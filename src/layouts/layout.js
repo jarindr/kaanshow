@@ -3,6 +3,8 @@ import './Layout.global.styl'
 import Helmet from 'react-helmet'
 import React from 'react'
 
+import NavBar from '../components/NavBar'
+
 const Layout = React.createClass({
   propTypes: {
     children: React.PropTypes.element
@@ -21,6 +23,7 @@ const Layout = React.createClass({
           meta={[
           ]}
         />
+        <NavBar />
         {this.props.children}
       </div>
     )
