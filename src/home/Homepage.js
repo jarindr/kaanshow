@@ -1,15 +1,17 @@
 import React from 'react'
 
-import ImageSwitcher from '../components/ImageSwitcher'
+import IntroSection from './IntroSection'
+import KaanClipSection from './KaanClipSection'
 
-const HomePage = () => {
-  return (
-    <div>
-      <ImageSwitcher
-        imageCover={require('./assets/cover1.png')}
-        imageHover={require('./assets/cover2.png')}
-      />
-    </div>
-  )
-}
-export default HomePage
+const MainPage = React.createClass({
+  render () {
+    return (
+      <div>
+        <IntroSection />
+        <KaanClipSection />
+      </div>
+    )
+  }
+})
+
+export default MainPage
