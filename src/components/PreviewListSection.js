@@ -5,12 +5,14 @@ import styles from './PreviewListSection.styl'
 
 const PreviewListSection = React.createClass({
   propTypes: {
-    data: React.PropTypes.array
+    data: React.PropTypes.array,
+    onClickPreview: React.PropTypes.func.isRequired,
+    current: React.PropTypes.string.isRequired
   },
   getInitialState () {
     return {
       shouldPlay: false,
-      current: getYouTubeID(this.props.data[0].url)
+      current: this.props.current
     }
   },
   renderList () {
@@ -20,7 +22,7 @@ const PreviewListSection = React.createClass({
     return this.props.data.map(x => {
       const imageUrl = `http://img.youtube.com/vi/${getYouTubeID(x.url)}/maxresdefault.jpg`
       return (
-        <div className={styles.previewBlock} onClick={this.onClickPreviewBlock.bind(this, getYouTubeID(x.url))}>
+        <div className={styles.previewBlock} onClick={this.onClickPreviewBlock.bind(null, getYouTubeID(x.url))}>
           <img src={imageUrl} className={styles.previewImage} />
           <div>{x.caption}</div>
         </div>

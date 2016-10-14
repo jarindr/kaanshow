@@ -1,0 +1,54 @@
+.block
+  width: 330px
+  height: 220px
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin-top: -4px
+  color: white
+  :hover img
+    filter: none
+  .blockTitle
+    position: absolute;
+    left: 0
+    right: 0
+    margin-top 50%
+    margin: 0 auto
+    top: 50%
+    height: 0
+    transform: translateY(-50%);
+    z-index: 20
+    font-family: Chonburi;
+    font-size: 35px
+    line-height: 25px
+    text-shadow: 3px 3px 10px black;
+    span
+      font-size: 20px
+  .backgroundImageContainer
+    position: relative;
+    cursor: pointer;
+    width: 100%
+    height: 100%
+    img
+      height: 220px
+      position: absolute;
+      left: 170px
+      top: 0
+      transform: translateX(-50%);
+      transition: 0.2s
+      filter: sepia(100%) opacity(50%) saturate(250%) contrast(100%)
+  .backgroundImageContainer:hover img
+    filter: none
+    height: 250px
+    left: 165px
+    top: -20px
+.container
+  background-color: black
+  height: calc(100vh - 80px)
+  text-align: center
+  padding 40px 20px
+.blocksContainer
+  max-width: 1050px
+  margin: 40px auto 0 auto
+  text-align: center
+  padding-top: 4px

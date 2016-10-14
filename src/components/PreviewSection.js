@@ -17,7 +17,7 @@ const PreviewSection = React.createClass({
   renderPreviewBlock (data) {
     const imageUrl = `http://img.youtube.com/vi/${getYouTubeID(data.url)}/maxresdefault.jpg`
     return (
-      <div className={styles.previewBlock}>
+      <div className={styles.previewBlock} onClick={this.props.onClickPreview.bind(null, getYouTubeID(data.url))}>
         <div className={styles.imageContainer}>
           <img src={require('../assets/images/play.png')} className={styles.playButton} />
           <img src={imageUrl} className={styles.previewImage} />

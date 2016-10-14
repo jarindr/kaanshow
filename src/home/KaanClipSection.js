@@ -1,6 +1,7 @@
 import Modal from 'react-modal'
 import React from 'react'
 
+import styles from './KaanClipSection.styl'
 import PreviewListSection from '../components/PreviewListSection'
 import PreviewSection from '../components/PreviewSection'
 
@@ -30,11 +31,14 @@ const customStyles = {
 const KaanClipSection = React.createClass({
   getInitialState () {
     return {
-      listAcitve: true
+      listAcitve: false
     }
   },
-  onClickPreview () {
-    this.setState({ listAcitve: true })
+  onClickPreview (id, e) {
+    this.setState({ listAcitve: true, current: id })
+  },
+  closeModal () {
+    this.setState({ listAcitve: false })
   },
   renderList (data) {
     if (this.state.listAcitve) {
@@ -44,14 +48,14 @@ const KaanClipSection = React.createClass({
           onRequestClose={this.closeModal}
           style={customStyles}
         >
-          <PreviewListSection data={DATA} />
+          <PreviewListSection data={DATA} current={this.state.current} />
         </Modal>
       )
     }
   },
   render () {
     return (
-      <div>
+      <div className={styles.container}>
         <PreviewSection data={DATA} onClickPreview={this.onClickPreview} />
         {this.renderList()}
       </div>
