@@ -8,7 +8,9 @@ const WorldOfKaanModal = React.createClass({
     children: React.PropTypes.node,
     title: React.PropTypes.string,
     subTitle: React.PropTypes.string,
-    images: React.PropTypes.array
+    images: React.PropTypes.array,
+    isModalOpen: React.PropTypes.bool,
+    closeModal: React.PropTypes.func
   },
   getInitialState () {
     return {
@@ -18,7 +20,7 @@ const WorldOfKaanModal = React.createClass({
   render () {
     const customStyles = {
       overlay: {
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backgroundColor: 'rgba(0, 0, 0, 0.2)',
         zIndex: 999
       },
       content: {
@@ -40,19 +42,34 @@ const WorldOfKaanModal = React.createClass({
     }
     return (
       <Modal
-        isOpen
+        isOpen={this.props.isModalOpen}
         onRequestClose={this.closeModal}
         style={customStyles}
       >
         <div className={styles.container}>
           <div className={styles.imagePreview} style={style}>
+            <img src={require('../assets/images/next.png')} className={styles.arrowRight} />
+            <img src={require('../assets/images/next.png')} className={styles.arrowLeft} />
           </div>
-          <div className={styles.content}>
-            <h1>{this.props.title}</h1>
-            <h3>{this.props.subTitle}</h3>
-            <p>
-              {this.props.children}
-            </p>
+          <div className={styles.contentContainer}>
+            <div className={styles.closeModalContainer}>
+              <div onClick={this.props.closeModal} className={styles.closeModal}>X</div> <span style={{float: 'right'}}>BACK TO WORLD</span>
+            </div>
+            <div className={styles.content}>
+              <h1>{this.props.title}</h1>
+              <h3>{this.props.subTitle}</h3>
+              <p>
+                {this.props.children}
+              </p>
+            </div>
+            <div className={styles.social}>
+              <div className={styles.socialRadial}>
+                <i className='flaticon-facebook'></i>
+              </div>
+              <div className={styles.socialRadial}>
+                <i className='flaticon-twitter'></i>
+              </div>
+            </div>
           </div>
         </div>
       </Modal>

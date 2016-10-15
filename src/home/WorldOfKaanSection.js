@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styles from './WorldOfKaanSection.styl'
+import worldOfKaanData from './WorldOfKaanData'
 import Title from '../components/Title'
 import WorldOfKaanModal from '../components/WorldOfKaanModal'
 
@@ -8,14 +9,16 @@ const Block = React.createClass({
   propTypes: {
     backgroundImage: React.PropTypes.string,
     title: React.PropTypes.string.isRequired,
-    subTitle: React.PropTypes.string
+    subTitle: React.PropTypes.string,
+    onClickBlock: React.PropTypes.func
   },
   render () {
     return (
-      <div className={styles.block}>
+      <div className={styles.block} onClick={this.props.onClickBlock}>
         <div className={styles.backgroundImageContainer}>
           <div className={styles.blockTitle}>
-            {this.props.title}<br />
+            {this.props.title}
+            <br />
             <span>({this.props.subTitle})</span>
           </div>
           <img src={this.props.backgroundImage} />
@@ -26,32 +29,44 @@ const Block = React.createClass({
 })
 
 const WorldOfKaanSection = React.createClass({
+  getInitialState () {
+    return {
+      isModalOpen: false,
+      current: 0
+    }
+  },
+  onClickBlock (i, e) {
+    this.setState({isModalOpen: true, current: i})
+  },
+  closeModal () {
+    this.setState({isModalOpen: false})
+  },
+  renderBlocks () {
+    return worldOfKaanData.map((x, i) => (
+      <Block
+        title={x.title}
+        subTitle={x.subTitle}
+        backgroundImage={x.backgroundImage}
+        onClickBlock={this.onClickBlock.bind(null, i)}
+        key={i}
+      />
+    ))
+  },
   render () {
     return (
       <div className={styles.container}>
         <Title text='WORLD OF KAAN' />
         <div className={styles.blocksContainer}>
-          <Block title='เกาะแก้วพิสดาร' subTitle='พระอภัยมณี' backgroundImage={require('./assets/worldOfKaan/003.jpg')} />
-          <Block title='เกาะแก้วพิสดาร' subTitle='พระอภัยมณี' backgroundImage={require('./assets/worldOfKaan/Ch02_001.jpg')} />
-          <Block title='เกาะแก้วพิสดาร' subTitle='พระอภัยมณี' backgroundImage={require('./assets/worldOfKaan/Ch03_002.jpg')} />
-          <Block title='เกาะแก้วพิสดาร' subTitle='พระอภัยมณี' backgroundImage={require('./assets/worldOfKaan/Ch06_002.jpg')} />
-          <Block title='เกาะแก้วพิสดาร' subTitle='พระอภัยมณี' backgroundImage={require('./assets/worldOfKaan/Ch07_War.jpg')} />
-          <Block title='เกาะแก้วพิสดาร' subTitle='พระอภัยมณี' backgroundImage={require('./assets/worldOfKaan/ch05_skyhigh_cloud_004_002.jpg')} />
+          {this.renderBlocks()}
         </div>
         <WorldOfKaanModal
-          title='เกาะแก้วพิสดาร'
-          subTitle='พระอภัยมณี'
-          images={[require('./assets/worldOfKaan/Ch06_002.jpg')]}
-        >
-          asdasdasdadsasddadasdassadsadas asd asd ;asldj sl;d ajsdl ;asjd ;asjd l;sd jals;d jasd
-          asdasdasdadsasddadasdassadsadas asd asd ;asldj sl;d ajsdl ;asjd ;asjd l;sd jals;d jasd
-          asdasdasdadsasddadasdassadsadas asd asd ;asldj sl;d ajsdl ;asjd ;asjd l;sd jals;d jasd
-          asdasdasdadsasddadasdassadsadas asd asd ;asldj sl;d ajsdl ;asjd ;asjd l;sd jals;d jasd
-          asdasdasdadsasddadasdassadsadas asd asd ;asldj sl;d ajsdl ;asjd ;asjd l;sd jals;d jasd
-          asdasdasdadsasddadasdassadsadas asd asd ;asldj sl;d ajsdl ;asjd ;asjd l;sd jals;d jasd
-          asdasdasdadsasddadasdassadsadas asd asd ;asldj sl;d ajsdl ;asjd ;asjd l;sd jals;d jasd
-          asdasdasdadsasddadasdassadsadas asd asd ;asldj sl;d ajsdl ;asjd ;asjd l;sd jals;d jasd
-          asdasdasdadsasddadasdassadsadas asd asd ;asldj sl;d ajsdl ;asjd ;asjd l;sd jals;d jasd
+          title={worldOfKaanData[this.state.current].title}
+          subTitle={worldOfKaanData[this.state.current].subTitle}
+          images={worldOfKaanData[this.state.current].images}
+          isModalOpen={this.state.isModalOpen}
+          closeModal={this.closeModal}
+          >
+          {worldOfKaanData[this.state.current].content}
         </WorldOfKaanModal>
       </div>
     )

@@ -1,19 +1,82 @@
 .container
-  max-width: 1000px
-  width: 100%
   vertical-align: top;
-  height: 350px
+  height: 450px
+  width: 1100px
 .imagePreview
   display: inline-block;
   width: 60%
   vertical-align: top;
   height: 100%
   background-size: cover;
+  position: relative
   img
     width: 100%
-.content
+.contentContainer
   display: inline-block;
   width: 40%
   height: 100%
+  padding-right: 20px
+  padding-top: 20px
+  h1
+    color: #be9b42
+    margin: 0
+    font-family: Chonburi
+  h3
+    color: #be9b42
+    margin: 0
+    font-family: Chonburi
+.content
   overflow-y: auto;
+  height: 350px
   padding: 20px 40px;
+  margin-top: 30px
+.closeModalContainer
+  span
+    font-size: 10px
+    font-family: montserrat
+    margin-top: 5px
+    color rgb(106, 106, 106)
+.social
+  margin-left: 40px
+  margin-top: 12px
+.socialRadial
+  border-radius: 50%
+  border: 1px solid grey
+  width: 25px
+  height: 25px
+  text-align: center
+  color: rgb(88, 88, 88)
+  line-height: 25px
+  display: inline-block
+  margin-right: 10px
+  :global .flaticon-facebook:before
+    font-size: 14px
+  :global .flaticon-twitter:before
+    font-size: 14px
+.closeModal
+  cursor: pointer;
+  width: 25px
+  height: 25px
+  line-height: 25px
+  font-size: 12px
+  text-align: center;
+  background-color: rgb(43, 43, 43)
+  color: rgb(226, 226, 226)
+  padding-top: 1px
+  float: right
+  margin-left: 6px
+  border-radius: 50%
+.arrowLeft
+  width: 30px!important
+  position: absolute
+  top: 50%
+  right: 10px
+  transform: translateY(-50%)
+  cursor: pointer;
+.arrowRight
+  width: 30px!important
+  cursor: pointer;
+  position: absolute
+  top: 50%
+  left 10px
+  transform: translateY(-50%) scaleX(-1)
