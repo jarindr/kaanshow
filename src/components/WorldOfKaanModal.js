@@ -50,6 +50,7 @@ const WorldOfKaanModal = React.createClass({
           <div className={styles.imagePreview} style={style}>
             <img src={require('../assets/images/next.png')} className={styles.arrowRight} />
             <img src={require('../assets/images/next.png')} className={styles.arrowLeft} />
+            <div className={styles.titleImage}>{`${this.props.title} (${this.props.subTitle})`}</div>
           </div>
           <div className={styles.contentContainer}>
             <div className={styles.closeModalContainer}>

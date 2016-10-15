@@ -11,7 +11,12 @@ const DATA = [
   {url: 'https://www.youtube.com/watch?v=tgQpUTDBI1A', caption: 'hello'},
   {url: 'https://www.youtube.com/watch?v=PFRJvHXaNBk', caption: 'hello'},
   {url: 'https://www.youtube.com/watch?v=cL4uhaQ58Rk', caption: 'hello'},
-  {url: 'https://www.youtube.com/watch?v=X2kGaP7N2VA', caption: 'hello'}
+  {url: 'https://www.youtube.com/watch?v=X2kGaP7N2VA', caption: 'hello'},
+  {url: 'https://www.youtube.com/watch?v=X2kGaP7N2VA', caption: 'hello'},
+  {url: 'https://www.youtube.com/watch?v=tgQpUTDBI1A', caption: 'hello'},
+  {url: 'https://www.youtube.com/watch?v=X2kGaP7N2VA', caption: 'hello'},
+  {url: 'https://www.youtube.com/watch?v=X2kGaP7N2VA', caption: 'hello'},
+  {url: 'https://www.youtube.com/watch?v=PFRJvHXaNBk', caption: 'hello'}
 ]
 
 const customStyles = {

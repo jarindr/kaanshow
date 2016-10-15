@@ -1,4 +1,5 @@
 import getYouTubeID from 'get-youtube-id'
+import FlipMove from 'react-flip-move'
 import React from 'react'
 
 import styles from './PreviewSection.styl'
@@ -14,10 +15,10 @@ const PreviewSection = React.createClass({
       current: 0
     }
   },
-  renderPreviewBlock (data) {
+  renderPreviewBlock (data, i) {
     const imageUrl = `http://img.youtube.com/vi/${getYouTubeID(data.url)}/maxresdefault.jpg`
     return (
-      <div className={styles.previewBlock} onClick={this.props.onClickPreview.bind(null, getYouTubeID(data.url))}>
+      <div key={i} className={styles.previewBlock} onClick={this.props.onClickPreview.bind(null, getYouTubeID(data.url))}>
         <div className={styles.imageContainer}>
           <img src={require('../assets/images/play.png')} className={styles.playButton} />
           <img src={imageUrl} className={styles.previewImage} />
@@ -28,16 +29,37 @@ const PreviewSection = React.createClass({
   },
   renderPreviewBlocks () {
     return this.props.data
-    .slice(this.state.current, this.state.current + 6)
-    .map(x => this.renderPreviewBlock(x))
+    .map((x, i) => this.renderPreviewBlock(x, i))
+    .slice(6 * this.state.current, 6 * this.state.current + 6)
+  },
+  onClickCircleNavigation (i, e) {
+    this.setState({current: i})
+  },
+  renderNavigation () {
+    const numberList = Math.ceil(this.props.data.length / 6)
+    const current = this.state.current
+    const circleList = Array(numberList).fill().map((x, i) => (
+      <div
+        className={`${i === current ? styles.navigationActive : styles.navigation}`}
+        onClick={this.onClickCircleNavigation.bind(null, i)}>
+      </div>
+    ))
+    return (
+      <div className={styles.navigationContainer}>
+        {circleList}
+      </div>
+    )
   },
   render () {
     return (
       <div className={styles.container}>
         <Title text='KAAN CLIPS' />
         <div className={styles.previewBlocksContainer}>
-        {this.renderPreviewBlocks()}
+          <FlipMove enterAnimation='fade' leaveAnimation='fade'>
+            {this.renderPreviewBlocks()}
+          </FlipMove>
         </div>
+        {this.renderNavigation()}
       </div>
     )
   }
