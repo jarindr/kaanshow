@@ -16,11 +16,13 @@ const PreviewSection = React.createClass({
     }
   },
   renderPreviewBlock (data, i) {
-    const imageUrl = `http://img.youtube.com/vi/${getYouTubeID(data.url)}/maxresdefault.jpg`
+    const imageUrl = /(youtube)/.test(data.url)
+      ? `http://img.youtube.com/vi/${getYouTubeID(data.url)}/maxresdefault.jpg`
+      : data.url
     return (
       <div key={i} className={styles.previewBlock} onClick={this.props.onClickPreview.bind(null, getYouTubeID(data.url))}>
         <div className={styles.imageContainer}>
-          <img src={require('../assets/images/play.png')} className={styles.playButton} />
+          <img src={require('../assets/images/play.png')} className={styles.playButton} hidden={!(/(youtube)/.test(data.url))} />
           <img src={imageUrl} className={styles.previewImage} />
         </div>
         <div>{data.caption}</div>
@@ -53,7 +55,6 @@ const PreviewSection = React.createClass({
   render () {
     return (
       <div className={styles.container}>
-        <Title text='KAAN CLIPS' />
         <div className={styles.previewBlocksContainer}>
           <FlipMove enterAnimation='fade' leaveAnimation='fade'>
             {this.renderPreviewBlocks()}

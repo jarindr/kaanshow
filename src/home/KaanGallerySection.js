@@ -62,8 +62,11 @@ const KaanClipSection = React.createClass({
   render () {
     return (
       <div className={styles.container}>
-        <Title text='KAAN CLIPS' />
-        <PreviewSection data={DATA} onClickPreview={this.onClickPreview} />
+        <Title text='KAAN GALLERY' />
+        <PreviewSection
+          data={DATA}
+          onClickPreview={this.onClickPreview}
+        />
         {this.renderList()}
       </div>
     )
