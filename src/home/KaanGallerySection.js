@@ -7,17 +7,9 @@ import PreviewSection from '../components/PreviewSection'
 import Title from '../components/Title'
 
 const DATA = [
-  {url: 'https://www.youtube.com/watch?v=QC4xnfh_-Eo', caption: 'hello'},
-  {url: 'https://www.youtube.com/watch?v=Ejj2t6tJfEU', caption: 'hello'},
-  {url: 'https://www.youtube.com/watch?v=tgQpUTDBI1A', caption: 'hello'},
-  {url: 'https://www.youtube.com/watch?v=PFRJvHXaNBk', caption: 'hello'},
-  {url: 'https://www.youtube.com/watch?v=cL4uhaQ58Rk', caption: 'hello'},
-  {url: 'https://www.youtube.com/watch?v=X2kGaP7N2VA', caption: 'hello'},
-  {url: 'https://www.youtube.com/watch?v=X2kGaP7N2VA', caption: 'hello'},
-  {url: 'https://www.youtube.com/watch?v=tgQpUTDBI1A', caption: 'hello'},
-  {url: 'https://www.youtube.com/watch?v=X2kGaP7N2VA', caption: 'hello'},
-  {url: 'https://www.youtube.com/watch?v=X2kGaP7N2VA', caption: 'hello'},
-  {url: 'https://www.youtube.com/watch?v=PFRJvHXaNBk', caption: 'hello'}
+  {url: require('../assets/images/characters/chalawan-small.jpg'), type: 'characters'},
+  {url: require('../assets/images/characters/crocodilewife-small.jpg'), type: 'show'},
+  {url: require('../assets/images/characters/GinnaRee-small.jpg'), type: 'special'}
 ]
 
 const customStyles = {
@@ -37,27 +29,29 @@ const customStyles = {
 const KaanClipSection = React.createClass({
   getInitialState () {
     return {
-      listAcitve: false
+      isModalOpen: false,
+      currentCategory: 'all'
     }
   },
   onClickPreview (id, e) {
-    this.setState({ listAcitve: true, current: id })
+    this.setState({ isModalOpen: true, current: id })
   },
   closeModal () {
-    this.setState({ listAcitve: false })
+    this.setState({ isModalOpen: false })
   },
-  renderList (data) {
-    if (this.state.listAcitve) {
-      return (
-        <Modal
-          isOpen
-          onRequestClose={this.closeModal}
-          style={customStyles}
-        >
-          <PreviewListSection data={DATA} current={this.state.current} />
-        </Modal>
-      )
-    }
+  onChangeCategory (catagory) {
+    this.setState({currentCategory: catagory})
+  },
+  renderModal (data) {
+    return (
+      <Modal
+        isOpen={this.state.isModalOpen}
+        onRequestClose={this.closeModal}
+        style={customStyles}
+      >
+        <PreviewListSection data={DATA.filter(x => /http/.test(x))} current={this.state.current} />
+      </Modal>
+    )
   },
   render () {
     return (
@@ -66,8 +60,9 @@ const KaanClipSection = React.createClass({
         <PreviewSection
           data={DATA}
           onClickPreview={this.onClickPreview}
+          onChangeCategory={this.onChangeCategory}
         />
-        {this.renderList()}
+        {this.renderModal()}
       </div>
     )
   }

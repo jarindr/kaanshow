@@ -37,34 +37,32 @@ const customStyles = {
 const KaanClipSection = React.createClass({
   getInitialState () {
     return {
-      listAcitve: false
+      isModalOpen: false
     }
   },
   onClickPreview (id, e) {
-    this.setState({ listAcitve: true, current: id })
+    this.setState({ isModalOpen: true, current: id })
   },
   closeModal () {
-    this.setState({ listAcitve: false })
+    this.setState({ isModalOpen: false })
   },
-  renderList (data) {
-    if (this.state.listAcitve) {
-      return (
-        <Modal
-          isOpen
-          onRequestClose={this.closeModal}
-          style={customStyles}
-        >
-          <PreviewListSection data={DATA} current={this.state.current} />
-        </Modal>
-      )
-    }
+  renderVideoModal (data) {
+    return (
+      <Modal
+        isOpen={this.state.isModalOpen}
+        onRequestClose={this.closeModal}
+        style={customStyles}
+      >
+        <PreviewListSection data={DATA} onClickPreview={this.onClickPreview} current={this.state.current} />
+      </Modal>
+    )
   },
   render () {
     return (
       <div className={styles.container}>
         <Title text='KAAN CLIPS' />
         <PreviewSection data={DATA} onClickPreview={this.onClickPreview} />
-        {this.renderList()}
+        {this.renderVideoModal()}
       </div>
     )
   }
