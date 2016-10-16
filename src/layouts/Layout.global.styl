@@ -1,4 +1,5 @@
 @import "./font.global.styl"
+
 .ReactModalPortal > * {
     // When the modal is closed, overlay div has no css class
     // This selector should be overridden by the `&--after-open` class below
@@ -18,10 +19,11 @@
     }
 }
 body
-  font-family: kanit;
+  font-family: 'Kanit', sans-serif;
   font-weight: 300;
   margin: 0
   padding: 0
+  background: black;
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -35,6 +37,7 @@ body
    ========================================================================== */
 div {
   box-sizing: border-box;
+  user-select: none;
 }
 html {
   font-family: sans-serif; /* 1 */

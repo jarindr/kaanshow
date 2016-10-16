@@ -15,10 +15,13 @@ const Layout = React.createClass({
         <Helmet
           titleTemplate=''
           defaultTitle=''
-          script={[
-            {innerHTML: require('raw!../FontLoader.js'), 'type': 'text/javascript'}
-          ]}
+          script={[]}
           link={[
+            {
+              href: 'https://fonts.googleapis.com/css?family=Chonburi|Kanit:300|Montserrat',
+              rel: 'stylesheet',
+              type: 'text/css'
+            }
           ]}
           meta={[
           ]}

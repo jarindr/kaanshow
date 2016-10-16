@@ -8,6 +8,7 @@ const IntroSection = React.createClass({
     return (
       <div className={styles.container}>
         <Title text='A SPECTACULAR CENIMATIC' />
+        <Title text='LIFE EXPERIENCE' />
         <p>
           เบนโลคอมพ์สตาร์หลวงพี่ ไลฟ์ผู้นำ สตรอเบอร์รีแจมปูอัด รวมมิตรโอเพ่น โลชั่น วีเจลิมูซีนคูลเลอร์ แอ็คชั่นลิมูซีนคอมเมนท์
           แพทยสภาเบิร์ด อาร์ติสต์อีสเตอร์เห่ยเด้อเพรส มหาอุปราชาเลกเชอร์บาลานซ์ สติกเกอร์เบลอดิกชันนารีฮิปโป

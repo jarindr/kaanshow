@@ -7,19 +7,45 @@ import PreviewSection from '../components/PreviewSection'
 import Title from '../components/Title'
 
 const DATA = [
-  {url: require('../assets/images/characters/chalawan-small.jpg'), type: 'characters'},
-  {url: require('../assets/images/characters/crocodilewife-small.jpg'), type: 'show'},
-  {url: require('../assets/images/characters/GinnaRee-small.jpg'), type: 'special'}
+  {
+    url: require('../assets/images/characters/chalawan-small.jpg'),
+    images: [
+      require('../assets/images/characters/chalawan-small.jpg'),
+      require('../assets/images/characters/GinnaRee-small.jpg'),
+      require('../assets/images/characters/GinnaRee.jpg'),
+      require('../assets/images/characters/Mermaid.jpg')
+    ],
+    type: 'character'
+  },
+  {
+    url: require('../assets/images/characters/GinnaRee-small.jpg'),
+    images: [
+      require('../assets/images/characters/chalawan-small.jpg'),
+      require('../assets/images/characters/GinnaRee-small.jpg')
+    ],
+    type: 'show'
+  },
+  {
+    url: require('../assets/images/characters/crocodilewife-small.jpg'),
+    images: [
+      require('../assets/images/characters/chalawan-small.jpg'),
+      require('../assets/images/characters/GinnaRee-small.jpg')
+    ],
+    type: 'special effect'
+  },
 ]
 const KaanClipSection = React.createClass({
   getInitialState () {
     return {
       isModalOpen: false,
-      currentCategory: 'all'
+      currentCategory: 'all',
+      current: {
+        images: []
+      }
     }
   },
-  onClickPreview (id, e) {
-    this.setState({ isModalOpen: true, current: id })
+  onClickPreview (data, e) {
+    this.setState({ isModalOpen: true, current: data })
   },
   closeModal () {
     this.setState({ isModalOpen: false })
@@ -32,7 +58,7 @@ const KaanClipSection = React.createClass({
       <ImageModalBox
         isModalOpen={this.state.isModalOpen}
         closeModal={this.closeModal}
-        images={[require('../assets/images/characters/chalawan-small.jpg')]}
+        images={this.state.current.images}
       />
     )
   },

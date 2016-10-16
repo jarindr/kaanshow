@@ -40,8 +40,8 @@ const KaanClipSection = React.createClass({
       isModalOpen: false
     }
   },
-  onClickPreview (id, e) {
-    this.setState({ isModalOpen: true, current: id })
+  onClickPreview (data) {
+    this.setState({ isModalOpen: true, current: data })
   },
   closeModal () {
     this.setState({ isModalOpen: false })
@@ -61,7 +61,9 @@ const KaanClipSection = React.createClass({
     return (
       <div className={styles.container}>
         <Title text='KAAN CLIPS' />
-        <PreviewSection data={DATA} onClickPreview={this.onClickPreview} />
+        <div className={styles.PreviewSectionContainer}>
+          <PreviewSection data={DATA} onClickPreview={this.onClickPreview} />
+        </div>
         {this.renderVideoModal()}
       </div>
     )

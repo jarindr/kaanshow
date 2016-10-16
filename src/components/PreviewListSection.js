@@ -16,25 +16,30 @@ const PreviewListSection = React.createClass({
   },
   renderPreviewBlocks () {
     return this.props.data.map(x => {
-      const imageUrl = `http://img.youtube.com/vi/${getYouTubeID(x.url)}/maxresdefault.jpg`
+      const imageUrl = /(youtube)/.test(x.url)
+        ? `http://img.youtube.com/vi/${getYouTubeID(x.url)}/maxresdefault.jpg`
+        : x.url
       return (
-        <div key={imageUrl} className={styles.previewBlock} onClick={this.props.onClickPreview.bind(null, getYouTubeID(x.url))}>
+        <div key={imageUrl} className={styles.previewBlock} onClick={this.onClickPreviewBlock.bind(null, x)}>
           <img src={imageUrl} className={styles.previewImage} />
-          <div>{x.caption}</div>
+          <div className={styles.caption}>{x.caption}</div>
         </div>
       )
     })
   },
-  onClickPreviewBlock (e) {
-    this.setState({shouldPlay: false})
-    this.props.onClickPreview()
+  onClickPreviewBlock (data, e) {
+    this.setState({shouldPlay: false}, () => {
+      this.props.onClickPreview(data)
+    })
   },
   onClickPlay () {
     this.setState({shouldPlay: true})
   },
   renderVideo () {
-    const imageUrl = `http://img.youtube.com/vi/${this.props.current}/maxresdefault.jpg`
-    const videoUrl = `http://www.youtube.com/embed/${this.props.current}?autoplay=1`
+    const imageUrl = /(youtube)/.test(this.props.current.url)
+      ? `http://img.youtube.com/vi/${getYouTubeID(this.props.current.url)}/maxresdefault.jpg`
+      : this.props.current.url
+    const videoUrl = `http://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?autoplay=1`
     return (
       !this.state.shouldPlay
       ? <img src={imageUrl} onClick={this.onClickPlay} />

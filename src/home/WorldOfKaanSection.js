@@ -36,6 +36,7 @@ const WorldOfKaanSection = React.createClass({
     }
   },
   onClickBlock (i, e) {
+    console.log(i)
     this.setState({isModalOpen: true, current: i})
   },
   closeModal () {
@@ -47,7 +48,7 @@ const WorldOfKaanSection = React.createClass({
         title={x.title}
         subTitle={x.subTitle}
         backgroundImage={x.backgroundImage}
-        onClickBlock={this.onClickBlock.bind(null, i)}
+        onClickBlock={this.onClickBlock.bind(null, x)}
         key={i}
       />
     ))
@@ -56,17 +57,18 @@ const WorldOfKaanSection = React.createClass({
     return (
       <div className={styles.container}>
         <Title text='WORLD OF KAAN' />
+        <h2 className={styles.subTitle}>THE JOURNEY BEGINS</h2>
         <div className={styles.blocksContainer}>
           {this.renderBlocks()}
         </div>
         <WorldOfKaanModal
-          title={worldOfKaanData[this.state.current].title}
-          subTitle={worldOfKaanData[this.state.current].subTitle}
-          images={worldOfKaanData[this.state.current].images}
+          title={this.state.current.title || null}
+          subTitle={this.state.current.subTitle || null}
+          images={this.state.current.images || []}
           isModalOpen={this.state.isModalOpen}
           closeModal={this.closeModal}
           >
-          {worldOfKaanData[this.state.current].content}
+          {this.state.current.content}
         </WorldOfKaanModal>
       </div>
     )
