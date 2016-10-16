@@ -2,7 +2,7 @@ import Modal from 'react-modal'
 import React from 'react'
 
 import styles from './KaanClipSection.styl'
-import PreviewListSection from '../components/PreviewListSection'
+import ImageModalBox from '../components/ImageModal'
 import PreviewSection from '../components/PreviewSection'
 import Title from '../components/Title'
 
@@ -11,21 +11,6 @@ const DATA = [
   {url: require('../assets/images/characters/crocodilewife-small.jpg'), type: 'show'},
   {url: require('../assets/images/characters/GinnaRee-small.jpg'), type: 'special'}
 ]
-
-const customStyles = {
-  overlay: {
-    backgroundColor: 'rgba(255, 255, 255, 0)'
-  },
-  content: {
-    top: '80px',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    padding: 0,
-    margin: 0,
-    border: '0'
-  }
-}
 const KaanClipSection = React.createClass({
   getInitialState () {
     return {
@@ -42,15 +27,13 @@ const KaanClipSection = React.createClass({
   onChangeCategory (catagory) {
     this.setState({currentCategory: catagory})
   },
-  renderModal (data) {
+  renderModal () {
     return (
-      <Modal
-        isOpen={this.state.isModalOpen}
-        onRequestClose={this.closeModal}
-        style={customStyles}
-      >
-        <PreviewListSection data={DATA.filter(x => /http/.test(x))} current={this.state.current} />
-      </Modal>
+      <ImageModalBox
+        isModalOpen={this.state.isModalOpen}
+        closeModal={this.closeModal}
+        images={[require('../assets/images/characters/chalawan-small.jpg')]}
+      />
     )
   },
   render () {
