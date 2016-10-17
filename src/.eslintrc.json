@@ -3,5 +3,8 @@
     "standard",
     "standard-react",
     "standard-jsx"
+  ],
+  "global": [
+    "$"
   ]
 }

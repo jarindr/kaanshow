@@ -12,26 +12,30 @@ const SIDENAV = ['INTRO<br>TO KAAN', 'KAAN CLIPS', 'THE STORY', 'WORLD<br>OF KAA
 const MainPage = React.createClass({
   componentDidMount () {
     window.addEventListener('scroll', () => {
-      const scrollPosition = $(window).scrollTop()
-      $(`.${styles.circle}`).each((index, el) => {
-        const id = $(el).attr('data-attribute')
-        const $section = $(this.refs[id])
-        const top = $section.offset().top - 81 - 50
-        const bottom = top + $section.outerHeight(true)
-        if(bottom > scrollPosition && top < scrollPosition) {
-          $(el).addClass(styles.white)
-          $(el).siblings(`.${styles.dotNavText}`).addClass(styles.show)
-        } else {
-          $(el).removeClass(styles.white)
-          $(el).siblings(`.${styles.dotNavText}`).removeClass(styles.show)
-        }
-      })
+      this.checkNavScroll()
+    })
+    this.checkNavScroll()
+  },
+  checkNavScroll () {
+    const scrollPosition = $(window).scrollTop()
+    $(`.${styles.circle}`).each((index, el) => {
+      const id = $(el).attr('data-attribute')
+      const $section = $(this.refs[id])
+      const top = $section.offset().top - 81 - 50
+      const bottom = top + $section.outerHeight(true)
+      if(bottom > scrollPosition && top < scrollPosition) {
+        $(el).addClass(styles.white)
+        $(el).siblings(`.${styles.dotNavText}`).addClass(styles.show)
+      } else {
+        $(el).removeClass(styles.white)
+        $(el).siblings(`.${styles.dotNavText}`).removeClass(styles.show)
+      }
     })
   },
   renderSideNav () {
     return (
       <div className={styles.sideNavgationContainer}>
-        {SIDENAV.map((x) => this.renderCircle(x))}
+        {SIDENAV.map((x, i) => this.renderCircle(x))}
       </div>
     )
   },
@@ -46,7 +50,7 @@ const MainPage = React.createClass({
   },
   render () {
     return (
-      <div>
+      <div className={styles.container}>
         {this.renderSideNav()}
         <div ref='INTRO TO KAAN'>
           <IntroSection />
