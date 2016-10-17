@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const commonLoaders = require('./webpack/commonLoaders')
 const autoprefixer = require('autoprefixer')
 const createStylesheetLoaders = require('./webpack/createStylesheetLoaders')
-
+const webpack = require('webpack')
 module.exports = {
   entry: [
     './src/index.js'
@@ -29,6 +29,10 @@ module.exports = {
   },
 
   plugins: [
-    new HtmlWebpackPlugin({template: './src/index.html'})
+    new HtmlWebpackPlugin({template: './src/index.html'}),
+    new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+    })
   ]
 }

@@ -15,7 +15,7 @@ const DATA = [
   {url: require('../assets/images/characters/chalawan-small.jpg'), caption: 'wow', type: 'image'},
   {url: 'https://www.youtube.com/watch?v=cL4uhaQ58Rk', caption: 'hello', type: 'video'},
   {url: 'https://www.youtube.com/watch?v=X2kGaP7N2VA', caption: 'hello', type: 'video'},
-  {url: 'https://www.youtube.com/watch?v=xIY_b10iehY', caption: 'hello', type: 'video'},
+  {url: 'https://www.youtube.com/watch?v=xIY_b10iehY', caption: 'hello', type: 'video'}
 ]
 
 const customStyles = {

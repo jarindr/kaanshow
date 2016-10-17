@@ -10,7 +10,7 @@ const NavBar = React.createClass({
           <img src={require('../assets/images/KAAN_Logo-for-Programmer_ch.png')} />
         </div>
         <div className={styles.navigationContainer}>
-          <span className={styles.navItem}>KAAN SHOW</span>
+          <span className={styles.navItem} style={{color: 'white'}}>KAAN SHOW</span>
           <span className={styles.navItem}>D'LUCK</span>
           <span className={styles.navItem}>PANJALUCK</span>
           <span className={styles.navItem}>LANGUAGE</span>
