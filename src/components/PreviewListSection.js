@@ -37,9 +37,9 @@ const PreviewListSection = React.createClass({
   },
   renderVideo () {
     const imageUrl = /(youtube)/.test(this.props.current.url)
-      ? `http://img.youtube.com/vi/${getYouTubeID(this.props.current.url)}/maxresdefault.jpg`
+      ? `https://img.youtube.com/vi/${getYouTubeID(this.props.current.url)}/maxresdefault.jpg`
       : this.props.current.url
-    const videoUrl = `http://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?autoplay=1`
+    const videoUrl = `https://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?autoplay=1`
     return (
       !this.state.shouldPlay
       ? <img src={imageUrl} onClick={this.onClickPlay} />
