@@ -1,6 +1,5 @@
-import getYouTubeID from 'get-youtube-id'
 import React from 'react'
-
+import getYouTubeID from 'get-youtube-id'
 import styles from './PreviewListSection.styl'
 
 const PreviewListSection = React.createClass({

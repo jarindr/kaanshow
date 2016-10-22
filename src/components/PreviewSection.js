@@ -1,7 +1,6 @@
-import getYouTubeID from 'get-youtube-id'
 import FlipMove from 'react-flip-move'
 import React from 'react'
-
+import getYouTubeID from 'get-youtube-id'
 import styles from './PreviewSection.styl'
 
 const PreviewSection = React.createClass({
@@ -24,7 +23,7 @@ const PreviewSection = React.createClass({
   renderCatagory () {
     const catagories = ['all', ...new Set(this.props.data.map(x => x.type || null))]
     const elements = catagories.map(x => (
-      <span className={styles.category} onClick={this.onChangeCategory.bind(null, x)}>{x}</span>
+      <span key={x} className={styles.category} onClick={this.onChangeCategory.bind(null, x)}>{x}</span>
     ))
     if (catagories.includes(null)) {
       return null
@@ -68,7 +67,9 @@ const PreviewSection = React.createClass({
     const circleList = Array(numberList).fill().map((x, i) => (
       <div
         className={`${i === current ? styles.navigationActive : styles.navigation}`}
-        onClick={this.onClickCircleNavigation.bind(null, i)}>
+        onClick={this.onClickCircleNavigation.bind(null, i)}
+        key={i}
+      >
       </div>
     ))
     return (

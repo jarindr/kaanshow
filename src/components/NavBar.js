@@ -1,5 +1,4 @@
 import React from 'react'
-
 import styles from './NavBar.styl'
 
 const NavBar = React.createClass({

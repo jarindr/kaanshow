@@ -1,10 +1,9 @@
 import Modal from 'react-modal'
-import React from 'react'
-
-import styles from './KaanClipSection.styl'
 import PreviewListSection from '../components/PreviewListSection'
 import PreviewSection from '../components/PreviewSection'
+import React from 'react'
 import Title from '../components/Title'
+import styles from './KaanClipSection.styl'
 
 const DATA = [
   {url: 'https://www.youtube.com/watch?v=QC4xnfh_-Eo', caption: 'hello'},

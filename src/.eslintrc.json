@@ -4,7 +4,7 @@
     "standard-react",
     "standard-jsx"
   ],
-  "global": [
-    "$"
-  ]
+  "env": {
+    "jquery": true
+  }
 }

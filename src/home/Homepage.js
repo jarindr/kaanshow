@@ -1,12 +1,11 @@
-import React from 'react'
-
-import styles from './HomePage.styl'
 import IntroSection from './IntroSection'
 import KaanClipSection from './KaanClipSection'
 import KaanGallerySection from './KaanGallerySection'
 import MakingTheShowSection from './MakingTheShowSection'
+import React from 'react'
 import TheStorySection from './TheStorySection'
 import WorldOfKaanSection from './WorldOfKaanSection'
+import styles from './HomePage.styl'
 
 const SIDENAV = ['INTRO<br>TO KAAN', 'KAAN CLIPS', 'THE STORY', 'WORLD<br>OF KAAN', 'KAAN<br>GALLERY', 'MAKING<br>THE SHOW']
 const MainPage = React.createClass({
@@ -23,7 +22,7 @@ const MainPage = React.createClass({
       const $section = $(this.refs[id])
       const top = $section.offset().top - 81 - 50
       const bottom = top + $section.outerHeight(true)
-      if(bottom > scrollPosition && top < scrollPosition) {
+      if (bottom > scrollPosition && top < scrollPosition) {
         $(el).addClass(styles.white)
         $(el).siblings(`.${styles.dotNavText}`).addClass(styles.show)
       } else {
@@ -35,14 +34,14 @@ const MainPage = React.createClass({
   renderSideNav () {
     return (
       <div className={styles.sideNavgationContainer}>
-        {SIDENAV.map((x, i) => this.renderCircle(x))}
+        {SIDENAV.map((x, i) => this.renderCircle(x, i))}
       </div>
     )
   },
-  renderCircle (text) {
+  renderCircle (text, i) {
     const textMarkup = () => ({__html: text})
     return (
-      <div className={styles.dotNavContainer}>
+      <div className={styles.dotNavContainer} key={i}>
         <div className={styles.dotNavText} dangerouslySetInnerHTML={textMarkup()} />
         <div className={styles.circle} data-attribute={text.replace('<br>', ' ')}></div>
       </div>

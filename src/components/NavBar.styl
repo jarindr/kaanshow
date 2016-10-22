@@ -8,9 +8,8 @@
   padding: 0 50px
   height: 80px
   position: fixed;
-  z-index: 50
+  z-index: 9999
   top: 0;
-  box-sizing: border-box;
 .navItem
   padding: 0 10px;
   font-size: 12px;
@@ -26,3 +25,33 @@
 .ticket
   background-color: #be9b42
   color: white
+.containerMobile
+  display: none;
+  height: 60px;
+  background-color: black
+  width: 100%
+
+@media screen and (max-width 500px)
+  .containerMobile
+    display: fixed;
+    top:0;
+  .container
+    width: 100%
+    text-align: center
+    display: block;
+  .navigationContainer
+    position: fixed;
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    padding-top: 50%
+    background-color: black
+    transform: translate3d(100%,0,0);
+  .navigationLogo
+    float left
+  .navItem
+    font-size: 40px
+    padding: 10px 0
+    display: block
+    width: 100%
