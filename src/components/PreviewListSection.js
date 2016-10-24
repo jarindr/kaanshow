@@ -8,6 +8,10 @@ const PreviewListSection = React.createClass({
     onClickPreview: React.PropTypes.func.isRequired,
     current: React.PropTypes.string
   },
+  componentDidMount () {
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    this.setState({shouldPlay: width < 768})
+  },
   getInitialState () {
     return {
       shouldPlay: false
@@ -27,9 +31,10 @@ const PreviewListSection = React.createClass({
     })
   },
   onClickPreviewBlock (data, e) {
-    this.setState({shouldPlay: false}, () => {
-      this.props.onClickPreview(data)
-    })
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    width > 768
+      ? this.setState({shouldPlay: false}, () => this.props.onClickPreview(data))
+      : this.props.onClickPreview(data)
   },
   onClickPlay () {
     this.setState({shouldPlay: true})
@@ -42,7 +47,11 @@ const PreviewListSection = React.createClass({
     return (
       !this.state.shouldPlay
       ? <img src={imageUrl} onClick={this.onClickPlay} />
-    : <iframe width="100%" height='50vh' src={videoUrl} frameBorder="0" allowFullScreen></iframe>
+    : (
+        <div className={styles.iframeContainer}>
+          <iframe width="100%" height='100%' src={videoUrl} frameBorder="0" allowFullScreen></iframe>
+        </div>
+      )
     )
   },
   render () {

@@ -2,8 +2,7 @@
   height: calc(100vh - 80px)
   background-color: black
   text-align: center
-  padding-left: 50px
-  padding-right: 50px
+  padding: 0 20px
 .mainVideo
   display inline-block
   width: calc(100% - 300px)
@@ -27,6 +26,8 @@
 .videoContainer
   position: static;
   height: 100%
+.iframeContainer
+  height: 70vh
 
 @media screen and (max-width 768px)
   .container
@@ -37,6 +38,7 @@
     transform: translateY(-50%)
   .mainVideo
     width: 100%
+    padding: 0
   .listVideos
     width: 100%
     height: auto
@@ -45,3 +47,5 @@
   .previewBlock
     display: inline-block;
     width: 40%
+  .iframeContainer
+    height: 350px
