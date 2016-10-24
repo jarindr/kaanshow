@@ -1,6 +1,5 @@
 import Modal from 'react-modal'
 import React from 'react'
-
 import styles from './ImageModal.styl'
 
 const customStyles = {
@@ -18,7 +17,8 @@ const customStyles = {
     padding: 0,
     border: 'none',
     margin: 0,
-    background: 'none'
+    background: 'none',
+    width: '90vw'
   }
 }
 

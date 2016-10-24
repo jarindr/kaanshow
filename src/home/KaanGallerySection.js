@@ -1,10 +1,8 @@
-import Modal from 'react-modal'
-import React from 'react'
-
-import styles from './KaanClipSection.styl'
 import ImageModalBox from '../components/ImageModal'
 import PreviewSection from '../components/PreviewSection'
+import React from 'react'
 import Title from '../components/Title'
+import styles from './KaanClipSection.styl'
 
 const DATA = [
   {
@@ -32,7 +30,7 @@ const DATA = [
       require('../assets/images/characters/GinnaRee-small.jpg')
     ],
     type: 'special effect'
-  },
+  }
 ]
 const KaanClipSection = React.createClass({
   getInitialState () {

@@ -1,6 +1,5 @@
 import Modal from 'react-modal'
 import React from 'react'
-
 import styles from './WorldOfKaanModal.styl'
 
 const WorldOfKaanModal = React.createClass({
@@ -33,7 +32,9 @@ const WorldOfKaanModal = React.createClass({
         padding: 0,
         border: 'none',
         margin: 0,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        width: '90vw',
+        backgroundColor: 'transparent'
       }
     }
     const style = {

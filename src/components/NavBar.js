@@ -8,6 +8,12 @@ const NavBar = React.createClass({
         <div className={styles.navigationLogo}>
           <img src={require('../assets/images/KAAN_Logo-for-Programmer_ch.png')} />
         </div>
+        <div id="hamberger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div className={styles.navigationContainer}>
           <span className={styles.navItem} style={{color: 'white'}}>KAAN SHOW</span>
           <span className={styles.navItem}>D'LUCK</span>
