@@ -24,3 +24,24 @@
   cursor: pointer;
   img
     width: 100%
+.videoContainer
+  position: static;
+  height: 100%
+
+@media screen and (max-width 768px)
+  .container
+    padding: 0
+  .videoContainer
+    position: absolute;
+    top: 50%
+    transform: translateY(-50%)
+  .mainVideo
+    width: 100%
+  .listVideos
+    width: 100%
+    height: auto
+    overflow-x: scroll
+    white-space:nowrap;
+  .previewBlock
+    display: inline-block;
+    width: 40%

@@ -48,11 +48,13 @@ const PreviewListSection = React.createClass({
   render () {
     return (
       <div className={styles.container}>
-        <div className={styles.mainVideo}>
-          {this.renderVideo()}
-        </div>
-        <div className={styles.listVideos}>
-          {this.renderPreviewBlocks()}
+        <div className={styles.videoContainer}>
+          <div className={styles.mainVideo}>
+            {this.renderVideo()}
+          </div>
+          <div className={styles.listVideos}>
+            {this.renderPreviewBlocks()}
+          </div>
         </div>
       </div>
 
