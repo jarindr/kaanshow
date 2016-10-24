@@ -38,11 +38,11 @@ const PreviewListSection = React.createClass({
     const imageUrl = /(youtube)/.test(this.props.current.url)
       ? `https://img.youtube.com/vi/${getYouTubeID(this.props.current.url)}/maxresdefault.jpg`
       : this.props.current.url
-    const videoUrl = `https://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?autoplay=1`
+    const videoUrl = `https://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?rel=0&amp;autoplay=1`
     return (
       !this.state.shouldPlay
       ? <img src={imageUrl} onClick={this.onClickPlay} />
-    : <iframe width="100%" height='600' src={videoUrl} frameBorder="0"></iframe>
+    : <iframe width="100%" height='50vh' src={videoUrl} frameBorder="0" allowFullScreen></iframe>
     )
   },
   render () {
