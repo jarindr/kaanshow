@@ -3,13 +3,45 @@
   background-color: black
   text-align: center
   padding: 0 20px
+  margin: 0 auto;
 .mainVideo
   display inline-block
-  width: calc(100% - 300px)
+  width: calc(100% - 310px)
   vertical-align: middle;
-  padding-right: 10px
+  margin-right: 10px
+  position: relative;
+  height: 600px
+  overflow: hidden;
   img
+    position: absolute;
     width: 100%
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+  .playButton
+    z-index: 2
+    width: 50px
+    left: 0
+    right: 0
+    margin: 0 auto
+.closeModal
+  position: absolute;
+  z-index: 20
+  cursor: pointer;
+  right 10px
+  top 10px
+  cursor: pointer;
+  width: 30px
+  height: 30px
+  line-height: 30px
+  font-size: 15px
+  text-align: center;
+  background-color: white
+  color: black
+  padding-top: 1px
+  border-radius: 50%
+.mainImagePreviewContainer
+  cursor: pointer;
 .caption
   color: white
   text-align: left;
@@ -28,7 +60,14 @@
   height: 100%
 .iframeContainer
   height: 80vh
-
+.imageOverlay
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  z-index: 1
 @media screen and (max-width 768px)
   .container
     padding: 0
@@ -39,7 +78,8 @@
     transform: translateY(-50%)
   .mainVideo
     width: 100%
-    padding: 0
+    margin-right: 0
+    height: 400px
   .listVideos
     width: 100%
     height: auto

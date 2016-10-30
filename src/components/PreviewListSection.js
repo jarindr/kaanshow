@@ -6,7 +6,8 @@ const PreviewListSection = React.createClass({
   propTypes: {
     data: React.PropTypes.array,
     onClickPreview: React.PropTypes.func.isRequired,
-    current: React.PropTypes.string
+    current: React.PropTypes.string,
+    closeModal: React.PropTypes.func.isRequired
   },
   componentDidMount () {
     const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
@@ -39,19 +40,34 @@ const PreviewListSection = React.createClass({
   onClickPlay () {
     this.setState({shouldPlay: true})
   },
-  renderVideo () {
+  renderMainImagePreview () {
     const imageUrl = /(youtube)/.test(this.props.current.url)
       ? `https://img.youtube.com/vi/${getYouTubeID(this.props.current.url)}/maxresdefault.jpg`
       : this.props.current.url
+    return (
+      <div className={styles.mainImagePreviewContainer} onClick={this.onClickPlay}>
+        <div className={styles.closeModal} onClick={this.props.closeModal}>X</div>
+        <div className={styles.playButton}>
+          <img src={require('../assets/images/play.png')} className={styles.playButton} />
+        </div>
+        <div className={styles.imageOverlay}></div>
+        <img src={imageUrl} />
+      </div>
+    )
+  },
+  renderVideoPreview () {
     const videoUrl = `https://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?rel=0&amp;autoplay=1`
     return (
+      <div className={styles.iframeContainer}>
+        <iframe width="100%" height='100%' src={videoUrl} frameBorder="0" allowFullScreen></iframe>
+      </div>
+    )
+  },
+  renderMainPreview () {
+    return (
       !this.state.shouldPlay
-      ? <img src={imageUrl} onClick={this.onClickPlay} />
-    : (
-        <div className={styles.iframeContainer}>
-          <iframe width="100%" height='100%' src={videoUrl} frameBorder="0" allowFullScreen></iframe>
-        </div>
-      )
+      ? this.renderMainImagePreview()
+      : this.renderVideoPreview()
     )
   },
   render () {
@@ -59,7 +75,7 @@ const PreviewListSection = React.createClass({
       <div className={styles.container}>
         <div className={styles.videoContainer}>
           <div className={styles.mainVideo}>
-            {this.renderVideo()}
+            {this.renderMainPreview()}
           </div>
           <div className={styles.listVideos}>
             {this.renderPreviewBlocks()}

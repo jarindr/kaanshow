@@ -30,7 +30,8 @@ const customStyles = {
     bottom: 0,
     padding: 0,
     margin: 0,
-    border: '0'
+    border: '0',
+    backgroundColor: 'transparent'
   }
 }
 const KaanClipSection = React.createClass({
@@ -52,7 +53,7 @@ const KaanClipSection = React.createClass({
         onRequestClose={this.closeModal}
         style={customStyles}
       >
-        <PreviewListSection data={DATA} onClickPreview={this.onClickPreview} current={this.state.current} />
+        <PreviewListSection data={DATA} onClickPreview={this.onClickPreview} current={this.state.current} closeModal={this.closeModal} />
       </Modal>
     )
   },

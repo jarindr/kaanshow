@@ -1,9 +1,9 @@
 import './Layout.global.styl'
 
+import Footer from '../components/Footer'
 import Helmet from 'react-helmet'
-import React from 'react'
-
 import NavBar from '../components/NavBar'
+import React from 'react'
 
 const Layout = React.createClass({
   propTypes: {
@@ -28,6 +28,7 @@ const Layout = React.createClass({
         />
         <NavBar />
         {this.props.children}
+        <Footer />
       </div>
     )
   }
