@@ -1,10 +1,10 @@
+import ImageModalBox from '../components/ImageModal'
 import Modal from 'react-modal'
 import PreviewListSection from '../components/PreviewListSection'
 import PreviewSection from '../components/PreviewSection'
 import React from 'react'
 import Title from '../components/Title'
 import styles from './MakingTheShowSection.styl'
-
 const DATA = [
   {url: 'https://www.youtube.com/watch?v=QC4xnfh_-Eo', caption: 'hello', type: 'video'},
   {url: 'https://www.youtube.com/watch?v=Ejj2t6tJfEU', caption: 'hello', type: 'video'},
@@ -34,7 +34,8 @@ const customStyles = {
 const MakingTheShowSection = React.createClass({
   getInitialState () {
     return {
-      isModalOpen: false
+      isModalOpen: false,
+      current: ''
     }
   },
   onClickPreview (data, e) {
@@ -43,15 +44,24 @@ const MakingTheShowSection = React.createClass({
   closeModal () {
     this.setState({ isModalOpen: false })
   },
-  renderVideoModal (data) {
+  renderVideoModal () {
     return (
       <Modal
         isOpen={this.state.isModalOpen}
         onRequestClose={this.closeModal}
         style={customStyles}
         >
-        <PreviewListSection data={DATA} onClickPreview={this.onClickPreview} current={this.state.current} />
+        <PreviewListSection data={DATA.filter(x => /youtube/.test(x.url))} onClickPreview={this.onClickPreview} current={this.state.current} />
       </Modal>
+    )
+  },
+  renderImageModal (data) {
+    return (
+      <ImageModalBox
+        isModalOpen={this.state.isModalOpen}
+        closeModal={this.closeModal}
+        images={[this.state.current.url]}
+      />
     )
   },
   render () {
@@ -69,7 +79,7 @@ const MakingTheShowSection = React.createClass({
         <div className={styles.previewSectionContainer}>
           <PreviewSection data={DATA} onClickPreview={this.onClickPreview} />
         </div>
-        {this.renderVideoModal()}
+        {/youtube/.test(this.state.current.url) ? this.renderVideoModal() : this.renderImageModal()}
       </div>
     )
   }
