@@ -23,7 +23,9 @@ const PreviewSection = React.createClass({
   renderCatagory () {
     const catagories = ['all', ...new Set(this.props.data.map(x => x.type || null))]
     const elements = catagories.map(x => (
-      <span key={x} className={styles.category} onClick={this.onChangeCategory.bind(null, x)}>{x}</span>
+      <span key={x} className={styles.category} style={{opacity: x === this.state.currentCategory ? 1 : 0.5}} onClick={this.onChangeCategory.bind(null, x)}>
+        {x}
+      </span>
     ))
     if (catagories.includes(null)) {
       return null
