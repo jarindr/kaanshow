@@ -2,7 +2,7 @@ const data = [
   {
     title: 'เกาะแก้วพิสดาร',
     subTitle: 'พระอภัยมณี',
-    backgroundImage: require('./assets/worldOfKaan/003.jpg'),
+    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_01-เกาะแก้วพิสดาร_r1_ch.jpg'),
     images: [require('./assets/worldOfKaan/Ch06_002.jpg')],
     content: `บนโลคอมพ์สตาร์หลวงพี่ ไลฟ์ผู้นำ สตรอเบอร์รีแจมปูอัด รวมมิตรโอเพ่น โลชั่น วีเจลิมูซีนคูลเลอร์ แอ็คชั่นลิมูซีนคอมเมนท์
               แพทยสภาเบิร์ด อาร์ติสต์อีสเตอร์เห่ยเด้อเพรส มหาอุปราชาเลกเชอร์บาลานซ์ สติกเกอร์เบลอดิกชันนารีฮิปโป
@@ -12,9 +12,9 @@ const data = [
               มลภาวะพฤหัสราเม็งศิลปากรแคนยอน ฟยอร์ดแดนซ์ซื่อบื้อ เดชานุภาพบุญคุณ หน่อมแน้มพาสต้าช็อปโปสเตอร์`
   },
   {
-    title: 'เกาะแก้วพิสดาร',
+    title: 'ป่าหิมพานต์',
     subTitle: 'พระอภัยมณี',
-    backgroundImage: require('./assets/worldOfKaan/Ch02_001.jpg'),
+    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_02-ป่าหิมพานต์_r1_ch.jpg'),
     images: [require('./assets/worldOfKaan/Ch02_001.jpg')],
     content: `บนโลคอมพ์สตาร์หลวงพี่ ไลฟ์ผู้นำ สตรอเบอร์รีแจมปูอัด รวมมิตรโอเพ่น โลชั่น วีเจลิมูซีนคูลเลอร์ แอ็คชั่นลิมูซีนคอมเมนท์
               แพทยสภาเบิร์ด อาร์ติสต์อีสเตอร์เห่ยเด้อเพรส มหาอุปราชาเลกเชอร์บาลานซ์ สติกเกอร์เบลอดิกชันนารีฮิปโป
@@ -24,9 +24,9 @@ const data = [
               มลภาวะพฤหัสราเม็งศิลปากรแคนยอน ฟยอร์ดแดนซ์ซื่อบื้อ เดชานุภาพบุญคุณ หน่อมแน้มพาสต้าช็อปโปสเตอร์`
   },
   {
-    title: 'เกาะแก้วพิสดาร',
+    title: 'เมืองสามล',
     subTitle: 'พระอภัยมณี',
-    backgroundImage: require('./assets/worldOfKaan/Ch03_002.jpg'),
+    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_03-เมืองสามล_r1_ch.jpg'),
     images: [require('./assets/worldOfKaan/Ch03_002.jpg')],
     content: `บนโลคอมพ์สตาร์หลวงพี่ ไลฟ์ผู้นำ สตรอเบอร์รีแจมปูอัด รวมมิตรโอเพ่น โลชั่น วีเจลิมูซีนคูลเลอร์ แอ็คชั่นลิมูซีนคอมเมนท์
               แพทยสภาเบิร์ด อาร์ติสต์อีสเตอร์เห่ยเด้อเพรส มหาอุปราชาเลกเชอร์บาลานซ์ สติกเกอร์เบลอดิกชันนารีฮิปโป
@@ -36,9 +36,9 @@ const data = [
               มลภาวะพฤหัสราเม็งศิลปากรแคนยอน ฟยอร์ดแดนซ์ซื่อบื้อ เดชานุภาพบุญคุณ หน่อมแน้มพาสต้าช็อปโปสเตอร์`
   },
   {
-    title: 'เกาะแก้วพิสดาร',
+    title: 'กลางเวหา',
     subTitle: 'พระอภัยมณี',
-    backgroundImage: require('./assets/worldOfKaan/Ch06_002.jpg'),
+    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_04-กลางเวหา_r1_ch.jpg'),
     images: [require('./assets/worldOfKaan/Ch06_002.jpg')],
     content: `บนโลคอมพ์สตาร์หลวงพี่ ไลฟ์ผู้นำ สตรอเบอร์รีแจมปูอัด รวมมิตรโอเพ่น โลชั่น วีเจลิมูซีนคูลเลอร์ แอ็คชั่นลิมูซีนคอมเมนท์
               แพทยสภาเบิร์ด อาร์ติสต์อีสเตอร์เห่ยเด้อเพรส มหาอุปราชาเลกเชอร์บาลานซ์ สติกเกอร์เบลอดิกชันนารีฮิปโป
@@ -48,9 +48,9 @@ const data = [
               มลภาวะพฤหัสราเม็งศิลปากรแคนยอน ฟยอร์ดแดนซ์ซื่อบื้อ เดชานุภาพบุญคุณ หน่อมแน้มพาสต้าช็อปโปสเตอร์`
   },
   {
-    title: 'เกาะแก้วพิสดาร',
+    title: 'วังบาดาล',
     subTitle: 'พระอภัยมณี',
-    backgroundImage: require('./assets/worldOfKaan/Ch07_War.jpg'),
+    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_05-วังบาดาล_r1_ch.jpg'),
     images: [require('./assets/worldOfKaan/Ch07_War.jpg')],
     content: `บนโลคอมพ์สตาร์หลวงพี่ ไลฟ์ผู้นำ สตรอเบอร์รีแจมปูอัด รวมมิตรโอเพ่น โลชั่น วีเจลิมูซีนคูลเลอร์ แอ็คชั่นลิมูซีนคอมเมนท์
               แพทยสภาเบิร์ด อาร์ติสต์อีสเตอร์เห่ยเด้อเพรส มหาอุปราชาเลกเชอร์บาลานซ์ สติกเกอร์เบลอดิกชันนารีฮิปโป
@@ -60,9 +60,9 @@ const data = [
               มลภาวะพฤหัสราเม็งศิลปากรแคนยอน ฟยอร์ดแดนซ์ซื่อบื้อ เดชานุภาพบุญคุณ หน่อมแน้มพาสต้าช็อปโปสเตอร์`
   },
   {
-    title: 'เกาะแก้วพิสดาร',
+    title: 'สมรภูมิจักรกล',
     subTitle: 'พระอภัยมณี',
-    backgroundImage: require('./assets/worldOfKaan/Ch02_001.jpg'),
+    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_06-สมรภูมิจักรกล_r1_ch.jpg'),
     images: [require('./assets/worldOfKaan/Ch03_002.jpg')],
     content: `บนโลคอมพ์สตาร์หลวงพี่ ไลฟ์ผู้นำ สตรอเบอร์รีแจมปูอัด รวมมิตรโอเพ่น โลชั่น วีเจลิมูซีนคูลเลอร์ แอ็คชั่นลิมูซีนคอมเมนท์
               แพทยสภาเบิร์ด อาร์ติสต์อีสเตอร์เห่ยเด้อเพรส มหาอุปราชาเลกเชอร์บาลานซ์ สติกเกอร์เบลอดิกชันนารีฮิปโป

@@ -6,7 +6,7 @@ import Title from '../components/Title'
 import styles from './KaanClipSection.styl'
 
 const DATA = [
-  {url: 'https://www.youtube.com/watch?v=QC4xnfh_-Eo', caption: 'hello'},
+  {url: 'https://www.youtube.com/watch?v=nI8baFj05uE', caption: 'hello'},
   {url: 'https://www.youtube.com/watch?v=Ejj2t6tJfEU', caption: 'hello'},
   {url: 'https://www.youtube.com/watch?v=tgQpUTDBI1A', caption: 'hello'},
   {url: 'https://www.youtube.com/watch?v=PFRJvHXaNBk', caption: 'hello'},

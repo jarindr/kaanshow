@@ -1,9 +1,8 @@
 import React from 'react'
-
-import styles from './WorldOfKaanSection.styl'
-import worldOfKaanData from './WorldOfKaanData'
 import Title from '../components/Title'
 import WorldOfKaanModal from '../components/WorldOfKaanModal'
+import styles from './WorldOfKaanSection.styl'
+import worldOfKaanData from './WorldOfKaanData'
 
 const Block = React.createClass({
   propTypes: {
@@ -18,8 +17,6 @@ const Block = React.createClass({
         <div className={styles.backgroundImageContainer}>
           <div className={styles.blockTitle}>
             {this.props.title}
-            <br />
-            <span>({this.props.subTitle})</span>
           </div>
           <img src={this.props.backgroundImage} />
         </div>
