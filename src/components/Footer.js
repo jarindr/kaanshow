@@ -10,7 +10,7 @@ const Footer = React.createClass({
   },
   render () {
     return (
-      <div className={styles.container}>
+      <div className={styles.container} id='footer-hack'>
         <div className={styles.socialFeed}>
           {this.renderSocialBlock()}
           {this.renderSocialBlock()}
