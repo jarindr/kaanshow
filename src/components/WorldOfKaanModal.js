@@ -60,8 +60,7 @@ const WorldOfKaanModal = React.createClass({
             <div className={styles.content}>
               <h1>{this.props.title}</h1>
               <h3>{this.props.subTitle}</h3>
-              <p>
-                {this.props.children}
+              <p dangerouslySetInnerHTML={{ __html: this.props.children }}>
               </p>
             </div>
             <div className={styles.social}>

@@ -17,7 +17,8 @@ const PreviewSection = React.createClass({
   },
   onChangeCategory (category, e) {
     this.setState({
-      currentCategory: category
+      currentCategory: category,
+      current: 0
     })
   },
   renderCatagory () {
@@ -42,10 +43,13 @@ const PreviewSection = React.createClass({
       ? `http://img.youtube.com/vi/${getYouTubeID(data.url)}/maxresdefault.jpg`
       : data.url
     return (
-      <div key={imageUrl} className={styles.previewBlock} onClick={this.props.onClickPreview.bind(null, data)}>
-        <div className={styles.imageContainer}>
+      <div
+        key={imageUrl}
+        className={styles.previewBlock}
+        onClick={this.props.onClickPreview.bind(null, data)}
+      >
+        <div className={styles.imageContainer} style={{background: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
           <img src={require('../assets/images/play.png')} className={styles.playButton} hidden={!(/(youtube)/.test(data.url))} />
-          <img src={imageUrl} className={styles.previewImage} />
         </div>
         <div className={styles.caption}>{data.caption}</div>
       </div>

@@ -2,16 +2,90 @@ import ImageModalBox from '../components/ImageModal'
 import PreviewSection from '../components/PreviewSection'
 import React from 'react'
 import Title from '../components/Title'
+import { shuffle } from '../utils/Sorting'
 import styles from './KaanClipSection.styl'
-
-const DATA = [
+const DATA = shuffle([
   {
-    url: require('../assets/images/characters/chalawan-small.jpg'),
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_01_ch.png'),
     images: [
-      require('../assets/images/characters/chalawan-small.jpg'),
-      require('../assets/images/characters/GinnaRee-small.jpg'),
-      require('../assets/images/characters/GinnaRee.jpg'),
-      require('../assets/images/characters/Mermaid.jpg')
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_01-Character_ch.png')
+    ],
+    type: 'show'
+  },
+  {
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_02_ch.png'),
+    images: [
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_01-Character_ch.png')
+    ],
+    type: 'show'
+  },
+  {
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_03-Character_ch.png'),
+    images: [
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_01-Character_ch.png')
+    ],
+    type: 'show'
+  },
+  {
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_04_ch.png'),
+    images: [
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_01-Character_ch.png')
+    ],
+    type: 'show'
+  },
+  {
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_05_ch.png'),
+    images: [
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_01-Character_ch.png')
+    ],
+    type: 'show'
+  },
+  {
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_06_ch.png'),
+    images: [
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_01-Character_ch.png')
+    ],
+    type: 'show'
+  },
+  {
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_01-Character_ch.png'),
+    images: [
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_01-Character_ch.png')
+    ],
+    type: 'character'
+  },
+  {
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_02-Character_ch.png'),
+    images: [
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_02-Character_ch.png')
+    ],
+    type: 'character'
+  },
+  {
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_03-Character_ch.png'),
+    images: [
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_03-Character_ch.png')
+    ],
+    type: 'character'
+  },
+  {
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_04-Character_ch.png'),
+    images: [
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_04-Character_ch.png')
+    ],
+    type: 'character'
+  },
+  {
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_05-Character_ch.png'),
+    images: [
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_05-Character_ch.png')
+    ],
+    type: 'character'
+  },
+  {
+    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_06-Character_ch.png'),
+    images: [
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_06-Character_ch.png')
     ],
     type: 'character'
   },
@@ -31,7 +105,8 @@ const DATA = [
     ],
     type: 'special effect'
   }
-]
+])
+
 const KaanClipSection = React.createClass({
   getInitialState () {
     return {
