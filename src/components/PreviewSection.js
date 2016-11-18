@@ -49,7 +49,7 @@ const PreviewSection = React.createClass({
         onClick={this.props.onClickPreview.bind(null, data)}
       >
         <div className={styles.imageContainer} style={{background: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
-          <img src={require('../assets/images/play.png')} className={styles.playButton} hidden={!(/(youtube)/.test(data.url))} />
+          <img src={require('../assets/images/play_new.png')} className={styles.playButton} hidden={!(/(youtube)/.test(data.url))} />
         </div>
         <div className={styles.caption}>{data.caption}</div>
       </div>

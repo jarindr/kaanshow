@@ -45,10 +45,10 @@ const PreviewListSection = React.createClass({
       ? `https://img.youtube.com/vi/${getYouTubeID(this.props.current.url)}/maxresdefault.jpg`
       : this.props.current.url
     return (
-      <div className={styles.mainImagePreviewContainer} onClick={this.onClickPlay}>
-        <div className={styles.closeModal} onClick={this.props.closeModal}>X</div>
-        <div className={styles.playButton}>
-          <img src={require('../assets/images/play.png')} className={styles.playButton} />
+      <div className={styles.mainImagePreviewContainer}>
+        <img src={require('../assets/images/closeButton.png')} className={styles.closeModal} onClick={this.props.closeModal} />
+        <div className={styles.playButton} onClick={this.onClickPlay}>
+          <img src={require('../assets/images/play_new.png')} className={styles.playButton} />
         </div>
         <div className={styles.imageOverlay}></div>
         <img src={imageUrl} />

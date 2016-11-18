@@ -3,7 +3,7 @@ import PreviewSection from '../components/PreviewSection'
 import React from 'react'
 import Title from '../components/Title'
 import { shuffle } from '../utils/Sorting'
-import styles from './KaanClipSection.styl'
+import styles from './KaanGallerySection.styl'
 const DATA = shuffle([
   {
     url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_01_ch.png'),

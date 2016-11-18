@@ -7,7 +7,7 @@ const IntroSection = React.createClass({
     return (
       <div className={styles.container}>
         <Title text='A SPECTACULAR CENIMATIC' />
-        <Title text='LIFE EXPERIENCE' />
+        <Title text='LIVE EXPERIENCE' />
         <p>
           A SPECTACULAR CINEMATIC LIVE EXPERIENCE KAAN คือ การแสดงที่ผสานเทคนิคพิเศษระดับโลกเข้ากับภาพยนตร์และการแสดงสดบนเวที
           ทั้งการเต้น ยิมนาสติก กายกรรม การเชิดหุ่น การแสดงโขน ตลอดจนศิลปะการต่อสู้แบบไทย

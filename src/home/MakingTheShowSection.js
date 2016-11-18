@@ -13,7 +13,6 @@ const DATA = [
   {url: 'https://www.youtube.com/watch?v=PFRJvHXaNBk', caption: 'hello', type: 'video'},
   {url: require('../assets/images/characters/chalawan-small.jpg'), caption: 'wow', type: 'image'},
   {url: 'https://www.youtube.com/watch?v=cL4uhaQ58Rk', caption: 'hello', type: 'video'},
-  {url: 'https://www.youtube.com/watch?v=X2kGaP7N2VA', caption: 'hello', type: 'video'},
   {url: 'https://www.youtube.com/watch?v=xIY_b10iehY', caption: 'hello', type: 'video'}
 ]
 
@@ -51,7 +50,12 @@ const MakingTheShowSection = React.createClass({
         onRequestClose={this.closeModal}
         style={customStyles}
         >
-        <PreviewListSection data={DATA.filter(x => /youtube/.test(x.url))} onClickPreview={this.onClickPreview} current={this.state.current} />
+        <PreviewListSection
+          data={DATA.filter(x => /youtube/.test(x.url))}
+          onClickPreview={this.onClickPreview}
+          current={this.state.current}
+          closeModal={this.closeModal}
+        />
       </Modal>
     )
   },

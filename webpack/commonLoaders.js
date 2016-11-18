@@ -22,6 +22,11 @@ module.exports = [
     loader: 'file?name=assets/images/[hash].[ext]'
   },
   {
+    test: /\.gif$/,
+    exclude: /\.placeholder\.(gif)$/,
+    loader: 'file?name=assets/images/[hash].[ext]'
+  },
+  {
     test: /\.eps$/,
     exclude: /\.placeholder\.(jpg|png)$/,
     loader: 'file?name=assets/images/[hash].[ext]'

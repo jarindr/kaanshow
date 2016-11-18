@@ -114,9 +114,9 @@ const Footer = React.createClass({
             <div className={styles.contactFrom}>
               <ul>
                 <li>CONTACT US</li>
-                <input type='text' placeholder='Enter your name' />
-                <input type='text' placeholder='Enter your email' />
-                <textarea type='text' placeholder='Message'></textarea>
+                <input type='text' placeholder='Enter Your Name' />
+                <input type='text' placeholder='Enter Your Email' />
+                <textarea type='text' placeholder='Your Message'></textarea>
                 <div className={styles.sendEmail}>SEND MESSAGE</div>
               </ul>
             </div>
