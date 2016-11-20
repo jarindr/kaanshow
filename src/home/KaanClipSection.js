@@ -3,8 +3,8 @@ import PreviewListSection from '../components/PreviewListSection'
 import PreviewSection from '../components/PreviewSection'
 import React from 'react'
 import Scroller from '../components/Scroller'
+import SinglePreview from '../components/SinglePreview'
 import Title from '../components/Title'
-import getYouTubeID from 'get-youtube-id'
 import styles from './KaanClipSection.styl'
 const DATA = [
   {url: 'https://www.youtube.com/watch?v=nI8baFj05uE', caption: 'hello'},
@@ -60,9 +60,7 @@ const KaanClipSection = React.createClass({
     return (
       <div className={styles.container}>
         <Title text='KAAN CLIPS' />
-        <div className={styles.PreviewSectionContainer}>
-          <img src={`http://img.youtube.com/vi/${getYouTubeID('https://www.youtube.com/watch?v=nI8baFj05uE')}/maxresdefault.jpg`} />
-        </div>
+        <SinglePreview />
         {this.renderVideoModal()}
       </div>
     )

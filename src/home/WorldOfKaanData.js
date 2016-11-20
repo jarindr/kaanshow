@@ -1,8 +1,8 @@
 const data = [
   {
-    title: 'เกาะแก้วพิสดาร',
-    subTitle: 'พระอภัยมณี',
-    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_01-เกาะแก้วพิสดาร_r1_ch.jpg'),
+    title: 'ผีเสื้อพิโรธ',
+    subTitle: 'THE WARTH OF THE SEA GIANTESS',
+    backgroundImage: require('./assets/worldOfKaan/01.jpg'),
     images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_01-เกาะแก้วพิสดาร_r1_ch.jpg')],
     content: `ณ เกาะแก้วพิสดาร นางอสูรร้ายแห่งท้องทะเลกำลังตื่นจากนิทราการผจญภัยเหนือจินตนาการได้เริ่มขึ้นแล้ว! <br><br>เปิดโลกแห่งจินตนาการไปกับการผจญภัยกลางมหาสมุทรอันเวิ้งว้าง
               ของเกาะแก้วพิสดาร ขี่หลังม้านิลมังกรท่องไปในโลกใหม่ตื่นตาตื่นใจกับเรือสำเภาลำยักษ์
@@ -10,9 +10,9 @@ const data = [
               การบุกจู่โจมของเหล่าปีศาจผีเสื้อและความน่าสะพรึงกลัวของผีเสื้อสมุทรยักษ์ที่คืบคลานเข้ามาพร้อมทำลายล้างทุกสิ่งที่ขวางหน้า์`
   },
   {
-    title: 'ป่าหิมพานต์',
-    subTitle: 'พระสุธน มโนราห์',
-    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_02-ป่าหิมพานต์_r1_ch.jpg'),
+    title: 'ปราโมทย์หิมพานต์',
+    subTitle: 'The Colors of Himmavanta',
+    backgroundImage: require('./assets/worldOfKaan/02.jpg'),
     images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_02-ป่าหิมพานต์_r1_ch.jpg')],
     content: `เบื้องหลังโชว์ตระการตาของสรรพสัตว์และนางกินรีแห่งหิมพานต์ภัยร้ายได้คืบคลานเข้ามาแบบไม่ทันให้ตั้งตัว!<br><br>
               ลัดเลาะสู่มิติอันเร้นลับ แฝงกายให้กลมกลืนกับเหล่าสรรพสัตว์แห่งวรรณคดี ที่จะชวนไปตื่นตาตื่นใจกับความงดงามที่น่าอัศจรรย์ของป่าหิมพานต์
@@ -20,9 +20,9 @@ const data = [
               แล้วลุ้นระทึกกับกระบวนยุทธของพรานบุญและเหล่าลูกสมุนที่เป็นภัยร้ายแฝงกายเข้ามาหมายเอาชีวิต์`
   },
   {
-    title: 'เมืองสามล',
-    subTitle: 'สังข์ทอง',
-    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_03-เมืองสามล_r1_ch.jpg'),
+    title: 'เดิมพันเมืองสามล',
+    subTitle: 'The Wager for the Ivory Kingdom',
+    backgroundImage: require('./assets/worldOfKaan/03.jpg'),
     images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_03-เมืองสามล_r1_ch.jpg')],
     content: `ขบวนเจ้าชายต่างดั้นด้นมาเพื่อรับมาลัยเสี่ยงทาย หารู้ไม่ว่ามาลัยที่ทุกคนหมายปองนั้น มีเดิมพันเป็น “ชีวิต”<br><br>
               ร่วมสังสรรค์กับงานรื่นเริงอันยิ่งใหญ่ตระการตา สนุกสนานไปกับขบวนขันหมากของเจ้าชายทั้ง 6 ที่มาพร้อมระบำ 5 ภาค
@@ -30,9 +30,9 @@ const data = [
               “สมรภูมิรบ” ที่เหล่าเจ้าชายและเจ้าเงาะป่าต้องพิสูจน์ความกล้าหาญ ต่อกรกับระมาดสัตว์ประหลาดยักษ์อันน่าเกรงขาม มาลุ้นกันว่างานเลี้ยงจะเลิกลาเช่นไร์`
   },
   {
-    title: 'กลางเวหา',
-    subTitle: 'เมขลา และ รามสูร',
-    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_04-กลางเวหา_r1_ch.jpg'),
+    title: 'กลแก้วเมขลา',
+    subTitle: 'The Chase of Lightning',
+    backgroundImage: require('./assets/worldOfKaan/04.jpg'),
     images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_04-กลางเวหา_r1_ch.jpg')],
     content: `เมฆดำคำราม ฟาดอสนีบาตต่างเส้นแส้การร่ายรำของเทพธิดากลายเป็นเกมไล่ล่ากลางเวหา<br><br>
               ตื่นเต้นไปบนเวหากับการไล่ล่าระหว่างเมขลาและรามสูร สายฟ้าต่างฟาดฟันประหัตประหารส่งเสียงคำรามกระหึ่มไปทั่วท้องนภา
@@ -40,18 +40,18 @@ const data = [
               ที่เผยกายอสูรยักษ์มา สร้างความน่าสะพรึงกลัวเพื่อต่อกรซึ่งกันและกัน์`
   },
   {
-    title: 'วังบาดาล',
-    subTitle: 'ไกรทอง',
-    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_05-วังบาดาล_r1_ch.jpg'),
+    title: 'ปราบพญาชาละวัน',
+    subTitle: 'The Underwater Abyss',
+    backgroundImage: require('./assets/worldOfKaan/05.jpg'),
     images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_05-วังบาดาล_r1_ch.jpg')],
     content: `ใต้ผืนน้ำสีคราม มีวังบาดาลของพญาจระเข้ยักษ์ซ่อนอยู่ใครก็ตามที่หลงเข้าไปในนั้น อย่าหวังว่าจะมีชีวิตรอดกลับมา<br><br>
               ดำดิ่งสู่ก้นลึกของผืนนที แหวกสายวารีสู่วังบาดาล นครเร้นลับที่ซ่อนตัวอยู่ใต้ท้องน้ำ ตื่นตะลึงไปกับพญาชาละวัน
               จระเข้ร่างมหึมาที่ไล่ล่าศัตรูหมายปลิดชีพอย่างไม่ลดละ มันส์ไปกับฉากต่อสู้ของไกรทองกับเหล่าสมุนชาละวันที่ปะทะฝีมือแบบตาต่อตาฟันต่อฟันกันอย่างดุเดือด์`
   },
   {
-    title: 'สมรภูมิจักรกล',
-    subTitle: 'รามเกียรติ์',
-    backgroundImage: require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_06-สมรภูมิจักรกล_r1_ch.jpg'),
+    title: 'ทศกัณฐ์อหังการ',
+    subTitle: 'The Cataclysm',
+    backgroundImage: require('./assets/worldOfKaan/06.jpg'),
     images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_06-สมรภูมิจักรกล_r1_ch.jpg')],
     content: `สงครามจักรกลอันยาวนานนับร้อยปีจะสิ้นสุดด้วยคำว่า มีชัย หรือ ปราชัยคานเท่านั้นที่จะเป็นผู้ตัดสิน<br><br>
               จากดินแดนอันรุ่งเรืองถูกถล่มจนทลายกลายเป็นดินแดนอันร่วงโรย มหาสงครามแห่งรามเกียรติ์ไร้วี่แววยุติ

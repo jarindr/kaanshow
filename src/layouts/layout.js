@@ -18,7 +18,7 @@ const Layout = React.createClass({
           script={[]}
           link={[
             {
-              href: 'https://fonts.googleapis.com/css?family=Chonburi|Kanit:200|Montserrat',
+              href: 'https://fonts.googleapis.com/css?family=Chonburi|Kanit:200,700|Montserrat',
               rel: 'stylesheet',
               type: 'text/css'
             }

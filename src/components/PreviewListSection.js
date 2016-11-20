@@ -51,15 +51,16 @@ const PreviewListSection = React.createClass({
           <img src={require('../assets/images/play_new.png')} className={styles.playButton} />
         </div>
         <div className={styles.imageOverlay}></div>
-        <img src={imageUrl} />
-      </div>
-    )
-  },
-  renderVideoPreview () {
-    const videoUrl = `https://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?rel=0&amp;autoplay=1`
-    return (
-      <div className={styles.iframeContainer}>
-        <iframe width="100%" height='100%' src={videoUrl} frameBorder="0" allowFullScreen></iframe>
+        <img src={imageUrl} className={styles.imagePreview} />
+        <div className={styles.iframeContainer}>
+          <iframe
+            width="100%"
+            height='100%'
+            src={`https://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?rel=0&amp;autoplay=1`}
+            frameBorder="0"
+            allowFullScreen>
+          </iframe>
+        </div>
       </div>
     )
   },

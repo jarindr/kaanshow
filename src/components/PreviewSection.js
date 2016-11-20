@@ -62,7 +62,6 @@ const PreviewSection = React.createClass({
   renderPreviewBlocks () {
     return this.getFilterdData()
     .map((x, i) => this.renderPreviewBlock(x, i))
-    .slice(6 * this.state.current, 6 * this.state.current + 6)
   },
   onClickCircleNavigation (i, e) {
     this.setState({current: i})
@@ -89,11 +88,10 @@ const PreviewSection = React.createClass({
       <div className={styles.container}>
         {this.renderCatagory()}
         <div className={styles.previewBlocksContainer}>
-          <FlipMove>
+          <FlipMove enterAnimation='fade' leaveAnimation='fade'>
             {this.renderPreviewBlocks()}
           </FlipMove>
         </div>
-        {this.renderNavigation()}
       </div>
     )
   }
