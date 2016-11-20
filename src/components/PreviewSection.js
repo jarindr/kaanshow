@@ -51,7 +51,10 @@ const PreviewSection = React.createClass({
         <div className={styles.imageContainer} style={{background: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
           <img src={require('../assets/images/play_new.png')} className={styles.playButton} hidden={!(/(youtube)/.test(data.url))} />
         </div>
-        <div className={styles.caption}>{data.caption}</div>
+        <div className={styles.caption} hidden={!data.caption}>
+          {data.caption}
+          <div style={{opacity: 0.5}}>{data.subCaption || ''}</div>
+        </div>
       </div>
     )
   },

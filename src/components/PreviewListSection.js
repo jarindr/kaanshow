@@ -26,7 +26,10 @@ const PreviewListSection = React.createClass({
       return (
         <div key={imageUrl} className={styles.previewBlock} onClick={this.onClickPreviewBlock.bind(null, x)}>
           <img src={imageUrl} className={styles.previewImage} />
-          <div className={styles.caption}>{x.caption}</div>
+          <div className={styles.caption}>
+            {x.caption}
+            <div style={{opacity: 0.5}}>{x.subCaption.substr(1, 20) || ''}</div>
+          </div>
         </div>
       )
     })
@@ -47,20 +50,24 @@ const PreviewListSection = React.createClass({
     return (
       <div className={styles.mainImagePreviewContainer}>
         <img src={require('../assets/images/closeButton.png')} className={styles.closeModal} onClick={this.props.closeModal} />
-        <div className={styles.playButton} onClick={this.onClickPlay}>
-          <img src={require('../assets/images/play_new.png')} className={styles.playButton} />
-        </div>
+        <img src={require('../assets/images/play_new.png')} className={styles.playButton} onClick={this.onClickPlay} />
+        <img src={require('../assets/images/twitter.png')} className={styles.twitter} onClick={this.onClickPlay} />
+        <img src={require('../assets/images/fb.png')} className={styles.fb} onClick={this.onClickPlay} />
         <div className={styles.imageOverlay}></div>
         <img src={imageUrl} className={styles.imagePreview} />
-        <div className={styles.iframeContainer}>
-          <iframe
-            width="100%"
-            height='100%'
-            src={`https://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?rel=0&amp;autoplay=1`}
-            frameBorder="0"
-            allowFullScreen>
-          </iframe>
-        </div>
+      </div>
+    )
+  },
+  renderVideoPreview () {
+    return (
+      <div className={styles.iframeContainer}>
+        <iframe
+          width="100%"
+          height='100%'
+          src={`https://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?rel=0&amp;autoplay=1`}
+          frameBorder="0"
+          allowFullScreen>
+        </iframe>
       </div>
     )
   },

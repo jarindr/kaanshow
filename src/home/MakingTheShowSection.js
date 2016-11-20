@@ -6,14 +6,25 @@ import React from 'react'
 import Title from '../components/Title'
 import styles from './MakingTheShowSection.styl'
 const DATA = [
-  {url: 'https://www.youtube.com/watch?v=QC4xnfh_-Eo', caption: 'hello', type: 'video'},
-  {url: 'https://www.youtube.com/watch?v=Ejj2t6tJfEU', caption: 'hello', type: 'video'},
-  {url: require('../assets/images/characters/GinnaRee-small.jpg'), caption: 'wow', type: 'image'},
-  {url: 'https://www.youtube.com/watch?v=tgQpUTDBI1A', caption: 'hello', type: 'video'},
-  {url: 'https://www.youtube.com/watch?v=PFRJvHXaNBk', caption: 'hello', type: 'video'},
-  {url: require('../assets/images/characters/chalawan-small.jpg'), caption: 'wow', type: 'image'},
-  {url: 'https://www.youtube.com/watch?v=cL4uhaQ58Rk', caption: 'hello', type: 'video'},
-  {url: 'https://www.youtube.com/watch?v=xIY_b10iehY', caption: 'hello', type: 'video'}
+  {url: 'https://www.youtube.com/watch?v=QC4xnfh_-Eo',
+    caption: 'od tempor incididunt ut labore et dolore.',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'video'
+  },
+  {url: 'https://www.youtube.com/watch?v=Ejj2t6tJfEU', caption: 'od tempor incididunt ut labore et dolore.',
+  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'video'},
+  {url: require('../assets/images/characters/GinnaRee-small.jpg'), caption: 'od tempor incididunt ut labore et dolore.',
+  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'image'},
+  {url: 'https://www.youtube.com/watch?v=tgQpUTDBI1A', caption: 'od tempor incididunt ut labore et dolore.',
+  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'video'},
+  {url: 'https://www.youtube.com/watch?v=PFRJvHXaNBk', caption: 'od tempor incididunt ut labore et dolore.',
+  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'video'},
+  {url: require('../assets/images/characters/chalawan-small.jpg'), caption: 'od tempor incididunt ut labore et dolore.',
+  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'image'},
+  {url: 'https://www.youtube.com/watch?v=cL4uhaQ58Rk', caption: 'od tempor incididunt ut labore et dolore.',
+  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'video'},
+  {url: 'https://www.youtube.com/watch?v=xIY_b10iehY', caption: 'od tempor incididunt ut labore et dolore.',
+  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'video'}
 ]
 
 const customStyles = {
