@@ -1,3 +1,4 @@
+import Footer from '../components/Footer'
 import IntroSection from './IntroSection'
 import KaanClipSection from './KaanClipSection'
 import KaanGallerySection from './KaanGallerySection'
@@ -66,26 +67,29 @@ const MainPage = React.createClass({
   },
   render () {
     return (
-      <div className={styles.container}>
-        {this.renderSideNav()}
-        <div ref='INTRO TO KAAN' id='INTRO-TO-KAAN'>
-          <IntroSection />
+      <div>
+        <div className={styles.container}>
+          {this.renderSideNav()}
+          <div ref='INTRO TO KAAN' id='INTRO-TO-KAAN'>
+            <IntroSection />
+          </div>
+          <div ref='KAAN CLIPS' id='KAAN-CLIPS'>
+            <KaanClipSection />
+          </div>
+          <div ref='THE STORY' id='THE-STORY'>
+            <TheStorySection />
+          </div>
+          <div ref='WORLD OF KAAN' id='WORLD-OF-KAAN'>
+            <WorldOfKaanSection />
+          </div>
+          <div ref='KAAN GALLERY' id='KAAN-GALLERY'>
+            <KaanGallerySection />
+          </div>
+          <div ref='MAKING THE SHOW' id='MAKING-THE-SHOW'>
+            <MakingTheShowSection />
+          </div>
         </div>
-        <div ref='KAAN CLIPS' id='KAAN-CLIPS'>
-          <KaanClipSection />
-        </div>
-        <div ref='THE STORY' id='THE-STORY'>
-          <TheStorySection />
-        </div>
-        <div ref='WORLD OF KAAN' id='WORLD-OF-KAAN'>
-          <WorldOfKaanSection />
-        </div>
-        <div ref='KAAN GALLERY' id='KAAN-GALLERY'>
-          <KaanGallerySection />
-        </div>
-        <div ref='MAKING THE SHOW' id='MAKING-THE-SHOW'>
-          <MakingTheShowSection />
-        </div>
+        <Footer />
       </div>
     )
   }

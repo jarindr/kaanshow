@@ -28,7 +28,6 @@ const Layout = React.createClass({
         />
         <NavBar />
         {this.props.children}
-        <Footer />
       </div>
     )
   }
