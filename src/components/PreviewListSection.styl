@@ -12,18 +12,6 @@
   position: relative;
   height: 600px
   overflow: hidden
-  .playButton
-    position: absolute
-    width: 100%
-    left: 0
-    top: 50%
-    transform: translateY(-50%)
-    z-index: 2
-    width: 50px
-    left: 0
-    right: 0
-    margin: 0 auto
-    cursor: pointer;
   .fb, .twitter
     position: absolute;
     bottom: 0
@@ -76,6 +64,22 @@
   top: 0
   bottom: 0
   z-index: 1
+.captionContainer
+  position: absolute;
+  z-index: 20
+  top: 50%
+  transform: translateY(-50%);
+  left: 0
+  right: 0
+  margin: 0 auto
+  cursor: pointer;
+  .caption
+    text-align: center;
+    font-size: 20px
+    font-family: montserrat
+    font-weight: 200
+    text-transform: uppercase;
+    margin-bottom: 10px
 @media screen and (max-width 768px)
   .container
     padding: 0

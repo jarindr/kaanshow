@@ -50,7 +50,10 @@ const PreviewListSection = React.createClass({
     return (
       <div className={styles.mainImagePreviewContainer}>
         <img src={require('../assets/images/closeButton.png')} className={styles.closeModal} onClick={this.props.closeModal} />
-        <img src={require('../assets/images/play_new.png')} className={styles.playButton} onClick={this.onClickPlay} />
+          <div className={styles.captionContainer}>
+            <div className={styles.caption}>Making the show od tempor incididunt ut labore et dolore</div>
+            <img src={require('../assets/images/play_new.png')} className={styles.playButton} onClick={this.onClickPlay} />
+          </div>
         <img src={require('../assets/images/twitter.png')} className={styles.twitter} onClick={this.onClickPlay} />
         <img src={require('../assets/images/fb.png')} className={styles.fb} onClick={this.onClickPlay} />
         <div className={styles.imageOverlay}></div>
