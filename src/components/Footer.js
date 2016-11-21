@@ -67,12 +67,11 @@ const Footer = React.createClass({
               <ul>
                 <li>INFO & DOWNLOAD</li>
                 <li>NEWS</li>
-                <li>DOWNLOAD</li>
-                <li>PHOTO, FACT SHEET, CLIPS</li>
+                <li><Link to='/info/download/'>DOWNLOAD PHOTO, FACT SHEET, CLIPS</Link></li>
                 <li><Link to='/info/term/'>TERM & CONDITION</Link></li>
                 <li><Link to='/info/disclaimer/'>DISCLIMER</Link></li>
                 <li><Link to='/info/privacy/'>PRIVACY</Link></li>
-                <li>FAQ</li>
+                <li><Link to='/info/faq/'>FAQ</Link></li>
               </ul>
             </div>
             <div className={styles.siteMapBlock}>
@@ -115,7 +114,7 @@ const Footer = React.createClass({
                 <li>
                   CONTACT@PUNJALUCK.COM
                 </li>
-                <li>SOCIAL</li>
+                <li className={styles.socialText}>SOCIAL</li>
                 <li className={styles.social}>
                   <img src={require('../assets/images/fb_footer.png')} />
                   <img src={require('../assets/images/twitter_footer.png')} />
