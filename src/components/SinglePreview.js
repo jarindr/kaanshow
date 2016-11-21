@@ -29,7 +29,10 @@ const SinglePreview = React.createClass({
           backgroundPosition: 'center'
         }}
         >
-        <img src={require('../assets/images/play_new.png')} className={styles.playButton} />
+        <div className={styles.captionContainer}>
+          <div className={styles.caption}>Making the show od tempor incididunt ut labore et dolore</div>
+          <img src={require('../assets/images/play_new.png')} className={styles.playButton} />
+        </div>
         <div className={styles.overlay} />
       </div>
     )
