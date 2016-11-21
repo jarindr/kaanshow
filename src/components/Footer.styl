@@ -3,6 +3,9 @@
   width: calc(100% / 6)
   height: 200px
   display: inline-block;
+  cursor: pointer;
+.socialBlock:hover > .socialCaption
+  opacity: 1
 .socialCaption
   position: absolute;
   left: 0
@@ -11,7 +14,20 @@
   top: 0
   width: 100%
   height: 100%
-  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white
+  transition: 0.4s
+  padding: 20px
+  font-family: montserrat
+  p
+    font-size: 14px
+.footerBar
+  color: white
+  font-family: Montserrat;
+  font-size: 12px
+  background: #222222
+  padding: 15px 5%
 .newsLetter
   text-align: center
   padding: 40px 5%
@@ -110,6 +126,12 @@
         &::placeholder
           font-family: Montserrat
           font-size: 12px
+.social
+  margin-top: 30px
+  opacity: 1!important
+  img
+    height: 25px
+    margin-right: 20px
 @media screen and (max-width:768px)
   .siteMapContact
     .siteMap

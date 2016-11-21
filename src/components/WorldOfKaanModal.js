@@ -55,7 +55,8 @@ const WorldOfKaanModal = React.createClass({
           </div>
           <div className={styles.contentContainer}>
             <div className={styles.closeModalContainer}>
-              <div onClick={this.props.closeModal} className={styles.closeModal}>X</div> <span style={{float: 'right'}}>BACK TO WORLD</span>
+              <img src={require('../assets/images/closeButtonBlack.png')} onClick={this.props.closeModal} className={styles.closeModal} />
+              <span className={styles.backWorld}>BACK TO WORLD</span>
             </div>
             <div className={styles.content}>
               <h1>{this.props.title}</h1>

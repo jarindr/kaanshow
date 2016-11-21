@@ -4,7 +4,11 @@ const Footer = React.createClass({
   renderSocialBlock () {
     return (
       <div className={styles.socialBlock} style={{background: `url(${require('../assets/images/KAAN_Logo-for-Programmer_ch.png')}) center`}}>
-        <div className={styles.socialCaption}></div>
+        <div className={styles.socialCaption}>
+          <img src={require('../assets/images/ig_hover.png')} width='20' />
+          <div>@random_guy</div>
+          <p>asdas asd asd asd asd asd asd asdas dasd asdas dasdasd asd asd asd asd asd</p>
+        </div>
       </div>
     )
   },
@@ -83,7 +87,8 @@ const Footer = React.createClass({
               <ul>
                 <li>CONTACT</li>
                 <li>
-                  ADDRESS<br />
+                  ADDRESS
+                  <br />
                   <span style={{fontFamily: 'kanit'}}>บริษัท ปัญลักษณ์ พาสุข จำกัด เลขที่ 202 อาคาร เลอ คองคอร์ด ห้อง 1601 ชั้น 16 ถ.รัชดาภิเษก แขวงห้วยขวาง กรุงเทพฯ 10310</span>
                 </li>
               </ul>
@@ -109,6 +114,12 @@ const Footer = React.createClass({
                 <li>
                   CONTACT@PUNJALUCK.COM
                 </li>
+                <li>SOCIAL</li>
+                <li className={styles.social}>
+                  <img src={require('../assets/images/fb_footer.png')} />
+                  <img src={require('../assets/images/twitter_footer.png')} />
+                  <img src={require('../assets/images/ig_footer.png')} />
+                </li>
               </ul>
             </div>
             <div className={styles.contactFrom}>
@@ -121,6 +132,10 @@ const Footer = React.createClass({
               </ul>
             </div>
           </div>
+        </div>
+        <div className={styles.footerBar}>
+          <span>© 2016 PANJALUCK PASUK CO., LTD. ALL RIGHTS RESERVED.</span>
+          <span style={{float: 'right'}}>TO THE TOP ^</span>
         </div>
       </div>
     )
