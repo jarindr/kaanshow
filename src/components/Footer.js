@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import React from 'react'
 import styles from './Footer.styl'
 const Footer = React.createClass({
@@ -68,9 +69,9 @@ const Footer = React.createClass({
                 <li>NEWS</li>
                 <li>DOWNLOAD</li>
                 <li>PHOTO, FACT SHEET, CLIPS</li>
-                <li>TERM & CONDITION</li>
-                <li>DISCLIMER</li>
-                <li>PRIVACY</li>
+                <li><Link to='/info/term/'>TERM & CONDITION</Link></li>
+                <li><Link to='/info/disclaimer/'>DISCLIMER</Link></li>
+                <li><Link to='/info/privacy/'>PRIVACY</Link></li>
                 <li>FAQ</li>
               </ul>
             </div>
