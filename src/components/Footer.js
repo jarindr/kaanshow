@@ -1,10 +1,19 @@
 import { Link } from 'react-router'
 import React from 'react'
 import styles from './Footer.styl'
+
+const footerPics = [
+  require('../assets/images/footer_dummy/1.png'),
+  require('../assets/images/footer_dummy/2.png'),
+  require('../assets/images/footer_dummy/3.png'),
+  require('../assets/images/footer_dummy/4.png'),
+  require('../assets/images/footer_dummy/5.png'),
+  require('../assets/images/footer_dummy/6.png')
+]
 const Footer = React.createClass({
-  renderSocialBlock () {
+  renderSocialBlock (pic) {
     return (
-      <div className={styles.socialBlock} style={{background: `url(${require('../assets/images/KAAN_Logo-for-Programmer_ch.png')}) center`}}>
+      <div className={styles.socialBlock} style={{background: `url(${pic}) center no-repeat`, backgroundSize: '102%'}}>
         <div className={styles.socialCaption}>
           <img src={require('../assets/images/ig_hover.png')} width='20' />
           <div>@random_guy</div>
@@ -20,18 +29,7 @@ const Footer = React.createClass({
     return (
       <div className={styles.container} id='footer-hack'>
         <div className={styles.socialFeed}>
-          {this.renderSocialBlock()}
-          {this.renderSocialBlock()}
-          {this.renderSocialBlock()}
-          {this.renderSocialBlock()}
-          {this.renderSocialBlock()}
-          {this.renderSocialBlock()}
-          {this.renderSocialBlock()}
-          {this.renderSocialBlock()}
-          {this.renderSocialBlock()}
-          {this.renderSocialBlock()}
-          {this.renderSocialBlock()}
-          {this.renderSocialBlock()}
+          {footerPics.map(x => this.renderSocialBlock(x))}
         </div>
         <div className={styles.newsLetter}>
           <h1>JOIN OUR NEWSLETTER</h1>
