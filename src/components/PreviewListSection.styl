@@ -49,8 +49,15 @@
   overflow-y: scroll;
 .previewBlock
   cursor: pointer;
+  position: relative;
+  height: 200px
   img
-    width: 100%
+    position: absolute;
+    left: 0
+    right: 0
+    top: 50%
+    margin: 0 auto
+    transform: translateY(-50%);
 .videoContainer
   position: static;
   height: 100%

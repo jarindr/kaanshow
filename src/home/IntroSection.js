@@ -6,7 +6,7 @@ const IntroSection = React.createClass({
   render () {
     return (
       <div className={styles.container}>
-        <Title text='A SPECTACULAR CENIMATIC' />
+        <Title text='A SPECTACULAR CINEMATIC' />
         <Title text='LIVE EXPERIENCE' />
         <p>
           A SPECTACULAR CINEMATIC LIVE EXPERIENCE KAAN คือ การแสดงที่ผสานเทคนิคพิเศษระดับโลกเข้ากับภาพยนตร์และการแสดงสดบนเวที

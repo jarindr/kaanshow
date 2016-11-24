@@ -3,7 +3,7 @@ const data = [
     title: 'ผีเสื้อพิโรธ',
     subTitle: 'THE WARTH OF THE SEA GIANTESS',
     backgroundImage: require('./assets/worldOfKaan/01.jpg'),
-    images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_01-เกาะแก้วพิสดาร_r1_ch.jpg')],
+    images: [require('./assets/worldOfKaan/bg1.jpg')],
     content: `ณ เกาะแก้วพิสดาร นางอสูรร้ายแห่งท้องทะเลกำลังตื่นจากนิทราการผจญภัยเหนือจินตนาการได้เริ่มขึ้นแล้ว! <br><br>เปิดโลกแห่งจินตนาการไปกับการผจญภัยกลางมหาสมุทรอันเวิ้งว้าง
               ของเกาะแก้วพิสดาร ขี่หลังม้านิลมังกรท่องไปในโลกใหม่ตื่นตาตื่นใจกับเรือสำเภาลำยักษ์
               พร้อมสนุกสนานไปกับการผจญภัยของพระอภัยมณีและเหล่าลูกเรือพบกับการร่ายรำอันวิจิตรบนผืนน้ำของฝูงนางเงือก
@@ -13,7 +13,7 @@ const data = [
     title: 'ปราโมทย์หิมพานต์',
     subTitle: 'The Colors of Himmavanta',
     backgroundImage: require('./assets/worldOfKaan/02.jpg'),
-    images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_02-ป่าหิมพานต์_r1_ch.jpg')],
+    images: [require('./assets/worldOfKaan/bg2.jpg')],
     content: `เบื้องหลังโชว์ตระการตาของสรรพสัตว์และนางกินรีแห่งหิมพานต์ภัยร้ายได้คืบคลานเข้ามาแบบไม่ทันให้ตั้งตัว!<br><br>
               ลัดเลาะสู่มิติอันเร้นลับ แฝงกายให้กลมกลืนกับเหล่าสรรพสัตว์แห่งวรรณคดี ที่จะชวนไปตื่นตาตื่นใจกับความงดงามที่น่าอัศจรรย์ของป่าหิมพานต์
               พร้อมตื่นตะลึงกับความงดงามของเหล่าฝูงกินรี ที่กำลังโบนบินอยู่บนท้องฟ้าอย่างอิสระเสรี
@@ -23,7 +23,7 @@ const data = [
     title: 'เดิมพันเมืองสามล',
     subTitle: 'The Wager for the Ivory Kingdom',
     backgroundImage: require('./assets/worldOfKaan/03.jpg'),
-    images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_03-เมืองสามล_r1_ch.jpg')],
+    images: [require('./assets/worldOfKaan/bg3.jpg')],
     content: `ขบวนเจ้าชายต่างดั้นด้นมาเพื่อรับมาลัยเสี่ยงทาย หารู้ไม่ว่ามาลัยที่ทุกคนหมายปองนั้น มีเดิมพันเป็น “ชีวิต”<br><br>
               ร่วมสังสรรค์กับงานรื่นเริงอันยิ่งใหญ่ตระการตา สนุกสนานไปกับขบวนขันหมากของเจ้าชายทั้ง 6 ที่มาพร้อมระบำ 5 ภาค
               ที่ร่ายรำถ่ายทอดวัฒนธรรมประยุกต์ของแต่ละภูมิภาคของไทยได้อย่างน่าประทับใจ แล้วเปลี่ยนอารมณ์อย่างฉับพลันจาก “สมรภูมิรัก” สู่
@@ -33,7 +33,7 @@ const data = [
     title: 'กลแก้วเมขลา',
     subTitle: 'The Chase of Lightning',
     backgroundImage: require('./assets/worldOfKaan/04.jpg'),
-    images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_04-กลางเวหา_r1_ch.jpg')],
+    images: [require('./assets/worldOfKaan/bg4.jpg')],
     content: `เมฆดำคำราม ฟาดอสนีบาตต่างเส้นแส้การร่ายรำของเทพธิดากลายเป็นเกมไล่ล่ากลางเวหา<br><br>
               ตื่นเต้นไปบนเวหากับการไล่ล่าระหว่างเมขลาและรามสูร สายฟ้าต่างฟาดฟันประหัตประหารส่งเสียงคำรามกระหึ่มไปทั่วท้องนภา
               ตื่นตาไปกับลีลากลางอากาศของเมขลา ที่ผสมผสานความแข็งแกร่งและความอ่อนช้อยได้อย่างมีเสน่ห์ และระทึกไปกับความน่าเกรงขามของรามสูร
@@ -43,7 +43,7 @@ const data = [
     title: 'ปราบพญาชาละวัน',
     subTitle: 'The Underwater Abyss',
     backgroundImage: require('./assets/worldOfKaan/05.jpg'),
-    images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_05-วังบาดาล_r1_ch.jpg')],
+    images: [require('./assets/worldOfKaan/bg5.jpg')],
     content: `ใต้ผืนน้ำสีคราม มีวังบาดาลของพญาจระเข้ยักษ์ซ่อนอยู่ใครก็ตามที่หลงเข้าไปในนั้น อย่าหวังว่าจะมีชีวิตรอดกลับมา<br><br>
               ดำดิ่งสู่ก้นลึกของผืนนที แหวกสายวารีสู่วังบาดาล นครเร้นลับที่ซ่อนตัวอยู่ใต้ท้องน้ำ ตื่นตะลึงไปกับพญาชาละวัน
               จระเข้ร่างมหึมาที่ไล่ล่าศัตรูหมายปลิดชีพอย่างไม่ลดละ มันส์ไปกับฉากต่อสู้ของไกรทองกับเหล่าสมุนชาละวันที่ปะทะฝีมือแบบตาต่อตาฟันต่อฟันกันอย่างดุเดือด์`
@@ -52,7 +52,7 @@ const data = [
     title: 'ทศกัณฐ์อหังการ',
     subTitle: 'The Cataclysm',
     backgroundImage: require('./assets/worldOfKaan/06.jpg'),
-    images: [require('./assets/worldOfKaan/KAAN_World-of-KAAN_Thumnail-(500x350px)_06-สมรภูมิจักรกล_r1_ch.jpg')],
+    images: [require('./assets/worldOfKaan/bg6.jpg')],
     content: `สงครามจักรกลอันยาวนานนับร้อยปีจะสิ้นสุดด้วยคำว่า มีชัย หรือ ปราชัยคานเท่านั้นที่จะเป็นผู้ตัดสิน<br><br>
               จากดินแดนอันรุ่งเรืองถูกถล่มจนทลายกลายเป็นดินแดนอันร่วงโรย มหาสงครามแห่งรามเกียรติ์ไร้วี่แววยุติ
               เปลวเพลิงแห่งสงครามลุกโชนไปทั่วพื้นที่ดังไฟนรกโลกันต์ที่ไม่มีวันดับ พระราม พระลักษณ์ หนุมาน และเหล่าทัพลิง

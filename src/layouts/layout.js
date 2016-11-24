@@ -1,6 +1,5 @@
 import './Layout.global.styl'
 
-import Footer from '../components/Footer'
 import Helmet from 'react-helmet'
 import NavBar from '../components/NavBar'
 import React from 'react'
@@ -15,10 +14,11 @@ const Layout = React.createClass({
         <Helmet
           titleTemplate=''
           defaultTitle=''
-          script={[]}
+          script={[{
+          }]}
           link={[
             {
-              href: 'https://fonts.googleapis.com/css?family=Kanit:200,400,700|Montserrat:400,700',
+              href: 'https://fonts.googleapis.com/css?family=Kanit:200,400,700',
               rel: 'stylesheet',
               type: 'text/css'
             }

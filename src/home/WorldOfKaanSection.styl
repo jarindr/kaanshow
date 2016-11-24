@@ -1,5 +1,5 @@
 .block
-  width: 33.33%
+  width: 280px
   height: 440px
   display: inline-block;
   overflow: hidden;
@@ -7,9 +7,35 @@
   color: white
   transition: 0.5s
   cursor: pointer;
-  &:hover
-    background-size: 120%!important
-    background-position: center center!important
+  .imageBlock
+    position: absolute;
+    width: 100%
+    left: 0
+    right: 0
+    margin: 0 auto
+    transition: 0.7s
+  .blackOverlay
+    position: absolute;
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: black
+    z-index: 2
+    transition: 0.7s
+    opacity: 0
+  .emptyOverlay
+    position: absolute;
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    z-index: 30
+    background: rgba(0,0,0,0)
+    &:hover ~ .blackOverlay
+      opacity: 0.7
+    &:hover ~ .imageBlock
+      transform: scale(1.3)
   .blockTitle
     position: absolute;
     left: 0
@@ -25,11 +51,11 @@
     font-weight: 700
     max-width: 240px
     .subTitle
-      font-family: Montserrat
+      font-family: montserrat
       font-size: 10px
       font-weight: 200
       letter-spacing: normal;
-      text-transform: uppercase;;
+      text-transform: uppercase;
       margin-top 2px
 .container
   background-color: black
@@ -38,9 +64,18 @@
   padding 80px 20px 40px 20px
   background url('./assets/kaanGallery/KAAN_Website (1280x800px)_05 GalleryBGOnly_Simp_bo_20161116.png') center no-repeat
   background-size: cover;
-  .subTitle
+  h2
     color: white
     margin: 0
+    font-family: montserrat
+    font-weight: 700
+  ::-webkit-scrollbar
+    width: 5px
+  ::-webkit-scrollbar-thumb
+    background: #be9b42
+    border-radius: 5px
+  ::-webkit-scrollbar-track
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(93,93,93,1) 41%, rgba(93,93,93,1) 60%, rgba(0,0,0,0) 61%, rgba(0,0,0,0) 100%);
 .blocksContainer
   margin: 40px auto 0 auto
   max-width: 850px

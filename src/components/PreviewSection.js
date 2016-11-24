@@ -1,8 +1,8 @@
+import $ from 'jquery'
 import FlipMove from 'react-flip-move'
 import React from 'react'
 import getYouTubeID from 'get-youtube-id'
 import styles from './PreviewSection.styl'
-
 const PreviewSection = React.createClass({
   propTypes: {
     data: React.PropTypes.array,
@@ -20,6 +20,9 @@ const PreviewSection = React.createClass({
       currentCategory: category,
       current: 0
     })
+  },
+  componentDidMount () {
+    this.setState({ containerHeight: this.refs.container.offsetHeight / Math.ceil(this.props.data.length / 3) * 2 })
   },
   renderCatagory () {
     const catagories = ['all', ...new Set(this.props.data.map(x => x.type || null))]
@@ -47,13 +50,14 @@ const PreviewSection = React.createClass({
         key={imageUrl}
         className={styles.previewBlock}
         onClick={this.props.onClickPreview.bind(null, data)}
+        id='kuy'
       >
         <div className={styles.imageContainer} style={{background: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
           <img src={require('../assets/images/play_new.png')} className={styles.playButton} hidden={!(/(youtube)/.test(data.url))} />
         </div>
         <div className={styles.caption} hidden={!data.caption}>
           {data.caption}
-          <div style={{opacity: 0.5}}>{data.subCaption || ''}</div>
+          <div style={{opacity: 0.5,marginTop: '4px'}}>{data.subCaption || ''}</div>
         </div>
       </div>
     )
@@ -90,7 +94,7 @@ const PreviewSection = React.createClass({
     return (
       <div className={styles.container}>
         {this.renderCatagory()}
-        <div className={styles.previewBlocksContainer}>
+        <div className={`${styles.previewBlocksContainer} customScrollBar`} ref='container' style={{height: this.state.containerHeight ? this.state.containerHeight : 'auto'}}>
           <FlipMove enterAnimation='fade' leaveAnimation='fade'>
             {this.renderPreviewBlocks()}
           </FlipMove>

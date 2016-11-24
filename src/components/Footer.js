@@ -13,10 +13,19 @@ const Footer = React.createClass({
       </div>
     )
   },
+  onClickToTop () {
+    window.scrollTo(0, 0)
+  },
   render () {
     return (
       <div className={styles.container} id='footer-hack'>
         <div className={styles.socialFeed}>
+          {this.renderSocialBlock()}
+          {this.renderSocialBlock()}
+          {this.renderSocialBlock()}
+          {this.renderSocialBlock()}
+          {this.renderSocialBlock()}
+          {this.renderSocialBlock()}
           {this.renderSocialBlock()}
           {this.renderSocialBlock()}
           {this.renderSocialBlock()}
@@ -114,11 +123,10 @@ const Footer = React.createClass({
                 <li>
                   CONTACT@PUNJALUCK.COM
                 </li>
-                <li className={styles.socialText}>SOCIAL</li>
                 <li className={styles.social}>
                   <img src={require('../assets/images/fb_footer.png')} />
-                  <img src={require('../assets/images/twitter_footer.png')} />
                   <img src={require('../assets/images/ig_footer.png')} />
+                  <img src={require('../assets/images/twitter_footer.png')} />
                 </li>
               </ul>
             </div>
@@ -135,7 +143,7 @@ const Footer = React.createClass({
         </div>
         <div className={styles.footerBar}>
           <span>© 2016 PANJALUCK PASUK CO., LTD. ALL RIGHTS RESERVED.</span>
-          <span style={{float: 'right'}}>TO THE TOP ^</span>
+          <span onClick={this.onClickToTop} style={{float: 'right', cursor: 'pointer'}}>TO THE TOP <img src={require('../assets/images/to_top.png')} style={{width: '15px'}} /></span>
         </div>
       </div>
     )

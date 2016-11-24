@@ -2,9 +2,8 @@ import ImageModalBox from '../components/ImageModal'
 import PreviewSection from '../components/PreviewSection'
 import React from 'react'
 import Title from '../components/Title'
-import { shuffle } from '../utils/Sorting'
 import styles from './KaanGallerySection.styl'
-const DATA = shuffle([
+const DATA = [
   {
     url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_01_ch.png'),
     images: [
@@ -105,7 +104,7 @@ const DATA = shuffle([
     ],
     type: 'special effect'
   }
-])
+]
 
 const KaanClipSection = React.createClass({
   getInitialState () {

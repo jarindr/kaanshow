@@ -21,10 +21,11 @@
   color white
   margin: 0 20px
   cursor: pointer;
+  font-size: 13px
   text-transform: uppercase;
   font-family: Montserrat
 .categoriesContainer
-  margin: 20px 0
+  margin: 10px 0 30px 0
 .playButton
   width: 40px
   left: 0
@@ -36,9 +37,9 @@
 .previewBlocksContainer
   font-size: 0
   max-width: 1050px
-  height: 500px
   overflow: auto;
   margin: 0 auto
+  padding-right: 10px
   text-align: left
 .navigation
   cursor: pointer;
@@ -60,6 +61,13 @@
 .container
   height: 100%
   text-align: center
+  ::-webkit-scrollbar
+    width: 5px
+  ::-webkit-scrollbar-thumb
+    background: #be9b42
+    border-radius: 5px
+  ::-webkit-scrollbar-track
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(93,93,93,1) 41%, rgba(93,93,93,1) 60%, rgba(0,0,0,0) 61%, rgba(0,0,0,0) 100%);
 .navigationContainer
   margin-top: 20px
   text-align: center

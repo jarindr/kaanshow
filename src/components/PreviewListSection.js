@@ -21,11 +21,13 @@ const PreviewListSection = React.createClass({
   renderPreviewBlocks () {
     return this.props.data.map(x => {
       const imageUrl = /(youtube)/.test(x.url)
-        ? `http://img.youtube.com/vi/${getYouTubeID(x.url)}/maxresdefault.jpg`
-        : x.url
+      ? `http://img.youtube.com/vi/${getYouTubeID(x.url)}/maxresdefault.jpg`
+      : x.url
       return (
-        <div key={imageUrl} className={styles.previewBlock} onClick={this.onClickPreviewBlock.bind(null, x)}>
-          <img src={imageUrl} className={styles.previewImage} />
+        <div>
+          <div key={imageUrl} className={styles.previewBlock} onClick={this.onClickPreviewBlock.bind(null, x)} style={{background: `url(${imageUrl}) center no-repeat`, backgroundSize: 'cover'}}>
+            <img src={require('../assets/images/play_new.png')} style={{width: '40px'}} />
+          </div>
           <div className={styles.caption}>
             {x.caption}
             <div style={{opacity: 0.5}}>{x.subCaption.substr(1, 20) || ''}</div>

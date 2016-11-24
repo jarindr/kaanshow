@@ -14,15 +14,10 @@ const Block = React.createClass({
   },
   render () {
     return (
-      <div
-        className={styles.block}
-        onClick={this.props.onClickBlock}
-        style={{
-          background: `url(${this.props.backgroundImage})`,
-          backgroundSize: '100%',
-          backgroundPosition: 'center'
-        }}
-      >
+      <div className={styles.block} onClick={this.props.onClickBlock}>
+        <div className={styles.emptyOverlay}></div>
+        <div className={styles.blackOverlay}></div>
+        <img src={this.props.backgroundImage} className={styles.imageBlock} />
         <div className={styles.blockTitle}>
           {this.props.title}
           <div className={styles.subTitle}>

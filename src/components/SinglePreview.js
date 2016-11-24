@@ -30,7 +30,7 @@ const SinglePreview = React.createClass({
         }}
         >
         <div className={styles.captionContainer}>
-          <div className={styles.caption}>Making the show od tempor incididunt ut labore et dolore</div>
+          <div className={styles.caption}>KAAN A SPECTACULAR CINEMATIC LIVE EXPERIENCE</div>
           <img src={require('../assets/images/play_new.png')} className={styles.playButton} />
         </div>
         <div className={styles.overlay} />
