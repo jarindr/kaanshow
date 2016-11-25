@@ -17,16 +17,28 @@ const MainPage = React.createClass({
       this.checkNavScroll()
     })
   },
+  getInitialState () {
+    return {
+      currentSection: 'INTRO-TO0KAAN',
+      navigateBySide: false
+    }
+  },
   checkNavScroll () {
     const scrollPosition = $(window).scrollTop()
     $(`.${styles.circle}`).each((index, el) => {
       const id = $(el).attr('data-attribute')
-      const $section = $(this.refs[id])
+      const $section = $(`#${id}`)
       const top = $section.offset().top - 81 - 50
       const bottom = top + $section.outerHeight(true)
       if (bottom > scrollPosition && top < scrollPosition) {
         $(el).addClass(styles.white)
-        $(el).siblings(`.${styles.dotNavText}`).addClass(styles.show)
+        if (!this.state.navigateBySide) {
+          $(el).siblings(`.${styles.dotNavText}`).addClass(styles.show)
+        } else if (this.state.navigateBySide && this.state.currentSection === id) {
+          $(el).siblings(`.${styles.dotNavText}`).addClass(styles.show)
+        } else {
+          $(el).siblings(`.${styles.dotNavText}`).removeClass(styles.show)
+        }
       } else {
         $(el).removeClass(styles.white)
         $(el).siblings(`.${styles.dotNavText}`).removeClass(styles.show)
@@ -48,12 +60,17 @@ const MainPage = React.createClass({
       </div>
     )
   },
-  onClickCircle (e) {
-    const id = $(e.currentTarget).attr('data-attribute').replace(/ /g, '-')
-    scrollTo(`#${id}`, {
-      offset: -80,
-      ease: 'inOutExpo',
-      duration: 1500
+  onClickCircle (text, e) {
+    const id = text.replace(/ /g, '-').replace(/<br>/g, '-')
+    this.setState({currentSection: id, navigateBySide: true}, () => {
+      scrollTo(`#${id}`, {
+        offset: -80,
+        ease: 'inOutExpo',
+        duration: 1500
+      })
+      setTimeout(() => {
+        this.setState({navigateBySide: false})
+      }, 1600)
     })
   },
   renderCircle (text, i) {
@@ -61,7 +78,7 @@ const MainPage = React.createClass({
     return (
       <div className={styles.dotNavContainer} key={i}>
         <div className={styles.dotNavText} dangerouslySetInnerHTML={textMarkup()} />
-        <div className={styles.circle} data-attribute={text.replace('<br>', ' ')} onClick={this.onClickCircle}></div>
+        <div className={styles.circle} data-attribute={text.replace('<br>', '-').replace(/ /g, '-')} onClick={this.onClickCircle.bind(null, text)}></div>
       </div>
     )
   },
