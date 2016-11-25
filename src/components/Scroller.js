@@ -7,7 +7,7 @@ const ScrollerBox = React.createClass({
   },
   renderBox (data) {
     const imageUrl = /(youtube)/.test(data.url)
-      ? `http://img.youtube.com/vi/${getYouTubeID(data.url)}/maxresdefault.jpg`
+      ? `https://img.youtube.com/vi/${getYouTubeID(data.url)}/maxresdefault.jpg`
       : data.url
     return (
       <div className={styles.boxContainer}>

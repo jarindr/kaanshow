@@ -21,7 +21,7 @@ const PreviewListSection = React.createClass({
   renderPreviewBlocks () {
     return this.props.data.map(x => {
       const imageUrl = /(youtube)/.test(x.url)
-      ? `http://img.youtube.com/vi/${getYouTubeID(x.url)}/maxresdefault.jpg`
+      ? `https://img.youtube.com/vi/${getYouTubeID(x.url)}/maxresdefault.jpg`
       : x.url
       return (
         <div>

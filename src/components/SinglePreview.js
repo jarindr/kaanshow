@@ -24,7 +24,7 @@ const SinglePreview = React.createClass({
         className={styles.singleVideoContainer}
         onClick={this.onPlayClick}
         style={{
-          background: `url(http://img.youtube.com/vi/${getYouTubeID('https://www.youtube.com/watch?v=nI8baFj05uE')}/maxresdefault.jpg)`,
+          background: `url(https://img.youtube.com/vi/${getYouTubeID('https://www.youtube.com/watch?v=nI8baFj05uE')}/maxresdefault.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
