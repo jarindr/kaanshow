@@ -1,6 +1,7 @@
 import { IndexRoute, Redirect, Route } from 'react-router'
 
 import DisclaimerPage from './info/disclaimer/disclaimerPage'
+import FaqPage from './info/faq/FaqPage'
 import HomePage from '../src/home/HomePage'
 import InfoPage from '../src/info/InfoPage'
 import Layout from '../src/layouts/layout'
@@ -20,7 +21,7 @@ export default (
         <Route path='term' component={TermPage} />
         <Route path='disclaimer' component={DisclaimerPage} />
         <Route path='privacy' component={PrivacyPage} />
-        <Route path='faq' />
+        <Route path='faq' component={FaqPage} />
       </Route>
     </Route>
   </div>
