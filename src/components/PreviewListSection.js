@@ -18,13 +18,13 @@ const PreviewListSection = React.createClass({
       shouldPlay: false
     }
   },
-  onClickFacebookShare (url) {
+  onClickShare (url, type) {
     const $window = $(window)
     const height = $window.height()
     const width = $window.width()
     const top = (height / 2) - 125
     const left = (width / 2) - 300
-    const urlSharer = `https://www.facebook.com/sharer/sharer.php?u=${url}`
+    const urlSharer = type === 'facebook' ? `https://www.facebook.com/sharer/sharer.php?u=${url}` : `https://twitter.com/intent/tweet?url=${url}`
     window.open(urlSharer, 'targetWindow', `toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250,top=${top},left=${left}`)
   },
   renderPreviewBlocks () {
@@ -65,8 +65,8 @@ const PreviewListSection = React.createClass({
           <div className={styles.caption}>Making the show od tempor incididunt ut labore et dolore</div>
           <img src={require('../assets/images/play_new.png')} className={styles.playButton} onClick={this.onClickPlay} />
         </div>
-        <img src={require('../assets/images/twitter.png')} className={styles.twitter} onClick={this.onClickPlay} />
-        <img src={require('../assets/images/fb.png')} className={styles.fb} onClick={this.onClickFacebookShare.bind(null, this.props.current.url)} />
+        <img src={require('../assets/images/twitter.png')} className={styles.twitter} onClick={this.onClickShare.bind(null, this.props.current.url, 'twitter')} />
+        <img src={require('../assets/images/fb.png')} className={styles.fb} onClick={this.onClickShare.bind(null, this.props.current.url, 'facebook')} />
       </div>
     )
   },
@@ -74,8 +74,8 @@ const PreviewListSection = React.createClass({
     return (
       <div className={styles.iframeContainer}>
         <img src={require('../assets/images/closeButton.png')} className={styles.closeModal} onClick={this.props.closeModal} />
-        <img src={require('../assets/images/twitter.png')} className={styles.twitter} onClick={this.onClickPlay} />
-        <img src={require('../assets/images/fb.png')} className={styles.fb} onClick={this.onClickPlay} />
+        <img src={require('../assets/images/twitter.png')} className={styles.twitter} onClick={this.onClickShare.bind(null, this.props.current.url, 'twitter')} />
+        <img src={require('../assets/images/fb.png')} className={styles.fb} onClick={this.onClickShare.bind(null, this.props.current.url, 'facebook')} />
         <iframe
           width="100%"
           height='100%'
