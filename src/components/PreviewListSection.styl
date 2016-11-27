@@ -12,7 +12,19 @@
   position: relative;
   height: 600px
   overflow: hidden
+.mainImagePreviewContainer
+  width: 100%
+  height: 100%
+  .closeModal
+    position: absolute;
+    z-index: 2000
+    cursor: pointer;
+    right 20px
+    width: 30px!important
+    top 10px
+    cursor: pointer;
   .fb, .twitter
+    cursor: pointer;
     position: absolute;
     bottom: 0
     width: 50px
@@ -22,17 +34,8 @@
     right 20px
   .twitter
     right: 80px
-
 .imagePreview
   width: 100%
-.closeModal
-  position: absolute;
-  z-index: 2000
-  cursor: pointer;
-  right 10px
-  width: 30px!important
-  top 10px
-  cursor: pointer;
 .caption
   color: white
   text-align: left;
@@ -63,6 +66,35 @@
   height: 100%
 .iframeContainer
   height: 100%
+  .closeModal
+    transition: 0.5s
+    opacity: 0
+    position: absolute;
+    z-index: 2000
+    cursor: pointer;
+    right 20px
+    width: 30px!important
+    top 10px
+    cursor: pointer;
+  .fb, .twitter
+    transition: 0.5s
+    cursor: pointer;
+    opacity: 0
+    position: absolute;
+    bottom: 0
+    width: 50px
+    bottom: 50px
+    z-index: 10
+  .fb
+    right 20px
+  .twitter
+    right: 80px
+  &:hover > .closeModal
+    opacity: 1
+  &:hover > .fb
+    opacity: 1
+  &:hover > .twitter
+    opacity: 1
 .imageOverlay
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;

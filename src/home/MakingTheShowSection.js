@@ -11,6 +11,11 @@ const DATA = [
     subCaption: 'x ea commodo consequat ex commodo consequat',
     type: 'video'
   },
+  {url: 'https://www.youtube.com/watch?v=nI8baFj05uE',
+    caption: 'od tempor incididunt ut labore et dolore.',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'video'
+  },
   {url: 'https://www.youtube.com/watch?v=Ejj2t6tJfEU', caption: 'od tempor incididunt ut labore et dolore.',
   subCaption: 'x ea commodo consequat ex commodo consequat', type: 'video'},
   {url: require('../assets/images/characters/GinnaRee-small.jpg'), caption: 'od tempor incididunt ut labore et dolore.',

@@ -18,6 +18,15 @@ const PreviewListSection = React.createClass({
       shouldPlay: false
     }
   },
+  onClickFacebookShare (url) {
+    const $window = $(window)
+    const height = $window.height()
+    const width = $window.width()
+    const top = (height / 2) - 125
+    const left = (width / 2) - 300
+    const urlSharer = `https://www.facebook.com/sharer/sharer.php?u=${url}`
+    window.open(urlSharer, 'targetWindow', `toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250,top=${top},left=${left}`)
+  },
   renderPreviewBlocks () {
     return this.props.data.map(x => {
       const imageUrl = /(youtube)/.test(x.url)
@@ -50,26 +59,27 @@ const PreviewListSection = React.createClass({
       ? `https://img.youtube.com/vi/${getYouTubeID(this.props.current.url)}/maxresdefault.jpg`
       : this.props.current.url
     return (
-      <div className={styles.mainImagePreviewContainer}>
+      <div className={styles.mainImagePreviewContainer} style={{background: `url(${imageUrl}) center no-repeat`, backgroundSize: 'cover'}}>
         <img src={require('../assets/images/closeButton.png')} className={styles.closeModal} onClick={this.props.closeModal} />
-          <div className={styles.captionContainer}>
-            <div className={styles.caption}>Making the show od tempor incididunt ut labore et dolore</div>
-            <img src={require('../assets/images/play_new.png')} className={styles.playButton} onClick={this.onClickPlay} />
-          </div>
+        <div className={styles.captionContainer}>
+          <div className={styles.caption}>Making the show od tempor incididunt ut labore et dolore</div>
+          <img src={require('../assets/images/play_new.png')} className={styles.playButton} onClick={this.onClickPlay} />
+        </div>
         <img src={require('../assets/images/twitter.png')} className={styles.twitter} onClick={this.onClickPlay} />
-        <img src={require('../assets/images/fb.png')} className={styles.fb} onClick={this.onClickPlay} />
-        <div className={styles.imageOverlay}></div>
-        <img src={imageUrl} className={styles.imagePreview} />
+        <img src={require('../assets/images/fb.png')} className={styles.fb} onClick={this.onClickFacebookShare.bind(null, this.props.current.url)} />
       </div>
     )
   },
   renderVideoPreview () {
     return (
       <div className={styles.iframeContainer}>
+        <img src={require('../assets/images/closeButton.png')} className={styles.closeModal} onClick={this.props.closeModal} />
+        <img src={require('../assets/images/twitter.png')} className={styles.twitter} onClick={this.onClickPlay} />
+        <img src={require('../assets/images/fb.png')} className={styles.fb} onClick={this.onClickPlay} />
         <iframe
           width="100%"
           height='100%'
-          src={`https://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?rel=0&amp;autoplay=1`}
+          src={`https://www.youtube.com/embed/${getYouTubeID(this.props.current.url)}?theme=dark&color=white&autoplay=1&keyboard=1&autohide=2&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3"frameborder="1"`}
           frameBorder="0"
           allowFullScreen>
         </iframe>

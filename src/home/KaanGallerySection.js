@@ -7,7 +7,8 @@ const DATA = [
   {
     url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_01_ch.png'),
     images: [
-      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_01-Character_ch.png')
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_01-Character_ch.png'),
+      require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_03-Character_ch.png')
     ],
     type: 'show'
   },

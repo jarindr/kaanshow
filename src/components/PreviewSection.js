@@ -57,7 +57,7 @@ const PreviewSection = React.createClass({
         </div>
         <div className={styles.caption} hidden={!data.caption}>
           {data.caption}
-          <div style={{opacity: 0.5,marginTop: '4px'}}>{data.subCaption || ''}</div>
+          <div style={{opacity: 0.5, marginTop: '4px'}}>{data.subCaption || ''}</div>
         </div>
       </div>
     )
