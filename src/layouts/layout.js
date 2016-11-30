@@ -18,9 +18,8 @@ const Layout = React.createClass({
           }]}
           link={[
             {
-              href: 'https://fonts.googleapis.com/css?family=Kanit:200,400,700|Montserrat:400,700',
-              rel: 'stylesheet',
-              type: 'text/css'
+              href: '',
+              rel: 'stylesheet'
             }
           ]}
           meta={[

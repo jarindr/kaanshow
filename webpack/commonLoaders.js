@@ -34,8 +34,6 @@ module.exports = [
   {
     test: /\.(eot|woff2|woff|ttf|otf|)(\?.*)?$/,
     loader: 'file?name=assets/fonts/[hash].[ext]'
-  },
-  { test: /jquery-mousewheel/, loader: "imports?define=>false&this=>window" },
-  { test: /malihu-custom-scrollbar-plugin/, loader: "imports?define=>false&this=>window" }
+  }
 
 ]

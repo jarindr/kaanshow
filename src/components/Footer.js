@@ -8,7 +8,13 @@ const footerPics = [
   require('../assets/images/footer_dummy/3.png'),
   require('../assets/images/footer_dummy/4.png'),
   require('../assets/images/footer_dummy/5.png'),
-  require('../assets/images/footer_dummy/6.png')
+  require('../assets/images/footer_dummy/6.png'),
+  require('../assets/images/footer_dummy/KAAN_Social Feed_Row2_01.png'),
+  require('../assets/images/footer_dummy/KAAN_Social Feed_Row2_02.png'),
+  require('../assets/images/footer_dummy/KAAN_Social Feed_Row2_03.png'),
+  require('../assets/images/footer_dummy/KAAN_Social Feed_Row2_04.png'),
+  require('../assets/images/footer_dummy/KAAN_Social Feed_Row2_05.png'),
+  require('../assets/images/footer_dummy/KAAN_Social Feed_Row2_06.png')
 ]
 const Footer = React.createClass({
   renderSocialBlock (pic) {

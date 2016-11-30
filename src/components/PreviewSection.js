@@ -25,7 +25,7 @@ const PreviewSection = React.createClass({
     this.setState({ containerHeight: this.refs.container.offsetHeight / Math.ceil(this.props.data.length / 3) * 2 })
   },
   renderCatagory () {
-    const catagories = ['all', ...new Set(this.props.data.map(x => x.type || null))]
+    const catagories = ['all', 'character', 'show', 'special effect']
     const elements = catagories.map(x => (
       <span key={x} className={styles.category} style={{opacity: x === this.state.currentCategory ? 1 : 0.5}} onClick={this.onChangeCategory.bind(null, x)}>
         {x}
