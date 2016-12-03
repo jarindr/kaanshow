@@ -1,4 +1,3 @@
-import $ from 'jquery'
 import FlipMove from 'react-flip-move'
 import React from 'react'
 import getYouTubeID from 'get-youtube-id'
@@ -7,27 +6,21 @@ const PreviewSection = React.createClass({
   propTypes: {
     data: React.PropTypes.array,
     onClickPreview: React.PropTypes.func,
-    onChangeCategory: React.PropTypes.func
-  },
-  getInitialState () {
-    return {
-      current: 0,
-      currentCategory: 'all'
-    }
-  },
-  onChangeCategory (category, e) {
-    this.setState({
-      currentCategory: category,
-      current: 0
-    })
+    onChangeCategory: React.PropTypes.func,
+    currentCategory: React.PropTypes.string
   },
   componentDidMount () {
     this.setState({ containerHeight: this.refs.container.offsetHeight / Math.ceil(this.props.data.length / 3) * 2 })
   },
+  getInitialState () {
+    return {
+      containerHeight: 'auto'
+    }
+  },
   renderCatagory () {
-    const catagories = ['all', 'character', 'show', 'special effect']
+    const catagories = ['all', ...new Set(this.props.data.map(x => x.type || null))]
     const elements = catagories.map(x => (
-      <span key={x} className={styles.category} style={{opacity: x === this.state.currentCategory ? 1 : 0.5}} onClick={this.onChangeCategory.bind(null, x)}>
+      <span key={x} className={styles.category} style={{opacity: x === this.props.currentCategory ? 1 : 0.5}} onClick={this.props.onChangeCategory.bind(null, x)}>
         {x}
       </span>
     ))
@@ -49,8 +42,7 @@ const PreviewSection = React.createClass({
       <div
         key={imageUrl}
         className={styles.previewBlock}
-        onClick={this.props.onClickPreview.bind(null, data)}
-        id='kuy'
+        onClick={this.props.onClickPreview.bind(null, i)}
       >
         <div className={styles.imageContainer} style={{background: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
           <img src={require('../assets/images/play_new.png')} className={styles.playButton} hidden={!(/(youtube)/.test(data.url))} />
@@ -64,7 +56,7 @@ const PreviewSection = React.createClass({
   },
   getFilterdData () {
     return this.props.data
-    .filter(x => this.state.currentCategory === 'all' ? true : x.type === this.state.currentCategory)
+    .filter(x => this.props.currentCategory === 'all' ? true : x.type === this.props.currentCategory)
   },
   renderPreviewBlocks () {
     return this.getFilterdData()

@@ -24,28 +24,12 @@ const customStyles = {
 
 const ImageModalBox = React.createClass({
   propTypes: {
-    images: React.PropTypes.array,
+    image: React.PropTypes.string,
     isModalOpen: React.PropTypes.bool.isRequired,
-    closeModal: React.PropTypes.func.isRequired
-  },
-  getInitialState () {
-    return {
-      current: 0
-    }
-  },
-  onClickNext () {
-    if (this.state.current + 1 > this.props.images.length - 1) {
-      this.setState({current: 0})
-    } else {
-      this.setState({current: this.state.current + 1})
-    }
-  },
-  onClickPrev () {
-    if (this.state.current - 1 < 0) {
-      this.setState({current: this.props.images.length - 1})
-    } else {
-      this.setState({current: this.state.current - 1})
-    }
+    closeModal: React.PropTypes.func.isRequired,
+    current: React.PropTypes.number.isRequired,
+    onClickNext: React.PropTypes.func.isRequired,
+    onClickPrev: React.PropTypes.func.isRequired
   },
   closeModal () {
     this.props.closeModal()
@@ -60,9 +44,9 @@ const ImageModalBox = React.createClass({
       >
         <div className={styles.container}>
           <img src={require('../assets/images/closeButtonBlack.png')} className={styles.closeButton} onClick={this.closeModal} />
-          <img src={require('../assets/images/next.png')} className={styles.arrowLeft} onClick={this.onClickNext} />
-          <img src={this.props.images[this.state.current]} className={styles.imageShow} />
-          <img src={require('../assets/images/next.png')} className={styles.arrowRight}onClick={this.onClickPrev} />
+          <img src={require('../assets/images/next.png')} className={styles.arrowLeft} onClick={this.props.onClickPrev} />
+          <img src={this.props.image} className={styles.imageShow} />
+          <img src={require('../assets/images/next.png')} className={styles.arrowRight}onClick={this.props.onClickNext} />
         </div>
       </Modal>
     )

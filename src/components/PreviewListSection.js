@@ -28,13 +28,13 @@ const PreviewListSection = React.createClass({
     window.open(urlSharer, 'targetWindow', `toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250,top=${top},left=${left}`)
   },
   renderPreviewBlocks () {
-    return this.props.data.map(x => {
+    return this.props.data.map((x,i) => {
       const imageUrl = /(youtube)/.test(x.url)
       ? `https://img.youtube.com/vi/${getYouTubeID(x.url)}/maxresdefault.jpg`
       : x.url
       return (
         <div>
-          <div key={imageUrl} className={styles.previewBlock} onClick={this.onClickPreviewBlock.bind(null, x)} style={{background: `url(${imageUrl}) center no-repeat`, backgroundSize: 'cover'}}>
+          <div key={imageUrl} className={styles.previewBlock} onClick={this.onClickPreviewBlock.bind(null, i)} style={{background: `url(${imageUrl}) center no-repeat`, backgroundSize: 'cover'}}>
             <img src={require('../assets/images/play_new.png')} style={{width: '40px'}} />
           </div>
           <div className={styles.caption}>

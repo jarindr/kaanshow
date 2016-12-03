@@ -6,30 +6,60 @@ import React from 'react'
 import Title from '../components/Title'
 import styles from './MakingTheShowSection.styl'
 const DATA = [
-  {url: 'https://www.youtube.com/watch?v=QC4xnfh_-Eo',
+  {
+    url: 'https: //www.youtube.com/watch?v=QC4xnfh_-Eo',
     caption: 'od tempor incididunt ut labore et dolore.',
     subCaption: 'x ea commodo consequat ex commodo consequat',
     type: 'video'
   },
-  {url: 'https://www.youtube.com/watch?v=nI8baFj05uE',
+  {
+    url: 'https: //www.youtube.com/watch?v=nI8baFj05uE',
     caption: 'od tempor incididunt ut labore et dolore.',
     subCaption: 'x ea commodo consequat ex commodo consequat',
     type: 'video'
   },
-  {url: 'https://www.youtube.com/watch?v=Ejj2t6tJfEU', caption: 'od tempor incididunt ut labore et dolore.',
-  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'video'},
-  {url: require('../assets/images/characters/GinnaRee-small.jpg'), caption: 'od tempor incididunt ut labore et dolore.',
-  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'image'},
-  {url: 'https://www.youtube.com/watch?v=tgQpUTDBI1A', caption: 'od tempor incididunt ut labore et dolore.',
-  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'video'},
-  {url: 'https://www.youtube.com/watch?v=PFRJvHXaNBk', caption: 'od tempor incididunt ut labore et dolore.',
-  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'video'},
-  {url: require('../assets/images/characters/chalawan-small.jpg'), caption: 'od tempor incididunt ut labore et dolore.',
-  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'image'},
-  {url: 'https://www.youtube.com/watch?v=cL4uhaQ58Rk', caption: 'od tempor incididunt ut labore et dolore.',
-  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'video'},
-  {url: 'https://www.youtube.com/watch?v=xIY_b10iehY', caption: 'od tempor incididunt ut labore et dolore.',
-  subCaption: 'x ea commodo consequat ex commodo consequat', type: 'video'}
+  {
+    url: 'https: //www.youtube.com/watch?v=Ejj2t6tJfEU',
+    caption: 'od tempor incididunt ut labore et dolore.',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'video'
+  },
+  {
+    url: require('../assets/images/characters/GinnaRee-small.jpg'),
+    caption: 'od tempor incididunt ut labore et dolore.',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'image'
+  },
+  {
+    url: require('../assets/images/characters/chalawan-small.jpg'),
+    caption: 'od tempor incididunt ut labore et dolore.',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'image'
+  },
+  {
+    url: 'https: //www.youtube.com/watch?v=tgQpUTDBI1A',
+    caption: 'od tempor incididunt ut labore et dolore.',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'video'
+  },
+  {
+    url: 'https: //www.youtube.com/watch?v=PFRJvHXaNBk',
+    caption: 'od tempor incididunt ut labore et dolore.',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'video'
+  },
+  {
+    url: 'https: //www.youtube.com/watch?v=cL4uhaQ58Rk',
+    caption: 'od tempor incididunt ut labore et dolore.',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'video'
+  },
+  {
+    url: 'https: //www.youtube.com/watch?v=xIY_b10iehY',
+    caption: 'od tempor incididunt ut labore et dolore.',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'video'
+  }
 ]
 
 const customStyles = {
@@ -50,14 +80,38 @@ const MakingTheShowSection = React.createClass({
   getInitialState () {
     return {
       isModalOpen: false,
-      current: ''
+      current: 0,
+      currentCategory: 'all',
+      filteredData: this.getFilterdData('all')
     }
   },
-  onClickPreview (data, e) {
-    this.setState({ isModalOpen: true, current: data })
+  onClickPreview (i, e) {
+    this.setState({ isModalOpen: true, current: i })
   },
   closeModal () {
     this.setState({ isModalOpen: false })
+  },
+  onChangeCategory (category) {
+    this.setState({currentCategory: category, filteredData: this.getFilterdData(category)})
+  },
+  getFilterdData (category) {
+    return category === 'all'
+    ? DATA
+    : DATA.filter(x => x.type === category)
+  },
+  onClickNext () {
+    if (this.state.current + 1 > this.state.filteredData.length - 1) {
+      this.setState({current: 0})
+    } else {
+      this.setState({current: this.state.current + 1})
+    }
+  },
+  onClickPrev () {
+    if (this.state.current - 1 < 0) {
+      this.setState({current: this.state.filteredData.length - 1})
+    } else {
+      this.setState({current: this.state.current - 1})
+    }
   },
   renderVideoModal () {
     return (
@@ -69,18 +123,21 @@ const MakingTheShowSection = React.createClass({
         <PreviewListSection
           data={DATA.filter(x => /youtube/.test(x.url))}
           onClickPreview={this.onClickPreview}
-          current={this.state.current}
+          current={this.state.filteredData[this.state.current]}
           closeModal={this.closeModal}
         />
       </Modal>
     )
   },
-  renderImageModal (data) {
+  renderImageModal () {
     return (
       <ImageModalBox
         isModalOpen={this.state.isModalOpen}
         closeModal={this.closeModal}
-        images={[this.state.current.url]}
+        image={this.state.filteredData[this.state.current].url}
+        current={this.state.current}
+        onClickNext={this.onClickNext}
+        onClickPrev={this.onClickPrev}
       />
     )
   },
@@ -96,9 +153,14 @@ const MakingTheShowSection = React.createClass({
           เพื่อให้โชว์ 90 นาทีนี้ เป็นโชว์ที่จะสร้างความประทับใจให้กับผู้ชมตลอดไป
         </p>
         <div className={styles.previewSectionContainer}>
-          <PreviewSection data={DATA} onClickPreview={this.onClickPreview} />
+          <PreviewSection
+            data={DATA}
+            onClickPreview={this.onClickPreview}
+            currentCategory={this.state.currentCategory}
+            onChangeCategory={this.onChangeCategory}
+          />
         </div>
-        {/youtube/.test(this.state.current.url) ? this.renderVideoModal() : this.renderImageModal()}
+        {/youtube/.test(this.state.filteredData[this.state.current].url) ? this.renderVideoModal() : this.renderImageModal()}
       </div>
     )
   }
