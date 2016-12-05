@@ -16,7 +16,7 @@ const SinglePreview = React.createClass({
       }
     })
   },
-  componentShouldUpdate (nextProps, nextState) {
+  shouldComponentUpdate (nextProps, nextState) {
     return nextProps.isPlayed !== this.state.isPlayed
   },
   onClickShare (url, type) {

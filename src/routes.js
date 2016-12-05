@@ -10,12 +10,20 @@ import Layout from '../src/layouts/layout'
 import PrivacyPage from './info/privacy/privacyPage'
 import React from 'react'
 import TermPage from './info/term/termPage'
+import TicketForm from './ticket/TicketForm'
+import TicketPage from './ticket/TicketPage'
+import TicketType from './ticket/TicketType'
 
 export default (
   <div>
     {/* main pages */}
     <Route path='/' component={Layout}>
       <IndexRoute component={HomePage} />
+      <Route path='ticket' component={TicketPage}>
+        <Route path='type' component={TicketType} />
+        <Route path='form' component={TicketForm} />
+      </Route>
+
       <Redirect from="info" to="info/privacy" />
       <Route path='info' component={InfoPage}>
         <Route path='news' />
