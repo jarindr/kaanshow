@@ -1,0 +1,67 @@
+.container
+  vertical-align: top;
+  height: 300px
+  width: 800px
+  background-color: white
+  margin: 0 auto;
+  position: relative;
+.imagePreview
+  display: inline-block;
+  width: 260px
+  vertical-align: top;
+  height: 260px
+  background-size: cover;
+  position: relative
+  margin: 20px
+  img
+    width: 100%
+.contentContainer
+  display: inline-block;
+  width: 500px
+  height: 100%
+  padding-right: 20px
+  padding-top: 20px
+  h1
+    margin: 10px 0
+    font-size: 16px
+    font-family: montserrat
+  h3
+    margin: 0
+    font-size: 10px
+    font-family: Montserrat
+    text-transform: uppercase;
+  p
+    font-weight: 400
+    color: rgb(112, 112, 112)
+  img
+    filter: invert(100%)
+    width: 20px
+.arrowLeft
+  width: 30px!important
+  position: absolute
+  top: 50%
+  right: -50px
+  transform: translateY(-50%)
+  cursor: pointer;
+.arrowRight
+  width: 30px!important
+  cursor: pointer;
+  position: absolute
+  top: 50%
+  left 0
+  transform: translateY(-50%) scaleX(-1)
+
+@media screen and (max-width 768px)
+  .container
+    width: 100%
+    height: auto
+  .imagePreview
+    width: 100%
+    height: 200px
+  .contentContainer
+    width: 100%
+  .content
+    height: 300px
+@media screen and (max-width 450px)
+  .content
+    height: 160px
