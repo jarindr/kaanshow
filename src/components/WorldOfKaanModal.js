@@ -16,6 +16,15 @@ const WorldOfKaanModal = React.createClass({
       current: 0
     }
   },
+  onClickShare (url, type) {
+    const $window = $(window)
+    const height = $window.height()
+    const width = $window.width()
+    const top = (height / 2) - 125
+    const left = (width / 2) - 300
+    const urlSharer = type === 'facebook' ? `https://www.facebook.com/sharer/sharer.php?u=${url}` : `https://twitter.com/intent/tweet?url=${url}`
+    window.open(urlSharer, 'targetWindow', `toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250,top=${top},left=${left}`)
+  },
   render () {
     const customStyles = {
       overlay: {
@@ -65,10 +74,10 @@ const WorldOfKaanModal = React.createClass({
               </p>
             </div>
             <div className={styles.social}>
-              <div className={styles.socialRadial}>
+              <div className={styles.socialRadial} onClick={() => this.onClickShare('kaanshow-ec4c0.firebaseapp.com', 'facebook')}>
                 <i className='flaticon-facebook'></i>
               </div>
-              <div className={styles.socialRadial}>
+              <div className={styles.socialRadial} onClick={() => this.onClickShare('kaanshow-ec4c0.firebaseapp.com', 'facebook')}>
                 <i className='flaticon-twitter'></i>
               </div>
             </div>
