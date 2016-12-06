@@ -135,6 +135,7 @@ const KaanClipSection = React.createClass({
           onClickPreview={this.onClickPreview}
           onChangeCategory={this.onChangeCategory}
           currentCategory={this.state.currentCategory}
+          category={['character', 'show', 'special effect']}
         />
         {this.renderModal()}
       </div>

@@ -7,7 +7,8 @@ const PreviewSection = React.createClass({
     data: React.PropTypes.array,
     onClickPreview: React.PropTypes.func,
     onChangeCategory: React.PropTypes.func,
-    currentCategory: React.PropTypes.string
+    currentCategory: React.PropTypes.string,
+    category: React.PropTypes.array
   },
   componentDidMount () {
     this.setState({ containerHeight: this.refs.container.offsetHeight / Math.ceil(this.props.data.length / 3) * 2 })
@@ -18,7 +19,7 @@ const PreviewSection = React.createClass({
     }
   },
   renderCatagory () {
-    const catagories = ['all', ...new Set(this.props.data.map(x => x.type || null))]
+    const catagories = this.props.category ? ['all', ...this.props.category] : ['all', ...new Set(this.props.data.map(x => x.type || null))]
     const elements = catagories.map(x => (
       <span key={x} className={styles.category} style={{opacity: x === this.props.currentCategory ? 1 : 0.5}} onClick={this.props.onChangeCategory.bind(null, x)}>
         {x}

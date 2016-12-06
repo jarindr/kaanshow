@@ -33,7 +33,7 @@ const PreviewListSection = React.createClass({
       ? `https://img.youtube.com/vi/${getYouTubeID(x.url)}/maxresdefault.jpg`
       : x.url
       return (
-        <div>
+        <div style={{marginBottom: '10px'}}>
           <div key={imageUrl} className={styles.previewBlock} onClick={this.onClickPreviewBlock.bind(null, i)} style={{background: `url(${imageUrl}) center no-repeat`, backgroundSize: 'cover'}}>
             <img src={require('../assets/images/play_new.png')} style={{width: '40px'}} />
           </div>
@@ -59,7 +59,7 @@ const PreviewListSection = React.createClass({
       ? `https://img.youtube.com/vi/${getYouTubeID(this.props.current.url)}/maxresdefault.jpg`
       : this.props.current.url
     return (
-      <div className={styles.mainImagePreviewContainer} style={{background: `url(${imageUrl}) center no-repeat`, backgroundSize: 'cover'}}>
+      <div className={styles.mainImagePreviewContainer} style={{backgroundImage: `url(${imageUrl})`}}>
         <img src={require('../assets/images/closeButton.png')} className={styles.closeModal} onClick={this.props.closeModal} />
         <div className={styles.captionContainer}>
           <div className={styles.caption}>Making the show od tempor incididunt ut labore et dolore</div>

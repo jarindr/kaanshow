@@ -77,7 +77,7 @@ const WorldOfKaanModal = React.createClass({
               <div className={styles.socialRadial} onClick={() => this.onClickShare('kaanshow-ec4c0.firebaseapp.com', 'facebook')}>
                 <i className='flaticon-facebook'></i>
               </div>
-              <div className={styles.socialRadial} onClick={() => this.onClickShare('kaanshow-ec4c0.firebaseapp.com', 'facebook')}>
+              <div className={styles.socialRadial} onClick={() => this.onClickShare('kaanshow-ec4c0.firebaseapp.com', 'twitter')}>
                 <i className='flaticon-twitter'></i>
               </div>
             </div>
