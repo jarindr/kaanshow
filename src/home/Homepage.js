@@ -32,16 +32,8 @@ const MainPage = React.createClass({
       const bottom = top + $section.outerHeight(true)
       if (bottom > scrollPosition && top < scrollPosition) {
         $(el).addClass(styles.white)
-        if (!this.state.navigateBySide) {
-          $(el).siblings(`.${styles.dotNavText}`).addClass(styles.show)
-        } else if (this.state.navigateBySide && this.state.currentSection === id) {
-          $(el).siblings(`.${styles.dotNavText}`).addClass(styles.show)
-        } else {
-          $(el).siblings(`.${styles.dotNavText}`).removeClass(styles.show)
-        }
       } else {
         $(el).removeClass(styles.white)
-        $(el).siblings(`.${styles.dotNavText}`).removeClass(styles.show)
       }
     })
     const footerRect = $('#footer-hack')[0].getBoundingClientRect()

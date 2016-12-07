@@ -15,7 +15,7 @@ const SocialFeedModal = React.createClass({
   render () {
     const customStyles = {
       overlay: {
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
         zIndex: 999
       },
       content: {
