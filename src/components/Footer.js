@@ -122,7 +122,7 @@ const Footer = React.createClass({
                   <li>INFO & DOWNLOAD</li>
                   <li>NEWS</li>
                   <li><Link to='/info/download/'>DOWNLOAD<br />(PHOTO, FACT SHEET, CLIPS)</Link></li>
-                  <li><Link to='/info/term/'>TERM & CONDITION</Link></li>
+                  <li><Link to='/info/term/'>TERMS & CONDITIONS</Link></li>
                   <li><Link to='/info/disclaimer/'>DISCLIMER</Link></li>
                   <li><Link to='/info/privacy/'>PRIVACY</Link></li>
                   <li><Link to='/info/faq/'>FAQ</Link></li>
