@@ -77,8 +77,8 @@ const MainPage = React.createClass({
     const textMarkup = () => ({__html: text})
     return (
       <div className={styles.dotNavContainer} key={i}>
-        <div className={styles.dotNavText} dangerouslySetInnerHTML={textMarkup()} />
-        <div className={styles.circle} data-attribute={text.replace('<br>', '-').replace(/ /g, '-')} onClick={this.onClickCircle.bind(null, text)}></div>
+        <div className={`${styles.dotNavText}`} dangerouslySetInnerHTML={textMarkup()} />
+        <div className={`${styles.circle}`} data-attribute={text.replace('<br>', '-').replace(/ /g, '-')} onClick={this.onClickCircle.bind(null, text)}></div>
       </div>
     )
   },
