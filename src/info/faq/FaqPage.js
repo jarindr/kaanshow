@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './FaqPage.styl'
-import { withRouter } from 'react-router'
 
 const FaqPage = React.createClass({
   propTypes: {

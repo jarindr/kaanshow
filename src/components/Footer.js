@@ -121,11 +121,11 @@ const Footer = React.createClass({
                 <ul>
                   <li>INFO & DOWNLOAD</li>
                   <li>NEWS</li>
-                  <li><Link to='/info/download/'>DOWNLOAD<br />(PHOTO, FACT SHEET, CLIPS)</Link></li>
-                  <li><Link to='/info/term/'>TERMS & CONDITIONS</Link></li>
-                  <li><Link to='/info/disclaimer/'>DISCLIMER</Link></li>
-                  <li><Link to='/info/privacy/'>PRIVACY</Link></li>
-                  <li><Link to='/info/faq/'>FAQ</Link></li>
+                  <li><Link to='/info/download/' target="_blank">DOWNLOAD<br />(PHOTO, FACT SHEET, CLIPS)</Link></li>
+                  <li><Link to='/info/term/' target="_blank">TERMS & CONDITIONS</Link></li>
+                  <li><Link to='/info/disclaimer/' target="_blank">DISCLIMER</Link></li>
+                  <li><Link to='/info/privacy/' target="_blank">PRIVACY</Link></li>
+                  <li><Link to='/info/faq/' target="_blank">FAQ</Link></li>
                 </ul>
               </div>
               <div className={styles.siteMapBlock}>

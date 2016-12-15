@@ -16,6 +16,7 @@ module.exports = [
     exclude: /\.placeholder\.(jpg|png)$/,
     loader: 'url?name=assets/images/[hash].[ext]&limit=4096'
   },
+
   {
     test: /\.jpg$/,
     exclude: /\.placeholder\.(jpg|png)$/,
@@ -25,6 +26,11 @@ module.exports = [
     test: /\.gif$/,
     exclude: /\.placeholder\.(gif)$/,
     loader: 'file?name=assets/images/[hash].[ext]'
+  },
+  {
+    test: /\.pdf$/,
+    exclude: /\.placeholder\.(pdf)$/,
+    loader: 'file?name=[hash].[ext]'
   },
   {
     test: /\.eps$/,

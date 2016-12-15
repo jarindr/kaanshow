@@ -13,6 +13,7 @@ import React from 'react'
 import TermPage from './info/term/termPage'
 import TicketForm from './ticket/TicketForm'
 import TicketPage from './ticket/TicketPage'
+import TicketShowAndStay from './ticket/TicketShowAndStay'
 import TicketType from './ticket/TicketType'
 
 export default (
@@ -24,6 +25,7 @@ export default (
       <Route path='ticket' component={TicketPage}>
         <Route path='type' component={TicketType} />
         <Route path='form' component={TicketForm} />
+        <Route path='showandstay' component={TicketShowAndStay} />
       </Route>
       <Redirect from="info" to="info/privacy" />
       <Route path='info' component={InfoPage}>

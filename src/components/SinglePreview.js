@@ -9,10 +9,12 @@ const SinglePreview = React.createClass({
     }
   },
   componentDidMount () {
+    const url = 'https://www.youtube.com/watch?v=nI8baFj05uE'
+    const videoUrl = `https://www.youtube.com/embed/${getYouTubeID(url)}?theme=dark&color=white&autoplay=0&keyboard=1&autohide=2&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3"frameborder="1"`
     window.addEventListener('scroll', () => {
-      const rectIframe = this.refs.container.getBoundingClientRect()
-      if (!checkIfInView(rectIframe)) {
-        this.setState({isPlayed: false})
+      const rectIframe = $('.youtube-iframe')[0].getBoundingClientRect()
+      if (!checkIfInView(rectIframe) && this.state.isPlayed) {
+        $('.youtube-iframe')[0].src = videoUrl
       }
     })
   },
@@ -35,7 +37,7 @@ const SinglePreview = React.createClass({
       <div className={styles.iframeContainer} id='iframeVideo'>
         <img src={require('../assets/images/twitter.png')} className={styles.twitter} onClick={this.onClickShare.bind(null, url, 'twitter')} />
         <img src={require('../assets/images/fb.png')} className={styles.fb} onClick={this.onClickShare.bind(null, url, 'facebook')} />
-        <iframe width="100%" height='100%' src={videoUrl} frameBorder="0" allowFullScreen></iframe>
+        <iframe width="100%" height='100%' src={videoUrl} frameBorder="0" allowFullScreen className='youtube-iframe'></iframe>
       </div>
     )
   },
