@@ -16,8 +16,8 @@ const NavBar = React.createClass({
         </div>
         <div className={styles.navigationContainer}>
           <span className={styles.navItem} style={{color: 'white'}}>KAAN SHOW</span>
-          <span className={styles.navItem}>D'LUCK</span>
-          <span className={styles.navItem}><a href='https://punjaluck-a28c1.firebaseapp.com/'>PANJALUCK</a></span>
+          <span className={styles.navItem}><a href='https://d-luck.firebaseapp.com/' target='_blank'>D'LUCK</a></span>
+          <span className={styles.navItem}><a href='https://punjaluck-a28c1.firebaseapp.com/' target='_blank'>PANJALUCK</a></span>
           <span className={styles.navItem}>LANGUAGE</span>
           <span className={styles.navItem}>
             <i className='flaticon-search'></i>
