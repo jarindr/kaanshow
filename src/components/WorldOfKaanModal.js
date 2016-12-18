@@ -53,7 +53,7 @@ const WorldOfKaanModal = React.createClass({
     return (
       <Modal
         isOpen={this.props.isModalOpen}
-        onRequestClose={this.closeModal}
+        onRequestClose={this.props.closeModal}
         style={customStyles}
       >
         <div className={styles.container}>

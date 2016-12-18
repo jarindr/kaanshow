@@ -22,7 +22,7 @@ const NavBar = React.createClass({
           <span className={styles.navItem}>
             <i className='flaticon-search'></i>
           </span>
-          <a href='https://www.pandapass.asia/booking/external/5' target='_blank'><span className={`${styles.navItem} ${styles.ticket}`}>TICKET</span></a>
+          <Link to='/ticket/type/' target='_blank'><span className={`${styles.navItem} ${styles.ticket}`}>TICKET</span></Link>
         </div>
       </div>
     )
