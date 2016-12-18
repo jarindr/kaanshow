@@ -2,11 +2,11 @@ import React from 'react'
 import styles from './DownloadPage.styl'
 const DATA = [
   {lang: 'THAI', file: require('../../assets/pdf/Fact Sheet_th_final_20161123.pdf')},
-  {lang: 'ENGLISH', file: require('../../assets/pdf/Fact Sheet_th_final_20161123.pdf')},
-  {lang: 'RUSSIAN', file: require('../../assets/pdf/Fact Sheet_th_final_20161123.pdf')},
-  {lang: 'CHINESE', file: require('../../assets/pdf/Fact Sheet_th_final_20161123.pdf')},
-  {lang: 'VIETNAMESE', file: require('../../assets/pdf/Fact Sheet_th_final_20161123.pdf')},
-  {lang: 'KOREAN', file: require('../../assets/pdf/Fact Sheet_th_final_20161123.pdf')}
+  {lang: 'ENGLISH', file: require('../../assets/pdf/Fact Sheet Eng_final_20161123.pdf')},
+  {lang: 'RUSSIAN', file: require('../../assets/pdf/Kaanshowrus edit 21.11.59.pdf')},
+  {lang: 'CHINESE', file: require('../../assets/pdf/Fact sheet Chinese_21.11.59.pdf')},
+  {lang: 'VIETNAMESE', file: require('../../assets/pdf/Fact Shee t - ภาษาเวียดนาม 23.11.59.pdf')},
+  {lang: 'KOREAN', file: require('../../assets/pdf/Fact Sheet thai-Korea 21.11.59.pdf')}
 ]
 const DownloadPage = React.createClass({
   renderFactSheetBlock (data) {
