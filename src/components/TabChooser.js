@@ -16,8 +16,10 @@ const TabChooser = React.createClass({
         <div className={`${styles.tabTitle} ${this.state.current === index ? styles.activeTab : null}`}>
           <h1>{data.title}</h1>
         </div>
-        <div className={`${styles.containerTabContent} ${this.state.current === index ? styles.activeContent : null}`}>
-          {data.content}
+        <div
+          className={`${styles.containerTabContent} ${this.state.current === index ? styles.activeContent : null}`}
+          dangerouslySetInnerHTML={{ __html: data.content }}
+        >
         </div>
       </div>
     )

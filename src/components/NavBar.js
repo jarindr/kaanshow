@@ -20,7 +20,7 @@ const NavBar = React.createClass({
           <span className={styles.navItem}><a href='https://punjaluck-a28c1.firebaseapp.com/' target='_blank'>PANJALUCK</a></span>
           <span className={styles.navItem}>LANGUAGE</span>
           <span className={styles.navItem}>
-            <i className='flaticon-search'></i>
+            <img src={require('../assets/images/Untitled 2.png')} className={styles.search} />
           </span>
           <Link to='/ticket/type/' target='_blank'><span className={`${styles.navItem} ${styles.ticket}`}>TICKET</span></Link>
         </div>
