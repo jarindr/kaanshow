@@ -15,7 +15,7 @@ const TicketCard = React.createClass({
           </div>
         </div>
         <div className={styles.contentContainer}>
-          <p>{this.props.content}</p>
+          <p dangerouslySetInnerHTML={{ __html: this.props.content }}></p>
         </div>
         <a href={this.props.link} target='_blank'><button type='button'>BUY TICKET</button></a>
       </div>

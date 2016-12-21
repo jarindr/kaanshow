@@ -5,6 +5,13 @@
   max-width: 1100px
   background-color: white
   margin: 0 auto;
+  ::-webkit-scrollbar
+    width: 5px
+  ::-webkit-scrollbar-thumb
+    background: #be9b42
+    border-radius: 1px;
+  ::-webkit-scrollbar-track
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(229,229,229,1) 41%, rgba(229,229,229,1) 60%, rgba(0,0,0,0) 61%, rgba(0,0,0,0) 100%);
 .imagePreview
   display: inline-block;
   width: 60%
@@ -23,18 +30,21 @@
   h1
     color: #be9b42
     margin: 0
-    font-family: 'kanit', cursive;
-    font-weight: 600
+    letter-spacing 1px
+    font-weight 700
   h3
     color: #be9b42
     margin: 0
     font-size: 10px
     font-family: Montserrat
+    font-weight 400
     text-transform: uppercase;
   p
     font-weight: 400
     color: #8a8a8a
-    font-size: 16px
+    line-height 1.5
+    font-size: 18px
+    letter-spacing 1px
 .content
   overflow-y: auto;
   height: 350px

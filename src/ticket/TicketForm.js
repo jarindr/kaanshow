@@ -10,7 +10,7 @@ const TicketForm = React.createClass({
         </div>
         <h1>กรอกรายละเอียด</h1>
         <div className={styles.col12}>
-          <h2>บริษัท / โรงเรียน / มหาลัย</h2>
+          <h2>บริษัท / โรงเรียน / มหาวิทยาลัย</h2>
           <input></input>
         </div>
         <div className={styles.col3}>
@@ -29,12 +29,12 @@ const TicketForm = React.createClass({
           <h2>ที่อยู่</h2>
           <textarea rows='4'></textarea>
         </div>
-        <div className={styles.col3}>
+        <div className={styles.col6} style={{width: '50%'}}>
           <h2>จังหวัด</h2>
           <input></input>
         </div>
-        <div className={styles.col6}>
-          <h2>รหัสไปรษณี</h2>
+        <div className={styles.col6} style={{width: '50%'}}>
+          <h2>รหัสไปรษณีย์</h2>
           <input></input>
         </div>
         <div className={styles.col3}>
@@ -46,7 +46,7 @@ const TicketForm = React.createClass({
           <input></input>
         </div>
         <button type='button'>SUBMIT</button>
-        <div style={{textAlign: 'left', fontSize: '14px'}}>สามารถจองได้ตั้งแต่ 11 คนขึ้นไป*</div>
+        <div style={{textAlign: 'left', fontSize: '14px'}}>*สามารถจองได้ตั้งแต่ 11 คนขึ้นไป</div>
       </div>
     )
   }
