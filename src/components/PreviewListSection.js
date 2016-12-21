@@ -62,7 +62,7 @@ const PreviewListSection = React.createClass({
       <div className={styles.mainImagePreviewContainer} style={{backgroundImage: `url(${imageUrl})`}}>
         <img src={require('../assets/images/closeButton.png')} className={styles.closeModal} onClick={this.props.closeModal} />
         <div className={styles.captionContainer}>
-          <div className={styles.caption}>Making the show od tempor incididunt ut labore et dolore</div>
+          <div className={styles.caption}>{this.props.current.caption}</div>
           <img src={require('../assets/images/play_new.png')} className={styles.playButton} onClick={this.onClickPlay} />
         </div>
         <img src={require('../assets/images/twitter.png')} className={styles.twitter} onClick={this.onClickShare.bind(null, this.props.current.url, 'twitter')} />

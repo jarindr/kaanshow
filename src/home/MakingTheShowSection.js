@@ -19,8 +19,8 @@ const DATA = [
     type: 'video'
   },
   {
-    url: 'https://www.youtube.com/watch?v=Ejj2t6tJfEU',
-    caption: 'od tempor incididunt ut labore et dolore.',
+    url: 'https://www.youtube.com/watch?v=IxnCbv_U_r0',
+    caption: 'Thailand Production Dream Team',
     subCaption: 'x ea commodo consequat ex commodo consequat',
     type: 'video'
   },
