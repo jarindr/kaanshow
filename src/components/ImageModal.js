@@ -18,7 +18,8 @@ const customStyles = {
     border: 'none',
     margin: 0,
     background: 'none',
-    width: '90vw'
+    width: '65vw',
+    overflow: 'visible'
   }
 }
 
