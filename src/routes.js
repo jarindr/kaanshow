@@ -1,5 +1,6 @@
 import { IndexRoute, Redirect, Route } from 'react-router'
 
+import Admin from './admin/SocialFeedPage'
 import DisclaimerPage from './info/disclaimer/disclaimerPage'
 import DownloadPage from './info/download/DownloadPage'
 import FaqCategoriesPage from './info/faq/FaqCategoriesPage'
@@ -21,6 +22,7 @@ export default (
     {/* main pages */}
     <Route path='/' component={Layout}>
       <IndexRoute component={HomePage} />
+      <Route path='admin' component={Admin} />
       <Route path='ticket' component={TicketPage}>
         <Route path='type' component={TicketType} />
         <Route path='form' component={TicketForm} />

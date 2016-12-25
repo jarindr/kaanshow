@@ -2,6 +2,7 @@ import React from 'react'
 import { checkIfInView } from '../utils/intersection'
 import getYouTubeID from 'get-youtube-id'
 import styles from './SinglePreview.styl'
+
 const SinglePreview = React.createClass({
   getInitialState () {
     return {
@@ -12,9 +13,11 @@ const SinglePreview = React.createClass({
     const url = 'https://www.youtube.com/watch?v=nI8baFj05uE'
     const videoUrl = `https://www.youtube.com/embed/${getYouTubeID(url)}?theme=dark&color=white&autoplay=0&keyboard=1&autohide=2&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3"frameborder="1"`
     window.addEventListener('scroll', () => {
-      const rectIframe = $('.youtube-iframe')[0].getBoundingClientRect()
-      if (!checkIfInView(rectIframe) && this.state.isPlayed) {
-        $('.youtube-iframe')[0].src = videoUrl
+      if (this.state.isPlayed) {
+        const rectIframe = $('.youtube-iframe')[0].getBoundingClientRect()
+        if (!checkIfInView(rectIframe) && this.state.isPlayed) {
+          $('.youtube-iframe')[0].src = videoUrl
+        }
       }
     })
   },
