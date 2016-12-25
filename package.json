@@ -59,8 +59,10 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "dns": "^0.2.2",
     "get-youtube-id": "^1.0.0",
     "history": "^3.0.0",
+    "isemail": "^2.2.1",
     "jquery": "^3.1.1",
     "jquery-mousewheel": "^3.1.13",
     "jscrollpane": "^2.0.22",
@@ -74,6 +76,7 @@
     "react-router": "^2.4.1",
     "react-router-scroll": "^0.3.2",
     "scroll-to": "0.0.2",
-    "scroll-to-element": "^2.0.0"
+    "scroll-to-element": "^2.0.0",
+    "validator": "^6.2.0"
   }
 }

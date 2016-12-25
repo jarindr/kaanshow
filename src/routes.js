@@ -21,7 +21,6 @@ export default (
     {/* main pages */}
     <Route path='/' component={Layout}>
       <IndexRoute component={HomePage} />
-      <Redirect from="ticket" to="ticket/type" />
       <Route path='ticket' component={TicketPage}>
         <Route path='type' component={TicketType} />
         <Route path='form' component={TicketForm} />

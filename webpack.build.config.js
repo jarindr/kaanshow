@@ -34,7 +34,7 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.DedupePlugin(),
-    new StaticSiteGeneratorPlugin('prerender', StaticData.paths, StaticData, { window: {}}),
+    new StaticSiteGeneratorPlugin('prerender', StaticData.paths, StaticData, { window: {location: {}}}),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)

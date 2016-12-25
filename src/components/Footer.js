@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 import React from 'react'
 import SocialFeedModal from './SocialFeedModal'
+import isEmail from 'validator/lib/isEmail'
 import styles from './Footer.styl'
 const DATA = [
   {image: require('../assets/images/footer_dummy/1.png'), mention: '@kaanshow', comment: 'this is fantastic1'},
@@ -17,6 +18,34 @@ const DATA = [
   {image: require('../assets/images/footer_dummy/KAAN_Social Feed_Row2_06.png'), mention: '@kaanshow', comment: 'this is fantastic12'}
 ]
 const Footer = React.createClass({
+  getInitialState () {
+    return {
+      isModalOpen: false,
+      current: 0,
+      subscribeSuccess: ''
+    }
+  },
+  onClickSubscribe () {
+    if (isEmail(this.subscribeForm.value)) {
+      $.ajax({
+        url: 'http://kaanshow.us12.list-manage.com/subscribe/post?u=f8db058f47508e16789a956f4&amp;id=031758e44e'.replace('/post?', '/post-json?').concat('&c=?'),
+        data: { EMAIL: this.subscribeForm.value },
+        success: this.onSubscribeSuccess,
+        dataType: 'jsonp',
+        error: (resp, text) => {
+          this.setState({subscribeSuccess: resp})
+        }
+      })
+    } else {
+      this.setState({subscribeSuccess: 'please enter a valid email.'})
+    }
+  },
+  onSubscribeSuccess (response) {
+    this.setState({subscribeSuccess: 'thank you for subscribing, please confirm in your email.'})
+    setTimeout(() => {
+      this.setState({subscribeSuccess: ''})
+    }, 3000)
+  },
   renderSocialBlock (data, i) {
     return (
       <div
@@ -34,12 +63,6 @@ const Footer = React.createClass({
   },
   onClickSocialBlock (data, e) {
     this.setState({isModalOpen: true, current: data})
-  },
-  getInitialState () {
-    return {
-      isModalOpen: false,
-      current: 0
-    }
   },
   onClickNext () {
     if (this.state.current + 1 > DATA.length - 1) {
@@ -80,8 +103,15 @@ const Footer = React.createClass({
           </div>
           <div className={styles.newsLetter}>
             <h1>JOIN OUR NEWSLETTER</h1>
-            <input type='text' placeholder='YOUR EMAIL ADDRESS' />
-            <div className={styles.joinUsButton}>JOIN US</div>
+            <input type='text' placeholder='YOUR EMAIL ADDRESS' ref={subscribeForm => this.subscribeForm = subscribeForm} />
+            <div style={{position: 'relative'}}>
+              <div className={styles.joinUsButton} onClick={this.onClickSubscribe}>
+                JOIN US
+              </div>
+              <div className={styles.subscribeFormResponse} style={{opacity: this.state.subscribeSuccess ? 1 : 0}}>
+                {this.state.subscribeSuccess}
+              </div>
+            </div>
           </div>
           <div className={styles.siteMapContact}>
             <div className={styles.siteMap}>
