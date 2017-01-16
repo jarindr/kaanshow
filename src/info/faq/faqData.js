@@ -95,7 +95,7 @@ export default [
         </table>
         หมายเหตุ : *อายุ 5-12 ปี หรือสูงไม่เกิน 140 ซม. / **อายุ 65 ปี ขึ้นไป
         <ul style='list-style-type: decimal'>
-        <span style="margin-left: -40px;">ท่านสามารถซื้อบัตรชมการแสดง KAAN ได้ 4 ช่องทาง ดังนี้</span>
+        <span style="margin-left: -40px;">ท่านสามารถซื้อบัตรชมการแสดง KAAN presented by SINGHA CORPORATION ได้ 4 ช่องทาง ดังนี้</span>
         <li>ระบบจำหน่ายบัตรออนไลน์ (Online Ticket) ทาง www.kaanshow.com</li>
         <li>ศูนย์รับจองทางโทรศัพท์ (Hotline) โทร.xxxxx</li>
         <li>ห้องรับและจำหน่ายบัตร (Ticket Booth) บริเวณด้านหน้าและภายในสิงห์ดีลักษณ์ ซีเนมาติก เธียเตอร์ สำหรับข้อมูลเพิ่มเติมโปรดคลิก<a href="/ticket/type/" target="_blank" style="text-decoration: underline;">ที่นี่</a></li>
