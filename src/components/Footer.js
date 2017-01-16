@@ -87,139 +87,141 @@ const Footer = React.createClass({
   render () {
     return (
       <div>
-        <SocialFeedModal
-          title={DATA[this.state.current].mention}
-          image={DATA[this.state.current].image}
-          isModalOpen={this.state.isModalOpen}
-          closeModal={this.onCloseModal}
-          onClickPrev={this.onClickPrev}
-          onClickNext={this.onClickNext}
-          >
-          {DATA[this.state.current].comment}
-        </SocialFeedModal>
-        <div className={styles.container} id='footer-hack'>
-          <div className={styles.socialFeed}>
-            {DATA.map((x, i) => this.renderSocialBlock(x, i))}
-          </div>
-          <div className={styles.newsLetter}>
-            <h1>JOIN OUR NEWSLETTER</h1>
-            <input type='text' placeholder='YOUR EMAIL ADDRESS' ref={subscribeForm => this.subscribeForm = subscribeForm} />
-            <div style={{position: 'relative'}}>
-              <div className={styles.joinUsButton} onClick={this.onClickSubscribe}>
-                JOIN US
+        <div className={styles.container}>
+          <SocialFeedModal
+            title={DATA[this.state.current].mention}
+            image={DATA[this.state.current].image}
+            isModalOpen={this.state.isModalOpen}
+            closeModal={this.onCloseModal}
+            onClickPrev={this.onClickPrev}
+            onClickNext={this.onClickNext}
+            >
+            {DATA[this.state.current].comment}
+          </SocialFeedModal>
+          <div className={styles.container} id='footer-hack'>
+            <div className={styles.socialFeed}>
+              {DATA.map((x, i) => this.renderSocialBlock(x, i))}
+            </div>
+            <div className={styles.newsLetter}>
+              <h1>JOIN OUR NEWSLETTER</h1>
+              <input type='text' placeholder='YOUR EMAIL ADDRESS' ref={subscribeForm => this.subscribeForm = subscribeForm} />
+              <div style={{position: 'relative'}}>
+                <div className={styles.joinUsButton} onClick={this.onClickSubscribe}>
+                  JOIN US
+                </div>
+                <div className={styles.subscribeFormResponse} style={{opacity: this.state.subscribeSuccess ? 1 : 0}}>
+                  {this.state.subscribeSuccess}
+                </div>
               </div>
-              <div className={styles.subscribeFormResponse} style={{opacity: this.state.subscribeSuccess ? 1 : 0}}>
-                {this.state.subscribeSuccess}
+            </div>
+            <div className={styles.siteMapContact}>
+              <div className={styles.siteMap}>
+                <h2>SITEMAP</h2>
+                <div className={styles.siteMapBlock}>
+                  <ul>
+                    <li>KAAN SHOW</li>
+                    <li>INTRO TO KAAN</li>
+                    <li>KAAN CLIPS</li>
+                    <li>THE STORY</li>
+                    <li>KAAN GALLERY</li>
+                  </ul>
+                </div>
+                <div className={styles.siteMapBlock}>
+                  <ul>
+                    <li>D'LUCK</li>
+                    <li>ABOUT D'LUCK</li>
+                    <li>GALLERY</li>
+                    <li>SEATING PLAN</li>
+                    <li>THEATER 360º</li>
+                    <li>FACILITIES</li>
+                    <li>LOCATION & MAP</li>
+                  </ul>
+                </div>
+                <div className={styles.siteMapBlock}>
+                  <ul>
+                    <li>PANJALUCK</li>
+                    <li>OUR BUSINESS</li>
+                    <li>VISION & MISSION</li>
+                    <li>CORPORATE VALUE</li>
+                    <li>BOARD PROFILE</li>
+                    <li>OUR PARTNER</li>
+                    <li>WORK WITH US</li>
+                  </ul>
+                </div>
+                <div className={styles.siteMapBlock}>
+                  <ul>
+                    <li>INFO & DOWNLOAD</li>
+                    <li>NEWS</li>
+                    <li><Link to='/info/download/' target="_blank">DOWNLOAD<br />(PHOTO, FACT SHEET, CLIPS)</Link></li>
+                    <li><Link to='/info/term/' target="_blank">TERMS & CONDITIONS</Link></li>
+                    <li><Link to='/info/disclaimer/' target="_blank">DISCLIMER</Link></li>
+                    <li><Link to='/info/privacy/' target="_blank">PRIVACY</Link></li>
+                    <li><Link to='/info/faq/' target="_blank">FAQ</Link></li>
+                  </ul>
+                </div>
+                <div className={styles.siteMapBlock}>
+                  <ul>
+                    <li>BOOKING TICKET</li>
+                    <li><Link to='/ticket/'>PACKAGE & PROMOTION</Link></li>
+                  </ul>
+                </div>
+              </div>
+              <div className={styles.contact}>
+                <h2>CONTACT</h2>
+                <div className={styles.siteMapBlock} style={{width: '40%'}}>
+                  <ul>
+                    <li>CONTACT</li>
+                    <li>
+                      ADDRESS
+                      <br />
+                      <span style={{fontFamily: 'kanit', fontSize: '14px'}}>บริษัท ปัญลักษณ์ พาสุข จำกัด <br />เลขที่ 202 อาคาร เลอ คองคอร์ด <br />ห้อง 1601 ชั้น 16 ถ.รัชดาภิเษก <br />แขวงห้วยขวาง กรุงเทพฯ 10310</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className={styles.siteMapBlock} style={{width: '30%'}}>
+                  <ul>
+                    <li>PHONE</li>
+                    <li>
+                      +66 2 694 2007
+                    </li>
+                    <li>
+                      +66 2 694 2008
+                    </li>
+                    <li className={styles.fax}>FAX</li>
+                    <li>
+                      +66 2 694 2009
+                    </li>
+                  </ul>
+                </div>
+                <div className={styles.siteMapBlock} style={{width: '30%'}}>
+                  <ul>
+                    <li>EMAIL</li>
+                    <li>
+                      CONTACT@PANJALUCK.COM
+                    </li>
+                    <li className={styles.social}>
+                      <img src={require('../assets/images/fb_footer.png')} />
+                      <img src={require('../assets/images/ig_footer.png')} />
+                      <img src={require('../assets/images/twitter_footer.png')} />
+                    </li>
+                  </ul>
+                </div>
+                <div className={styles.contactFrom}>
+                  <ul>
+                    <li>CONTACT US</li>
+                    <input type='text' placeholder='Enter Your Name' />
+                    <input type='text' placeholder='Enter Your Email' />
+                    <textarea type='text' placeholder='Your Message'></textarea>
+                    <div className={styles.sendEmail}>SEND MESSAGE</div>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div className={styles.siteMapContact}>
-            <div className={styles.siteMap}>
-              <h2>SITEMAP</h2>
-              <div className={styles.siteMapBlock}>
-                <ul>
-                  <li>KAAN SHOW</li>
-                  <li>INTRO TO KAAN</li>
-                  <li>KAAN CLIPS</li>
-                  <li>THE STORY</li>
-                  <li>KAAN GALLERY</li>
-                </ul>
-              </div>
-              <div className={styles.siteMapBlock}>
-                <ul>
-                  <li>D'LUCK</li>
-                  <li>ABOUT D'LUCK</li>
-                  <li>GALLERY</li>
-                  <li>SEATING PLAN</li>
-                  <li>THEATER 360º</li>
-                  <li>FACILITIES</li>
-                  <li>LOCATION & MAP</li>
-                </ul>
-              </div>
-              <div className={styles.siteMapBlock}>
-                <ul>
-                  <li>PANJALUCK</li>
-                  <li>OUR BUSINESS</li>
-                  <li>VISION & MISSION</li>
-                  <li>CORPORATE VALUE</li>
-                  <li>BOARD PROFILE</li>
-                  <li>OUR PARTNER</li>
-                  <li>WORK WITH US</li>
-                </ul>
-              </div>
-              <div className={styles.siteMapBlock}>
-                <ul>
-                  <li>INFO & DOWNLOAD</li>
-                  <li>NEWS</li>
-                  <li><Link to='/info/download/' target="_blank">DOWNLOAD<br />(PHOTO, FACT SHEET, CLIPS)</Link></li>
-                  <li><Link to='/info/term/' target="_blank">TERMS & CONDITIONS</Link></li>
-                  <li><Link to='/info/disclaimer/' target="_blank">DISCLIMER</Link></li>
-                  <li><Link to='/info/privacy/' target="_blank">PRIVACY</Link></li>
-                  <li><Link to='/info/faq/' target="_blank">FAQ</Link></li>
-                </ul>
-              </div>
-              <div className={styles.siteMapBlock}>
-                <ul>
-                  <li>BOOKING TICKET</li>
-                  <li><Link to='/ticket/'>PACKAGE & PROMOTION</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className={styles.contact}>
-              <h2>CONTACT</h2>
-              <div className={styles.siteMapBlock} style={{width: '40%'}}>
-                <ul>
-                  <li>CONTACT</li>
-                  <li>
-                    ADDRESS
-                    <br />
-                    <span style={{fontFamily: 'kanit', fontSize: '14px'}}>บริษัท ปัญลักษณ์ พาสุข จำกัด <br />เลขที่ 202 อาคาร เลอ คองคอร์ด <br />ห้อง 1601 ชั้น 16 ถ.รัชดาภิเษก <br />แขวงห้วยขวาง กรุงเทพฯ 10310</span>
-                  </li>
-                </ul>
-              </div>
-              <div className={styles.siteMapBlock} style={{width: '30%'}}>
-                <ul>
-                  <li>PHONE</li>
-                  <li>
-                    +66 2 694 2007
-                  </li>
-                  <li>
-                    +66 2 694 2008
-                  </li>
-                  <li className={styles.fax}>FAX</li>
-                  <li>
-                    +66 2 694 2009
-                  </li>
-                </ul>
-              </div>
-              <div className={styles.siteMapBlock} style={{width: '30%'}}>
-                <ul>
-                  <li>EMAIL</li>
-                  <li>
-                    CONTACT@PANJALUCK.COM
-                  </li>
-                  <li className={styles.social}>
-                    <img src={require('../assets/images/fb_footer.png')} />
-                    <img src={require('../assets/images/ig_footer.png')} />
-                    <img src={require('../assets/images/twitter_footer.png')} />
-                  </li>
-                </ul>
-              </div>
-              <div className={styles.contactFrom}>
-                <ul>
-                  <li>CONTACT US</li>
-                  <input type='text' placeholder='Enter Your Name' />
-                  <input type='text' placeholder='Enter Your Email' />
-                  <textarea type='text' placeholder='Your Message'></textarea>
-                  <div className={styles.sendEmail}>SEND MESSAGE</div>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className={styles.footerBar}>
-            <span>© 2016 PANJALUCK PASUK CO. , LTD. ALL RIGHTS RESERVED.</span>
-            <span onClick={this.onClickToTop} style={{float: 'right', cursor: 'pointer'}}>TO THE TOP <img src={require('../assets/images/to_top.png')} style={{width: '15px'}} /></span>
-          </div>
+        </div>
+        <div className={styles.footerBar}>
+          <span>© 2016 PANJALUCK PASUK CO. , LTD. ALL RIGHTS RESERVED.</span>
+          <span onClick={this.onClickToTop} style={{float: 'right', cursor: 'pointer'}}>TO THE TOP <img src={require('../assets/images/to_top.png')} style={{width: '15px'}} /></span>
         </div>
       </div>
     )
