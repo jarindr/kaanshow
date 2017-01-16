@@ -10,7 +10,7 @@ const SinglePreview = React.createClass({
     }
   },
   componentDidMount () {
-    const url = 'https://www.youtube.com/watch?v=nI8baFj05uE'
+    const url = 'https://www.youtube.com/watch?v=0aJYtZqtax8&t=9s'
     const videoUrl = `https://www.youtube.com/embed/${getYouTubeID(url)}?theme=dark&color=white&autoplay=0&keyboard=1&autohide=2&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3"frameborder="1"`
     window.addEventListener('scroll', () => {
       if (this.state.isPlayed) {
@@ -61,7 +61,10 @@ const SinglePreview = React.createClass({
         <img src={require('../assets/images/twitter.png')} className={styles.twitter} onClick={this.onClickShare.bind(null, url, 'twitter')} />
         <img src={require('../assets/images/fb.png')} className={styles.fb} onClick={this.onClickShare.bind(null, url, 'facebook')} />
         <div className={styles.captionContainer}>
-          <div className={styles.caption}>KAAN A SPECTACULAR CINEMATIC LIVE EXPERIENCE</div>
+          <div className={styles.caption}>
+            <h1>KAAN : A SPECTACULAR CINEMATIC LIVE EXPERIENCE</h1>
+            <p>การแสดงสดรูปแบบใหม่ครั้งแรกในเมืองไทย ที่นำเทคนิคพิเศษระดับโลกมากมาย มาผสมผสานเข้ากับการแสดงความสามารถบนเวทีหลากหลายรูปแบบ นำเสนอด้วยเทคนิคการเล่าเรื่องแบบภาพยนตร์</p>
+          </div>
           <img src={require('../assets/images/play_new.png')} className={styles.playButton} onClick={this.onPlayClick} />
         </div>
         <div className={styles.overlay} />

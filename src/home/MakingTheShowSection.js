@@ -7,9 +7,9 @@ import Title from '../components/Title'
 import styles from './MakingTheShowSection.styl'
 const DATA = [
   {
-    url: 'https://www.youtube.com/watch?v=QC4xnfh_-Eo',
-    caption: 'od tempor incididunt ut labore et dolore.',
-    subCaption: 'x ea commodo consequat ex commodo consequat',
+    url: 'https://www.youtube.com/watch?v=XnYOqcE2apE&t=22s',
+    caption: 'KAAN : THE PRODUCTION PROGRESS',
+    subCaption: 'อัพเดทความคืบหน้า KAAN กับประมวลภาพเบื้องหลังสุดเอ็กซ์คลูซีฟ',
     type: 'video'
   },
   {
