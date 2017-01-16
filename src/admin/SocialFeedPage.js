@@ -38,14 +38,18 @@ const SocailFeedPage = React.createClass({
     })
   },
   renderBlockImage (data) {
-
+    return (
+      <div className={styles.blockImage} key={data.id}>
+        <img src={data.images.standard_resolution.url} />
+      </div>
+    )
   },
   render () {
     return (
       <div className={styles.container}>
         <button type='button' onClick={this.onFetchDataSocialFeed}>Fetch now</button>
         <div className={styles.blocksContainer}>
-          {this.state.data.map(x => <BlockImage data={x} />)}
+          {this.state.data.map(x => this.renderBlockImage(x))}
         </div>
       </div>
     )

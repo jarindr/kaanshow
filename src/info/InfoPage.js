@@ -18,7 +18,7 @@ const InfoPage = React.createClass({
               <li style={{color: window.location.pathname.split('/')[2] === 'download' ? 'white' : '#9f9f9f'}}>DOWNLOAD</li>
             </Link>
             <Link to={'/info/term'}>
-              <li style={{color: window.location.pathname.split('/')[2] === 'term' ? 'white' : '#9f9f9f'}}>TERM & CONDITION</li>
+              <li style={{color: window.location.pathname.split('/')[2] === 'term' ? 'white' : '#9f9f9f'}}>TERMS & CONDITIONS</li>
             </Link>
             <Link to={'/info/disclaimer'}>
               <li style={{color: window.location.pathname.split('/')[2] === 'disclaimer' ? 'white' : '#9f9f9f'}}>DISCLAIMER</li>
