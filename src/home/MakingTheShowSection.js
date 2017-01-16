@@ -25,14 +25,68 @@ const DATA = [
     type: 'video'
   },
   {
-    url: require('../assets/images/characters/GinnaRee-small.jpg'),
-    caption: 'od tempor incididunt ut labore et dolore.',
+    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow01.jpg'),
+    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
     subCaption: 'x ea commodo consequat ex commodo consequat',
     type: 'image'
   },
   {
-    url: require('../assets/images/characters/chalawan-small.jpg'),
-    caption: 'od tempor incididunt ut labore et dolore.',
+    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow02.jpg'),
+    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'image'
+  },
+  {
+    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow03.jpg'),
+    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'image'
+  },
+  {
+    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow04.jpg'),
+    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'image'
+  },
+  {
+    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow05.jpg'),
+    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'image'
+  },
+  {
+    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow06.jpg'),
+    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'image'
+  },
+  {
+    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow07.jpg'),
+    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'image'
+  },
+  {
+    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow08.jpg'),
+    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'image'
+  },
+  {
+    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow09.jpg'),
+    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'image'
+  },
+  {
+    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow10.jpg'),
+    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
+    subCaption: 'x ea commodo consequat ex commodo consequat',
+    type: 'image'
+  },
+  {
+    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow01.jpg'),
+    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
     subCaption: 'x ea commodo consequat ex commodo consequat',
     type: 'image'
   },
