@@ -168,12 +168,22 @@
       .contactFrom
         input
           width: 100%
+          box-sizing border-box
         textarea
           width: 100%
+          box-sizing border-box
 
 @media screen and (max-width:450px)
+  .container
+    width 100%
+    .socialFeed
+      display none
+      height auto
+      .socialBlock
+        width 100%
+        float none
   .siteMapContact
     .siteMap
       display: none
     .siteMapBlock
-      width: 100%
+      width: 100%!important

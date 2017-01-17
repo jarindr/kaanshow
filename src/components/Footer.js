@@ -98,7 +98,7 @@ const Footer = React.createClass({
             >
             {DATA[this.state.current].comment}
           </SocialFeedModal>
-          <div className={styles.container} id='footer-hack'>
+          <div className={styles.containerFooter} id='footer-hack'>
             <div className={styles.socialFeed}>
               {DATA.map((x, i) => this.renderSocialBlock(x, i))}
             </div>
