@@ -22,7 +22,7 @@ const TicketForm = React.createClass({
           <input></input>
         </div>
         <div className={styles.col3}>
-          <h2>อีเมล์</h2>
+          <h2>อีเมล</h2>
           <input></input>
         </div>
         <div className={styles.col12}>
