@@ -162,7 +162,7 @@ const Footer = React.createClass({
                 <div className={styles.siteMapBlock}>
                   <ul>
                     <li>BOOKING TICKET</li>
-                    <li><Link to='/ticket/'>PACKAGE & PROMOTION</Link></li>
+                    <li><Link to='/ticket/type/'>PACKAGE & PROMOTION</Link></li>
                   </ul>
                 </div>
               </div>

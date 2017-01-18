@@ -3,6 +3,7 @@ import './Layout.global.styl'
 import Helmet from 'react-helmet'
 import NavBar from '../components/NavBar'
 import React from 'react'
+import styles from './layout.styl'
 
 const Layout = React.createClass({
   propTypes: {
@@ -27,6 +28,10 @@ const Layout = React.createClass({
         />
         <NavBar />
         {this.props.children}
+        <div className={styles.singLogo}>
+          <img src={require('../assets/images/singha.png')} />
+          <div classes={styles.singCaption}>SINGHA CORPORATION</div>
+        </div>
       </div>
     )
   }

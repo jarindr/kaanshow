@@ -55,6 +55,11 @@ const DATA = [
     type: 'character'
   },
   {
+    url: require('../home/assets/KAAN Show_01 Intro to KAAN (1280x800 px).png'),
+    image: require('../home/assets/KAAN Show_04 World of KAAN P1 (1280x800 px).png'),
+    type: 'character'
+  },
+  {
     url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_05-Character_ch.png'),
     image: require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_05-Character_ch.png'),
     type: 'character'

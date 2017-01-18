@@ -13,18 +13,6 @@ const DATA = [
     type: 'video'
   },
   {
-    url: 'https://www.youtube.com/watch?v=nI8baFj05uE',
-    caption: 'od tempor incididunt ut labore et dolore.',
-    subCaption: 'x ea commodo consequat ex commodo consequat',
-    type: 'video'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=IxnCbv_U_r0',
-    caption: 'Thailand Production Dream Team',
-    subCaption: 'x ea commodo consequat ex commodo consequat',
-    type: 'video'
-  },
-  {
     url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow01.jpg'),
     caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
     subCaption: 'x ea commodo consequat ex commodo consequat',
@@ -89,30 +77,6 @@ const DATA = [
     caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
     subCaption: 'x ea commodo consequat ex commodo consequat',
     type: 'image'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=tgQpUTDBI1A',
-    caption: 'od tempor incididunt ut labore et dolore.',
-    subCaption: 'x ea commodo consequat ex commodo consequat',
-    type: 'video'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=PFRJvHXaNBk',
-    caption: 'od tempor incididunt ut labore et dolore.',
-    subCaption: 'x ea commodo consequat ex commodo consequat',
-    type: 'video'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=cL4uhaQ58Rk',
-    caption: 'od tempor incididunt ut labore et dolore.',
-    subCaption: 'x ea commodo consequat ex commodo consequat',
-    type: 'video'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=xIY_b10iehY',
-    caption: 'od tempor incididunt ut labore et dolore.',
-    subCaption: 'x ea commodo consequat ex commodo consequat',
-    type: 'video'
   }
 ]
 
@@ -201,9 +165,9 @@ const MakingTheShowSection = React.createClass({
         <Title text='MAKING THE SHOW' />
         <p>
           KAAN Presented by SINGHA CORPORATION คือ ประวัติศาสตร์หน้าใหม่ของการแสดงโชว์ในเมืองไทย
-          ที่ได้รวบรวมสุดยอดฝีมือด้านต่างๆ ในเมืองไทย<br />เอาไว้มากมายกว่า 600 ชีวิต
+          ที่ได้รวบรวมสุดยอดฝีมือด้านต่างๆ ในเมืองไทย เอาไว้มากมายกว่า 600 ชีวิต
           ซึ่งทุกคนต่างทุ่มเทในการเตรียมงานโดยใช้เวลากว่า 3 ปี
-          นักแสดงและทีมงานเบื้องหลังผ่านการฝึกซ้อมอย่างหนักกว่า 10 เดือน
+          นักแสดง และทีมงานเบื้องหลังผ่านการฝึกซ้อมอย่างหนักกว่า 10 เดือน
           เพื่อให้โชว์ 90 นาทีนี้ เป็นโชว์ที่จะสร้างความประทับใจให้กับผู้ชมตลอดไป
         </p>
         <div className={styles.previewSectionContainer}>

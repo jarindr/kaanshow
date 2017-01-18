@@ -25,7 +25,7 @@ const NavBar = React.createClass({
           <span></span>
         </div>
         <div className={classNameNav}>
-          <span className={styles.navItem} style={{color: 'white'}}>KAAN SHOW</span>
+          <span className={styles.navItem} style={{color: 'white'}}><Link to='/'>KAAN SHOW</Link></span>
           <span className={styles.navItem}><a href='https://d-luck.firebaseapp.com/' target='_blank'>D'LUCK</a></span>
           <span className={styles.navItem}><a href='https://punjaluck-a28c1.firebaseapp.com/' target='_blank'>PANJALUCK</a></span>
           <span className={styles.navItem}>LANGUAGE</span>

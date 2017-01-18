@@ -98,10 +98,6 @@ const MainPage = React.createClass({
             <MakingTheShowSection />
           </div>
         </div>
-        <div className={styles.singLogo}>
-          <img src={require('../assets/images/singha.png')} />
-          <div classes={styles.singCaption}>SINGHA CORPORATION</div>
-        </div>
         <Footer />
       </div>
     )
