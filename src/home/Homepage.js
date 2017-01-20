@@ -12,6 +12,12 @@ import styles from './HomePage.styl'
 const SIDENAV = ['INTRO<br>TO KAAN', 'KAAN CLIPS', 'THE STORY', 'WORLD<br>OF KAAN', 'KAAN<br>GALLERY', 'MAKING<br>THE SHOW']
 const MainPage = React.createClass({
   componentDidMount () {
+    const hash = window.location.hash.slice(1)
+    scrollTo(`#${hash}`, {
+      offset: -80,
+      ease: '',
+      duration: 1
+    })
     this.checkNavScroll()
     window.addEventListener('scroll', () => {
       this.checkNavScroll()
@@ -19,7 +25,7 @@ const MainPage = React.createClass({
   },
   getInitialState () {
     return {
-      currentSection: 'INTRO-TO0KAAN',
+      currentSection: 'INTRO-TO-KAAN',
       navigateBySide: false
     }
   },

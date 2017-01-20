@@ -1,8 +1,8 @@
+import { RouterContext, match } from 'react-router'
+
 import Helmet from 'react-helmet'
 import React from 'react'
 import { createMemoryHistory } from 'history'
-import { match, RouterContext } from 'react-router'
-
 import routes from './routes'
 
 // Exported static site renderer
