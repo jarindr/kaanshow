@@ -13,11 +13,20 @@ const SIDENAV = ['INTRO<br>TO KAAN', 'KAAN CLIPS', 'THE STORY', 'WORLD<br>OF KAA
 const MainPage = React.createClass({
   componentDidMount () {
     const hash = window.location.hash.slice(1)
-    scrollTo(`#${hash}`, {
-      offset: -80,
-      ease: '',
-      duration: 1
+    setTimeout(() => {
+      scrollTo(`#${hash}`, {
+        offset: -80,
+        ease: '',
+        duration: 1
+      })
     })
+    window.onhashchange = () => {
+      scrollTo(`#${hash}`, {
+        offset: -80,
+        ease: '',
+        duration: 1
+      })
+    }
     this.checkNavScroll()
     window.addEventListener('scroll', () => {
       this.checkNavScroll()
