@@ -56,9 +56,8 @@ const PreviewSection = React.createClass({
     )
   },
   getFilterdData () {
-    console.log(this.props.data)
     return this.props.data
-    .filter(x => this.props.currentCategory === 'all' ? true : x.type === this.props.currentCategory)
+    .filter(x => this.props.currentCategory === 'all' ? x.option !== 'hide' : x.type === this.props.currentCategory)
   },
   renderPreviewBlocks () {
     return this.getFilterdData()

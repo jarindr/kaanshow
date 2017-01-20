@@ -75,9 +75,10 @@ const DATA = [
     type: 'show'
   },
   {
-    url: require('../assets/images/characters/crocodilewife-small.jpg'),
-    image: require('../assets/images/characters/GinnaRee-small.jpg'),
-    type: 'special effect'
+    url: require('./assets/kaanGallery/soon.png'),
+    image: require('./assets/kaanGallery/soon.png'),
+    type: 'special effect',
+    option: 'hide'
   }
 ]
 
