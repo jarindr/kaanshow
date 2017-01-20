@@ -29,8 +29,10 @@ const Layout = React.createClass({
         <NavBar />
         {this.props.children}
         <div className={styles.singLogo}>
-          <img src={require('../assets/images/singha.png')} />
-          <div classes={styles.singCaption}>SINGHA CORPORATION</div>
+          <div className={styles.singLogoContainer}>
+            <img src={require('../assets/images/singha.png')} />
+            <div classes={styles.singCaption}>SINGHA CORPORATION</div>
+          </div>
         </div>
       </div>
     )
