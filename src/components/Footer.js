@@ -120,34 +120,34 @@ const Footer = React.createClass({
                 <div className={styles.siteMapBlock}>
                   <ul>
                     <li>KAAN SHOW</li>
-                    <li><a href='https://kaanshow-ec4c0.firebaseapp.com/#INTRO-TO-KAAN'>INTRO TO KAAN</a></li>
-                    <li><a href='https://kaanshow-ec4c0.firebaseapp.com/#KAAN-CLIPS'>KAAN CLIPS</a></li>
-                    <li><a href='https://kaanshow-ec4c0.firebaseapp.com/#THE-STORY'>THE STORY</a></li>
-                    <li><a href='https://kaanshow-ec4c0.firebaseapp.com/#THE-STORY'>WORLD OF KAAN</a></li>
-                    <li><a href='https://kaanshow-ec4c0.firebaseapp.com/#KAAN-GALLERY'>KAAN GALLERY</a></li>
-                    <li><a href='https://kaanshow-ec4c0.firebaseapp.com/#MAKING-THE-SHOW'>MAKING THE SHOW</a></li>
+                    <li><a target='_blank' href='/#INTRO-TO-KAAN'>INTRO TO KAAN</a></li>
+                    <li><a target='_blank' href='/#KAAN-CLIPS'>KAAN CLIPS</a></li>
+                    <li><a target='_blank' href='/#THE-STORY'>THE STORY</a></li>
+                    <li><a target='_blank' href='/#WORLD-OF-KAAN'>WORLD OF KAAN</a></li>
+                    <li><a target='_blank' href='/#KAAN-GALLERY'>KAAN GALLERY</a></li>
+                    <li><a target='_blank' href='/#MAKING-THE-SHOW'>MAKING THE SHOW</a></li>
                   </ul>
                 </div>
                 <div className={styles.siteMapBlock}>
                   <ul>
                     <li>D'LUCK</li>
-                    <li><a href="https://d-luck.firebaseapp.com/#ABOUT-DLUCK">ABOUT D'LUCK</a></li>
-                    <li><a href="https://d-luck.firebaseapp.com/#GALLERY">GALLERY</a></li>
-                    <li><a href="https://d-luck.firebaseapp.com/#SEATING-PLAN">SEATING PLAN</a></li>
-                    <li><a href="https://d-luck.firebaseapp.com/#THEATER-360">THEATER 360º</a></li>
-                    <li><a href="https://d-luck.firebaseapp.com/#FACILITIES">FACILITIES</a></li>
-                    <li><a href="https://d-luck.firebaseapp.com/#LOCATION-MAP">LOCATION & MAP</a></li>
+                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#ABOUT-DLUCK">ABOUT D'LUCK</a></li>
+                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#GALLERY">GALLERY</a></li>
+                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#SEATING-PLAN">SEATING PLAN</a></li>
+                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#THEATER-360">THEATER 360º</a></li>
+                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#FACILITIES">FACILITIES</a></li>
+                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#LOCATION-MAP">LOCATION & MAP</a></li>
                   </ul>
                 </div>
                 <div className={styles.siteMapBlock}>
                   <ul>
                     <li>PANJALUCK</li>
-                    <li><a href='https://punjaluck-a28c1.firebaseapp.com/#business-page'>OUR BUSINESS</a></li>
-                    <li><a href='https://punjaluck-a28c1.firebaseapp.com/#vision-page'>VISION & MISSION</a></li>
-                    <li><a href='https://punjaluck-a28c1.firebaseapp.com/#corporate-page'>CORPORATE VALUE</a></li>
-                    <li><a href='https://punjaluck-a28c1.firebaseapp.com/#board-page'>BOARD PROFILE</a></li>
-                    <li><a href='https://punjaluck-a28c1.firebaseapp.com/#partner-page'>OUR PARTNER</a></li>
-                    <li><a href='https://punjaluck-a28c1.firebaseapp.com/#faq-page'>WORK WITH US</a></li>
+                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#business-page'>OUR BUSINESS</a></li>
+                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#vision-page'>VISION & MISSION</a></li>
+                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#corporate-page'>CORPORATE VALUE</a></li>
+                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#board-page'>BOARD PROFILE</a></li>
+                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#partner-page'>OUR PARTNER</a></li>
+                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#faq-page'>WORK WITH US</a></li>
                   </ul>
                 </div>
                 <div className={styles.siteMapBlock}>
