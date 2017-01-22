@@ -56,7 +56,6 @@ const MainPage = React.createClass({
     const id = text.replace(/ /g, '-').replace(/<br>/g, '-')
     this.setState({currentSection: id, navigateBySide: true}, () => {
       scrollTo(`#${id}`, {
-        offset: -80,
         ease: 'inOutExpo',
         duration: 1500
       })
