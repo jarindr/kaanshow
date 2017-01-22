@@ -31,7 +31,7 @@ const Layout = React.createClass({
         <div className={styles.singLogo}>
           <div className={styles.singLogoContainer}>
             <img src={require('../assets/images/singha.png')} />
-            <div classes={styles.singCaption}>SINGHA CORPORATION</div>
+            <div className={styles.singCaption}>SINGHA CORPORATION</div>
           </div>
         </div>
       </div>

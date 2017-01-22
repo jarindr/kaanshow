@@ -89,19 +89,20 @@
       list-style-type: none;
       font-size: 12px;
       opacity: 0.6
-      cursor: pointer;
       padding: 2px 0
       padding-left: 0
+      &.link
+        cursor: pointer;
       &:first-child
         margin-bottom: 10px
         opacity: 1
         font-size: 18px
-    li:hover
-      opacity: 1
-      a
-        list-style-type: none;
-        text-decoration: none
-        color: inherit;
+      &.link:hover
+        opacity: 1
+        a
+          list-style-type: none;
+          text-decoration: none
+          color: inherit;
   .fax
     margin: 5px 0
     opacity: 1

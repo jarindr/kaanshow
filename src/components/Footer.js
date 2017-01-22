@@ -120,51 +120,51 @@ const Footer = React.createClass({
                 <div className={styles.siteMapBlock}>
                   <ul>
                     <li>KAAN SHOW</li>
-                    <li><a target='_blank' href='/#INTRO-TO-KAAN'>INTRO TO KAAN</a></li>
-                    <li><a target='_blank' href='/#KAAN-CLIPS'>KAAN CLIPS</a></li>
-                    <li><a target='_blank' href='/#THE-STORY'>THE STORY</a></li>
-                    <li><a target='_blank' href='/#WORLD-OF-KAAN'>WORLD OF KAAN</a></li>
-                    <li><a target='_blank' href='/#KAAN-GALLERY'>KAAN GALLERY</a></li>
-                    <li><a target='_blank' href='/#MAKING-THE-SHOW'>MAKING THE SHOW</a></li>
+                    <li className={styles.link}><a target='_blank' href='/#INTRO-TO-KAAN'>INTRO TO KAAN</a></li>
+                    <li className={styles.link}><a target='_blank' href='/#KAAN-CLIPS'>KAAN CLIPS</a></li>
+                    <li className={styles.link}><a target='_blank' href='/#THE-STORY'>THE STORY</a></li>
+                    <li className={styles.link}><a target='_blank' href='/#WORLD-OF-KAAN'>WORLD OF KAAN</a></li>
+                    <li className={styles.link}><a target='_blank' href='/#KAAN-GALLERY'>KAAN GALLERY</a></li>
+                    <li className={styles.link}><a target='_blank' href='/#MAKING-THE-SHOW'>MAKING THE SHOW</a></li>
                   </ul>
                 </div>
                 <div className={styles.siteMapBlock}>
                   <ul>
                     <li>D'LUCK</li>
-                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#ABOUT-DLUCK">ABOUT D'LUCK</a></li>
-                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#GALLERY">GALLERY</a></li>
-                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#SEATING-PLAN">SEATING PLAN</a></li>
-                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#THEATER-360">THEATER 360º</a></li>
-                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#FACILITIES">FACILITIES</a></li>
-                    <li><a target='_blank' href="https://d-luck.firebaseapp.com/#LOCATION-MAP">LOCATION & MAP</a></li>
+                    <li className={styles.link}><a target='_blank' href="https://d-luck.firebaseapp.com/#ABOUT-DLUCK">ABOUT D'LUCK</a></li>
+                    <li className={styles.link}><a target='_blank' href="https://d-luck.firebaseapp.com/#GALLERY">GALLERY</a></li>
+                    <li className={styles.link}><a target='_blank' href="https://d-luck.firebaseapp.com/#SEATING-PLAN">SEATING PLAN</a></li>
+                    <li className={styles.link}><a target='_blank' href="https://d-luck.firebaseapp.com/#THEATER-360">THEATER 360º</a></li>
+                    <li className={styles.link}><a target='_blank' href="https://d-luck.firebaseapp.com/#FACILITIES">FACILITIES</a></li>
+                    <li className={styles.link}><a target='_blank' href="https://d-luck.firebaseapp.com/#LOCATION-MAP">LOCATION & MAP</a></li>
                   </ul>
                 </div>
                 <div className={styles.siteMapBlock}>
                   <ul>
                     <li>PANJALUCK</li>
-                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#business-page'>OUR BUSINESS</a></li>
-                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#vision-page'>VISION & MISSION</a></li>
-                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#corporate-page'>CORPORATE VALUE</a></li>
-                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#board-page'>BOARD PROFILE</a></li>
-                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#partner-page'>OUR PARTNER</a></li>
-                    <li><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#faq-page'>WORK WITH US</a></li>
+                    <li className={styles.link}><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#business-page'>OUR BUSINESS</a></li>
+                    <li className={styles.link}><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#vision-page'>VISION & MISSION</a></li>
+                    <li className={styles.link}><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#corporate-page'>CORPORATE VALUE</a></li>
+                    <li className={styles.link}><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#board-page'>BOARD PROFILE</a></li>
+                    <li className={styles.link}><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#partner-page'>OUR PARTNER</a></li>
+                    <li className={styles.link}><a target='_blank' href='https://punjaluck-a28c1.firebaseapp.com/#faq-page'>WORK WITH US</a></li>
                   </ul>
                 </div>
                 <div className={styles.siteMapBlock}>
                   <ul>
-                    <li>INFO & DOWNLOAD</li>
-                    <li>NEWS</li>
-                    <li><Link to='/info/download/' target="_blank">DOWNLOAD<br />(PHOTO, FACT SHEET, CLIPS)</Link></li>
-                    <li><Link to='/info/term/' target="_blank">TERMS & CONDITIONS</Link></li>
-                    <li><Link to='/info/disclaimer/' target="_blank">DISCLIMER</Link></li>
-                    <li><Link to='/info/privacy/' target="_blank">PRIVACY</Link></li>
-                    <li><Link to='/info/faq/' target="_blank">FAQ</Link></li>
+                    <li className={styles.link}>INFO & DOWNLOAD</li>
+                    <li className={styles.link}>NEWS</li>
+                    <li className={styles.link}><Link to='/info/download/' target="_blank">DOWNLOAD<br />(PHOTO, FACT SHEET, CLIPS)</Link></li>
+                    <li className={styles.link}><Link to='/info/term/' target="_blank">TERMS & CONDITIONS</Link></li>
+                    <li className={styles.link}><Link to='/info/disclaimer/' target="_blank">DISCLIMER</Link></li>
+                    <li className={styles.link}><Link to='/info/privacy/' target="_blank">PRIVACY</Link></li>
+                    <li className={styles.link}><Link to='/info/faq/' target="_blank">FAQ</Link></li>
                   </ul>
                 </div>
                 <div className={styles.siteMapBlock}>
                   <ul>
                     <li>BOOKING TICKET</li>
-                    <li><Link to='/ticket/type/'>PACKAGE & PROMOTION</Link></li>
+                    <li className={styles.link}><Link to='/ticket/type/' target='_blank'>PACKAGE & PROMOTION</Link></li>
                   </ul>
                 </div>
               </div>

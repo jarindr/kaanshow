@@ -12,26 +12,6 @@ import styles from './HomePage.styl'
 const SIDENAV = ['INTRO<br>TO KAAN', 'KAAN CLIPS', 'THE STORY', 'WORLD<br>OF KAAN', 'KAAN<br>GALLERY', 'MAKING<br>THE SHOW']
 const MainPage = React.createClass({
   componentDidMount () {
-    const hash = window.location.hash.slice(1)
-    if (hash) {
-      setTimeout(() => {
-        scrollTo(`#${hash}`, {
-          offset: -80,
-          ease: '',
-          duration: 1
-        })
-      })
-    }
-    window.onhashchange = () => {
-      setTimeout(() => {
-        scrollTo(`#${hash}`, {
-          offset: -80,
-          ease: '',
-          duration: 1
-        })
-      })
-      return
-    }
     this.checkNavScroll()
     window.addEventListener('scroll', () => {
       this.checkNavScroll()
@@ -99,22 +79,22 @@ const MainPage = React.createClass({
       <div>
         <div className={styles.container}>
           {this.renderSideNav()}
-          <div ref='INTRO TO KAAN' id='INTRO-TO-KAAN'>
+          <div ref='INTRO TO KAAN' id='INTRO-TO-KAAN' className={styles.sectionContainer}>
             <IntroSection />
           </div>
-          <div ref='KAAN CLIPS' id='KAAN-CLIPS'>
+          <div ref='KAAN CLIPS' id='KAAN-CLIPS' className={styles.sectionContainer}>
             <KaanClipSection />
           </div>
-          <div ref='THE STORY' id='THE-STORY'>
+          <div ref='THE STORY' id='THE-STORY' className={styles.sectionContainer}>
             <TheStorySection />
           </div>
-          <div ref='WORLD OF KAAN' id='WORLD-OF-KAAN'>
+          <div ref='WORLD OF KAAN' id='WORLD-OF-KAAN' className={styles.sectionContainer}>
             <WorldOfKaanSection />
           </div>
-          <div ref='KAAN GALLERY' id='KAAN-GALLERY'>
+          <div ref='KAAN GALLERY' id='KAAN-GALLERY' className={styles.sectionContainer}>
             <KaanGallerySection />
           </div>
-          <div ref='MAKING THE SHOW' id='MAKING-THE-SHOW'>
+          <div ref='MAKING THE SHOW' id='MAKING-THE-SHOW' className={styles.sectionContainer}>
             <MakingTheShowSection />
           </div>
         </div>
