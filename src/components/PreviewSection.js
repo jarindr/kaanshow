@@ -11,7 +11,7 @@ const PreviewSection = React.createClass({
     category: React.PropTypes.array
   },
   componentDidMount () {
-    this.setState({ containerHeight: this.refs.container.offsetHeight / Math.ceil(this.props.data.length / 3) * 2 })
+    this.setState({ containerHeight: $(this.refs.container)[0].offsetHeight / Math.ceil(this.props.data.length / 3) * 2 })
   },
   getInitialState () {
     return {
@@ -21,7 +21,7 @@ const PreviewSection = React.createClass({
   renderCatagory () {
     const catagories = this.props.category ? ['all', ...this.props.category] : ['all', ...new Set(this.props.data.map(x => x.type || null))]
     const elements = catagories.map(x => (
-      <span key={x} className={styles.category} style={{opacity: x === this.props.currentCategory ? 1 : 0.5}} onClick={this.props.onChangeCategory.bind(null, x)}>
+      <span key={x} className={styles.category} style={{ opacity: x === this.props.currentCategory ? 1 : 0.5 }} onClick={this.props.onChangeCategory.bind(null, x)}>
         {x}
       </span>
     ))
@@ -45,26 +45,26 @@ const PreviewSection = React.createClass({
         className={styles.previewBlock}
         onClick={this.props.onClickPreview.bind(null, i)}
       >
-        <div className={styles.imageContainer} style={{background: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+        <div className={styles.imageContainer} style={{ background: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <img src={require('../assets/images/play_new.png')} className={styles.playButton} hidden={!(/(youtube)/.test(data.url))} />
         </div>
         <div className={styles.caption} hidden={!data.caption}>
           {data.caption}
-          <div style={{opacity: 0.5, marginTop: '4px'}}>{data.subCaption || ''}</div>
+          <div style={{ opacity: 0.5, marginTop: '4px' }}>{data.subCaption || ''}</div>
         </div>
       </div>
     )
   },
   getFilterdData () {
     return this.props.data
-    .filter(x => this.props.currentCategory === 'all' ? x.option !== 'hide' : x.type === this.props.currentCategory)
+      .filter(x => this.props.currentCategory === 'all' ? x.option !== 'hide' : x.type === this.props.currentCategory)
   },
   renderPreviewBlocks () {
     return this.getFilterdData()
-    .map((x, i) => this.renderPreviewBlock(x, i))
+      .map((x, i) => this.renderPreviewBlock(x, i))
   },
   onClickCircleNavigation (i, e) {
-    this.setState({current: i})
+    this.setState({ current: i })
   },
   renderNavigation () {
     const numberList = Math.ceil(this.getFilterdData().length / 6)
@@ -87,7 +87,12 @@ const PreviewSection = React.createClass({
     return (
       <div className={styles.container}>
         {this.renderCatagory()}
-        <div className={`${styles.previewBlocksContainer} customScrollBar`} ref='container' style={{height: this.state.containerHeight ? this.state.containerHeight : 'auto'}}>
+        <div
+          className={`${styles.previewBlocksContainer} customScrollBar`}
+          id='hack-check-height'
+          ref='container'
+          style={{ height: this.state.containerHeight ? this.state.containerHeight : 'auto' }}
+        >
           <FlipMove enterAnimation='fade' leaveAnimation='fade'>
             {this.renderPreviewBlocks()}
           </FlipMove>
