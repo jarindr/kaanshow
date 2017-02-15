@@ -120,12 +120,12 @@ const Footer = React.createClass({
                 <div className={styles.siteMapBlock}>
                   <ul>
                     <li>KAAN SHOW</li>
-                    <li className={styles.link}><a target='_blank' href='/#INTRO-TO-KAAN'>INTRO TO KAAN</a></li>
-                    <li className={styles.link}><a target='_blank' href='/#KAAN-CLIPS'>KAAN CLIPS</a></li>
-                    <li className={styles.link}><a target='_blank' href='/#THE-STORY'>THE STORY</a></li>
-                    <li className={styles.link}><a target='_blank' href='/#WORLD-OF-KAAN'>WORLD OF KAAN</a></li>
-                    <li className={styles.link}><a target='_blank' href='/#KAAN-GALLERY'>KAAN GALLERY</a></li>
-                    <li className={styles.link}><a target='_blank' href='/#MAKING-THE-SHOW'>MAKING THE SHOW</a></li>
+                    <li className={styles.link}><a target='_blank' href='#INTRO-TO-KAAN'>INTRO TO KAAN</a></li>
+                    <li className={styles.link}><a target='_blank' href='#KAAN-CLIPS'>KAAN CLIPS</a></li>
+                    <li className={styles.link}><a target='_blank' href='#THE-STORY'>THE STORY</a></li>
+                    <li className={styles.link}><a target='_blank' href='#WORLD-OF-KAAN'>WORLD OF KAAN</a></li>
+                    <li className={styles.link}><a target='_blank' href='#KAAN-GALLERY'>KAAN GALLERY</a></li>
+                    <li className={styles.link}><a target='_blank' href='#MAKING-THE-SHOW'>MAKING THE SHOW</a></li>
                   </ul>
                 </div>
                 <div className={styles.siteMapBlock}>

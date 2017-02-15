@@ -78,22 +78,22 @@ const MainPage = React.createClass({
       <div>
         <div className={styles.container}>
           {this.renderSideNav()}
-          <div ref='INTRO TO KAAN' id='INTRO-TO-KAAN' className={styles.sectionContainer}>
+          <div id='INTRO-TO-KAAN' className={styles.sectionContainer}>
             <IntroSection />
           </div>
-          <div ref='KAAN CLIPS' id='KAAN-CLIPS' className={styles.sectionContainer}>
+          <div id='KAAN-CLIPS' className={styles.sectionContainer}>
             <KaanClipSection />
           </div>
-          <div ref='THE STORY' id='THE-STORY' className={styles.sectionContainer}>
+          <div id='THE-STORY' className={styles.sectionContainer}>
             <TheStorySection />
           </div>
-          <div ref='WORLD OF KAAN' id='WORLD-OF-KAAN' className={styles.sectionContainer}>
+          <div id='WORLD-OF-KAAN' className={styles.sectionContainer}>
             <WorldOfKaanSection />
           </div>
-          <div ref='KAAN GALLERY' id='KAAN-GALLERY' className={styles.sectionContainer}>
+          <div id='KAAN-GALLERY' className={styles.sectionContainer}>
             <KaanGallerySection />
           </div>
-          <div ref='MAKING THE SHOW' id='MAKING-THE-SHOW' className={styles.sectionContainer}>
+          <div id='MAKING-THE-SHOW' className={styles.sectionContainer}>
             <MakingTheShowSection />
           </div>
         </div>
