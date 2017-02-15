@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import React from 'react'
 import cx from 'classnames'
 import styles from './NavBar.styl'
+import LanguageDropdown from './languageDropdown'
 const NavBar = React.createClass({
   getInitialState () {
     return {
@@ -9,10 +10,10 @@ const NavBar = React.createClass({
     }
   },
   onClickHamberger () {
-    this.setState({mobileMenu: !this.state.mobileMenu})
+    this.setState({ mobileMenu: !this.state.mobileMenu })
   },
   render () {
-    const classNameNav = cx([styles.navigationContainer], {[styles.active]: this.state.mobileMenu})
+    const classNameNav = cx([styles.navigationContainer], { [styles.active]: this.state.mobileMenu })
     return (
       <div className={styles.container}>
         <div className={styles.navigationLogo}>
@@ -25,10 +26,16 @@ const NavBar = React.createClass({
           <span></span>
         </div>
         <div className={classNameNav}>
-          <span className={styles.navItem} style={{color: 'white'}}><Link to='/'>KAAN SHOW</Link></span>
+          <span className={styles.navItem} style={{ color: 'white' }}><Link to='/'>KAAN SHOW</Link></span>
           <span className={styles.navItem}><a href='https://d-luck.firebaseapp.com/' target='_blank'>D'LUCK</a></span>
           <span className={styles.navItem}><a href='https://punjaluck-a28c1.firebaseapp.com/' target='_blank'>PANJALUCK</a></span>
-          <span className={styles.navItem}>LANGUAGE</span>
+          <span className={styles.navItem}>
+            <LanguageDropdown
+              selectOptions={['EN', 'TH', 'JP', 'CN']}
+              selectIndex={0}
+              onChange={this.onSelectChange}
+            />
+          </span>
           <span className={styles.navItem}>
             <img src={require('../assets/images/Untitled 2.png')} className={styles.search} />
           </span>
