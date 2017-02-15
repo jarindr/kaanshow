@@ -25,7 +25,7 @@ const PreviewSection = React.createClass({
         {x}
       </span>
     ))
-    if (catagories.includes(null)) {
+    if (catagories.indexOf(null) !== -1) {
       return null
     } else {
       return (

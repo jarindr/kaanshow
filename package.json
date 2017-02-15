@@ -58,6 +58,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
     "classnames": "^2.2.5",
     "dns": "^0.2.2",
     "get-youtube-id": "^1.0.0",
