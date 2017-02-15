@@ -91,7 +91,7 @@ const PreviewSection = React.createClass({
           className={`${styles.previewBlocksContainer} customScrollBar`}
           id='hack-check-height'
           ref='container'
-          style={{ height: this.state.containerHeight ? this.state.containerHeight : 'auto' }}
+          style={{ height: this.state.containerHeight }}
         >
           <FlipMove enterAnimation='fade' leaveAnimation='fade'>
             {this.renderPreviewBlocks()}

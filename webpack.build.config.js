@@ -31,9 +31,6 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin('assets/stylesheets/style-[contenthash].css'),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin(),
-    new webpack.optimize.DedupePlugin(),
     new StaticSiteGeneratorPlugin('prerender', StaticData.paths, StaticData, { window: {location: {}}}),
     new webpack.DefinePlugin({
       'process.env': {

@@ -31,7 +31,7 @@ const NavBar = React.createClass({
           <span className={styles.navItem}><a href='https://punjaluck-a28c1.firebaseapp.com/' target='_blank'>PANJALUCK</a></span>
           <span className={styles.navItem}>
             <LanguageDropdown
-              selectOptions={['EN', 'TH', 'JP', 'CN']}
+              selectOptions={['TH', 'EN', 'JP', 'CN']}
               selectIndex={0}
               onChange={this.onSelectChange}
             />
