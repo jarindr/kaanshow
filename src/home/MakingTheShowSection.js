@@ -89,16 +89,20 @@ const MakingTheShowSection = React.createClass({
     return {
       isModalOpen: false,
       current: 0,
+      currentAll: 0,
       currentCategory: 'all',
       filteredData: this.getFilterdData('all')
     }
   },
   onClickPreview (i, e) {
+    const index = this.state.filteredData[i].type === 'video'
+    ? VIDEODATA.map(x => x.url).indexOf(this.state.filteredData[i].url)
+    : IMAGEDATA.map(x => x.url).indexOf(this.state.filteredData[i].url)
     const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
     if (width < 768 && this.state.filteredData[i].type === 'video') {
       window.open(this.state.filteredData[i].url, '_blank')
     } else {
-      this.setState({ isModalOpen: true, current: i, mode: this.state.filteredData[i].type })
+      this.setState({ isModalOpen: true, current: index, mode: this.state.filteredData[i].type })
     }
   },
   closeModal () {
@@ -144,20 +148,16 @@ const MakingTheShowSection = React.createClass({
     )
   },
   renderImageModal () {
-    if (this.state.isModalOpen) {
-      const imageURL = this.state.filteredData[this.state.current].url
-      const indexInImage = IMAGEDATA.map(x => x.url).indexOf(imageURL)
-      const realImage = IMAGEDATA[indexInImage].url
-      return (
-        <ImageModalBox
-          isModalOpen={this.state.isModalOpen}
-          closeModal={this.closeModal}
-          image={realImage}
-          onClickNext={this.onClickNext}
-          onClickPrev={this.onClickPrev}
-        />
-      )
-    }
+    return (
+      <ImageModalBox
+        isModalOpen={this.state.isModalOpen}
+        closeModal={this.closeModal}
+        images={IMAGEDATA}
+        onClickNext={this.onClickNext}
+        onClickPrev={this.onClickPrev}
+        current={this.state.current}
+      />
+    )
   },
   render () {
     return (

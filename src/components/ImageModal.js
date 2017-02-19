@@ -30,10 +30,42 @@ const ImageModalBox = React.createClass({
     isModalOpen: React.PropTypes.bool.isRequired,
     closeModal: React.PropTypes.func.isRequired,
     onClickNext: React.PropTypes.func.isRequired,
-    onClickPrev: React.PropTypes.func.isRequired
+    onClickPrev: React.PropTypes.func.isRequired,
+    images: React.PropTypes.array,
+    current: React.PropTypes.number
+  },
+  getInitialState () {
+    return {
+      current: this.props.current
+    }
+  },
+  componentWillReceiveProps (nextProps) {
+    this.setState({
+      current: nextProps.current
+    })
   },
   closeModal () {
     this.props.closeModal()
+  },
+  onClickNext () {
+    this.props.onClickNext()
+    if (this.props.images) {
+      if (this.state.current + 1 > this.props.images.length - 1) {
+        this.setState({ current: 0 })
+      } else {
+        this.setState({ current: this.state.current + 1 })
+      }
+    }
+  },
+  onClickPrev () {
+    this.props.onClickPrev()
+    if (this.props.images) {
+      if (this.state.current - 1 < 0) {
+        this.setState({ current: this.props.images.length - 1 })
+      } else {
+        this.setState({ current: this.state.current - 1 })
+      }
+    }
   },
   render () {
     return (
@@ -45,9 +77,9 @@ const ImageModalBox = React.createClass({
         <div className={styles.container}>
           <div className={styles.caption}>THIS IS A CAPTION</div>
           <img src={require('../assets/images/closeButtonBlack.png')} className={styles.closeButton} onClick={this.closeModal} />
-          <img src={require('../assets/images/next.png')} className={styles.arrowLeft} onClick={this.props.onClickPrev} />
-          <img src={this.props.image} className={styles.imageShow} />
-          <img src={require('../assets/images/next.png')} className={styles.arrowRight}onClick={this.props.onClickNext} />
+          <img src={require('../assets/images/next.png')} className={styles.arrowLeft} onClick={this.onClickPrev} />
+          <img src={this.props.images ? this.props.images[this.state.current].url : this.props.image} className={styles.imageShow} />
+          <img src={require('../assets/images/next.png')} className={styles.arrowRight} onClick={this.onClickNext} />
         </div>
       </Modal>
     )
