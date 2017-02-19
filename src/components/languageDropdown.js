@@ -56,7 +56,7 @@ const SelectableDropDown = React.createClass({
     const containerClassName = cx(styles.container, {
       [this.props.className]: this.props.className
     })
-    const deg = this.state.active ? 0 : 180
+    const deg = this.state.active ? 180 : 0
     return (
       <div className={containerClassName} onClick={this.onToggleSelect}>
         {this.props.name ? <label className={styles.title}>{this.props.name}</label> : null}

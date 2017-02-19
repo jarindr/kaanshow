@@ -26,10 +26,17 @@ const NavBar = React.createClass({
           <span></span>
         </div>
         <div className={classNameNav}>
+          <div className={styles.languageDropdownMobile}>
+            <LanguageDropdown
+              selectOptions={['TH', 'EN', 'JP', 'CN']}
+              selectIndex={0}
+              onChange={this.onSelectChange}
+            />
+          </div>
           <span className={styles.navItem} style={{ color: 'white' }}><Link to='/'>KAAN SHOW</Link></span>
           <span className={styles.navItem}><a href='https://d-luck.firebaseapp.com/' target='_blank'>D'LUCK</a></span>
           <span className={styles.navItem}><a href='https://punjaluck-a28c1.firebaseapp.com/' target='_blank'>PANJALUCK</a></span>
-          <span className={styles.navItem}>
+          <span className={`${styles.navItem} ${styles.languageDropdown}`}>
             <LanguageDropdown
               selectOptions={['TH', 'EN', 'JP', 'CN']}
               selectIndex={0}

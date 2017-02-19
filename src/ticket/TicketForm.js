@@ -46,7 +46,7 @@ const TicketForm = React.createClass({
           <input></input>
         </div>
         <button type='button'>SUBMIT</button>
-        <div style={{textAlign: 'left', fontSize: '14px'}}>*สามารถจองได้ตั้งแต่ 10 คนขึ้นไป</div>
+        <div className={styles.booknum} style={{textAlign: 'left', fontSize: '14px'}}>*สามารถจองได้ตั้งแต่ 10 คนขึ้นไป</div>
       </div>
     )
   }

@@ -8,7 +8,7 @@
   padding: 0 50px
   height: 80px
   position: fixed;
-  z-index: 30
+  z-index: 30000
   top: 0;
 .navItem
   margin: 0 10px;
@@ -37,9 +37,21 @@
   width: 100%
 .active
   transform: translate3d(0,0,0)!important
+.languageDropdownMobile
+  display none
 @media screen and (max-width 500px)
   .container
     padding: 0 20px
+  .search
+    width 30px
+  .languageDropdownMobile
+    display block
+    position fixed
+    top 30px
+    color grey!important
+    left 20px
+  .languageDropdown
+    display none!important
   .navigationContainer
     text-align center
     position: fixed;
@@ -47,7 +59,7 @@
     right: 0
     top: 0
     bottom: 0
-    padding-top: 50%
+    padding-top: 45%
     background-color: black
     transform: translate3d(-100%,0,0);
   .navigationLogo
@@ -77,6 +89,7 @@
   #hamberger-menu span {
     display: block;
     position: absolute;
+    z-index 1000
     height: 5px;
     width: 100%;
     background-color: white;

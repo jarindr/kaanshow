@@ -9,6 +9,20 @@ const Layout = React.createClass({
   propTypes: {
     children: React.PropTypes.element
   },
+  getInitialState () {
+    return {
+      showCopyright: false
+    }
+  },
+  componentDidMount () {
+    window.addEventListener('scroll', () => {
+      if ($(window).scrollTop() + $(window).innerHeight() >= $('body').height() - 500) {
+        this.setState({ showCopyright: true })
+      } else {
+        this.setState({ showCopyright: false })
+      }
+    })
+  },
   render () {
     return (
       <div>
@@ -16,6 +30,7 @@ const Layout = React.createClass({
           titleTemplate=''
           defaultTitle=''
           script={[{
+            src: 'https://cdn.polyfill.io/v2/polyfill.min.js'
           }]}
           link={[
             {
@@ -29,6 +44,9 @@ const Layout = React.createClass({
         <NavBar />
         {this.props.children}
         <div className={styles.singLogo}>
+          <div className={styles.copyright} style={{ display: this.state.showCopyright ? 'block' : 'none' }}>
+            © 2017 PANJALUCK PASUK CO. , LTD. ALL RIGHTS RESERVED.
+          </div>
           <div className={styles.singLogoContainer}>
             <img src={require('../assets/images/singha.png')} />
           </div>
