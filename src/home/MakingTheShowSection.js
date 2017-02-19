@@ -137,7 +137,7 @@ const MakingTheShowSection = React.createClass({
         <PreviewListSection
           data={VIDEODATA.filter(x => /youtube/.test(x.url))}
           onClickPreview={this.onClickPreview}
-          current={this.state.filteredData[this.state.current]}
+          current={VIDEODATA[this.state.current]}
           closeModal={this.closeModal}
         />
       </Modal>
