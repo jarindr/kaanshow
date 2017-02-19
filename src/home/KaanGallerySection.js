@@ -125,7 +125,6 @@ const KaanClipSection = React.createClass({
         isModalOpen={this.state.isModalOpen}
         closeModal={this.closeModal}
         image={this.state.filteredData[this.state.current]}
-        current={this.state.current}
         onClickNext={this.onClickNext}
         onClickPrev={this.onClickPrev}
       />

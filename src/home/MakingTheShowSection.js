@@ -135,7 +135,7 @@ const MakingTheShowSection = React.createClass({
         style={customStyles}
       >
         <PreviewListSection
-          data={VIDEODATA.filter(x => /youtube/.test(x.url))}
+          data={VIDEODATA}
           onClickPreview={this.onClickPreview}
           current={VIDEODATA[this.state.current]}
           closeModal={this.closeModal}
@@ -144,15 +144,20 @@ const MakingTheShowSection = React.createClass({
     )
   },
   renderImageModal () {
-    return (
-      <ImageModalBox
-        isModalOpen={this.state.isModalOpen}
-        closeModal={this.closeModal}
-        image={IMAGEDATA[this.state.current].url}
-        onClickNext={this.onClickNext}
-        onClickPrev={this.onClickPrev}
-      />
-    )
+    if (this.state.isModalOpen) {
+      const imageURL = this.state.filteredData[this.state.current].url
+      const indexInImage = IMAGEDATA.map(x => x.url).indexOf(imageURL)
+      const realImage = IMAGEDATA[indexInImage].url
+      return (
+        <ImageModalBox
+          isModalOpen={this.state.isModalOpen}
+          closeModal={this.closeModal}
+          image={realImage}
+          onClickNext={this.onClickNext}
+          onClickPrev={this.onClickPrev}
+        />
+      )
+    }
   },
   render () {
     return (
