@@ -5,13 +5,15 @@ import PreviewSection from '../components/PreviewSection'
 import React from 'react'
 import Title from '../components/Title'
 import styles from './MakingTheShowSection.styl'
-const DATA = [
+const VIDEODATA = [
   {
     url: 'https://www.youtube.com/watch?v=XnYOqcE2apE&t=22s',
     caption: 'KAAN : THE PRODUCTION PROGRESS',
     subCaption: 'อัพเดทความคืบหน้า KAAN กับประมวลภาพเบื้องหลังสุดเอ็กซ์คลูซีฟ',
     type: 'video'
-  },
+  }
+]
+const IMAGEDATA = [
   {
     url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow01.jpg'),
     caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
@@ -65,18 +67,6 @@ const DATA = [
     caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
     subCaption: 'x ea commodo consequat ex commodo consequat',
     type: 'image'
-  },
-  {
-    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow10.jpg'),
-    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
-    subCaption: 'x ea commodo consequat ex commodo consequat',
-    type: 'image'
-  },
-  {
-    url: require('./assets/makingTheShow/KAAN_Website_MakingTheShow01.jpg'),
-    caption: 'เบื้องหลังความอลังการของ KAAN presented by SINGHA CORPORATION',
-    subCaption: 'x ea commodo consequat ex commodo consequat',
-    type: 'image'
   }
 ]
 
@@ -104,31 +94,37 @@ const MakingTheShowSection = React.createClass({
     }
   },
   onClickPreview (i, e) {
-    this.setState({ isModalOpen: true, current: i })
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    if (width < 768 && this.state.filteredData[i].type === 'video') {
+      window.open(this.state.filteredData[i].url, '_blank')
+    } else {
+      this.setState({ isModalOpen: true, current: i, mode: this.state.filteredData[i].type })
+    }
   },
   closeModal () {
     this.setState({ isModalOpen: false })
   },
   onChangeCategory (category) {
-    this.setState({currentCategory: category, filteredData: this.getFilterdData(category)})
+    this.setState({ currentCategory: category, filteredData: this.getFilterdData(category) })
   },
   getFilterdData (category) {
+    const data = VIDEODATA.concat(IMAGEDATA)
     return category === 'all'
-    ? DATA
-    : DATA.filter(x => x.type === category)
+      ? data
+      : data.filter(x => x.type === category)
   },
   onClickNext () {
-    if (this.state.current + 1 > this.state.filteredData.length - 1) {
-      this.setState({current: 0})
+    if (this.state.current + 1 > IMAGEDATA.length - 1) {
+      this.setState({ current: 0 })
     } else {
-      this.setState({current: this.state.current + 1})
+      this.setState({ current: this.state.current + 1 })
     }
   },
   onClickPrev () {
     if (this.state.current - 1 < 0) {
-      this.setState({current: this.state.filteredData.length - 1})
+      this.setState({ current: IMAGEDATA.length - 1 })
     } else {
-      this.setState({current: this.state.current - 1})
+      this.setState({ current: this.state.current - 1 })
     }
   },
   renderVideoModal () {
@@ -137,9 +133,9 @@ const MakingTheShowSection = React.createClass({
         isOpen={this.state.isModalOpen}
         onRequestClose={this.closeModal}
         style={customStyles}
-        >
+      >
         <PreviewListSection
-          data={DATA.filter(x => /youtube/.test(x.url))}
+          data={VIDEODATA.filter(x => /youtube/.test(x.url))}
           onClickPreview={this.onClickPreview}
           current={this.state.filteredData[this.state.current]}
           closeModal={this.closeModal}
@@ -152,8 +148,7 @@ const MakingTheShowSection = React.createClass({
       <ImageModalBox
         isModalOpen={this.state.isModalOpen}
         closeModal={this.closeModal}
-        image={this.state.filteredData[this.state.current].url}
-        current={this.state.current}
+        image={IMAGEDATA[this.state.current].url}
         onClickNext={this.onClickNext}
         onClickPrev={this.onClickPrev}
       />
@@ -172,13 +167,13 @@ const MakingTheShowSection = React.createClass({
         </p>
         <div className={styles.previewSectionContainer}>
           <PreviewSection
-            data={DATA}
+            data={VIDEODATA.concat(IMAGEDATA)}
             onClickPreview={this.onClickPreview}
             currentCategory={this.state.currentCategory}
             onChangeCategory={this.onChangeCategory}
           />
         </div>
-        {/youtube/.test(this.state.filteredData[this.state.current].url) ? this.renderVideoModal() : this.renderImageModal()}
+        {this.state.mode === 'video' ? this.renderVideoModal() : this.renderImageModal()}
       </div>
     )
   }

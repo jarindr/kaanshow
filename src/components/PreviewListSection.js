@@ -6,7 +6,7 @@ const PreviewListSection = React.createClass({
   propTypes: {
     data: React.PropTypes.array,
     onClickPreview: React.PropTypes.func.isRequired,
-    current: React.PropTypes.string,
+    current: React.PropTypes.object,
     closeModal: React.PropTypes.func.isRequired
   },
   componentDidMount () {

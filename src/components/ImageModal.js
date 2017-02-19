@@ -29,13 +29,11 @@ const ImageModalBox = React.createClass({
     caption: React.PropTypes.string,
     isModalOpen: React.PropTypes.bool.isRequired,
     closeModal: React.PropTypes.func.isRequired,
-    current: React.PropTypes.number.isRequired,
     onClickNext: React.PropTypes.func.isRequired,
     onClickPrev: React.PropTypes.func.isRequired
   },
   closeModal () {
     this.props.closeModal()
-    this.setState({current: 0})
   },
   render () {
     return (
