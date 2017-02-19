@@ -14,6 +14,15 @@
   bottom 10px
   font-size 6px
   opacity 0
+  font-family Montserrat
+.toTop
+  font-family Montserrat
+  display none
+  position fixed
+  right 20px
+  bottom 10px
+  font-size 6px
+  opacity 0
 @media screen and (max-width 768px)
   .singLogo
     width 100%
@@ -23,8 +32,10 @@
     left 0
     right 0
     box-sizing  border-box
-    .copyright
+    .copyright, .toTop
       opacity 1
+      img
+        width 6px!important
     img
       width 65px
     .singLogoContainer
@@ -32,4 +43,4 @@
       position absolute
       display table
       right 10px
-      top 10px
+      transition 0.2s

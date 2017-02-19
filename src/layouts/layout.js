@@ -23,6 +23,9 @@ const Layout = React.createClass({
       }
     })
   },
+  onClickToTop () {
+    window.scrollTo(0, 0)
+  },
   render () {
     return (
       <div>
@@ -47,8 +50,11 @@ const Layout = React.createClass({
           <div className={styles.copyright} style={{ display: this.state.showCopyright ? 'block' : 'none' }}>
             © 2017 PANJALUCK PASUK CO. , LTD. ALL RIGHTS RESERVED.
           </div>
-          <div className={styles.singLogoContainer}>
+          <div className={styles.singLogoContainer} style={{top: this.state.showCopyright ? 0 : '10px'}}>
             <img src={require('../assets/images/singha.png')} />
+            <span onClick={this.onClickToTop} className={styles.toTop} style={{ display: this.state.showCopyright ? 'block' : 'none' }}>
+              TO THE TOP <img src={require('../assets/images/to_top.png')} style={{width: '15px'}} />
+            </span>
           </div>
         </div>
       </div>
