@@ -13,15 +13,15 @@ const TicketForm = React.createClass({
           <h2>บริษัท / โรงเรียน / มหาวิทยาลัย</h2>
           <input></input>
         </div>
-        <div className={styles.col3}>
+        <div className={`${styles.col3} ${styles.colMobile50}`}>
           <h2>ชื่อ</h2>
           <input></input>
         </div>
-        <div className={styles.col3}>
+        <div className={`${styles.col3} ${styles.colMobile50}`}>
           <h2>นามสกุล</h2>
           <input></input>
         </div>
-        <div className={styles.col3}>
+        <div className={`${styles.col3} ${styles.colMobile100}`}>
           <h2>อีเมล</h2>
           <input></input>
         </div>
@@ -37,11 +37,11 @@ const TicketForm = React.createClass({
           <h2>รหัสไปรษณีย์</h2>
           <input></input>
         </div>
-        <div className={styles.col3}>
+        <div className={`${styles.col3} ${styles.colMobile100}`}>
           <h2>จำนวนผู้เข้าชม*</h2>
           <input></input>
         </div>
-        <div className={styles.col6}>
+        <div className={`${styles.col3} ${styles.colMobile100}`}>
           <h2>รายละเอียดเพิ่มเติม</h2>
           <input></input>
         </div>
