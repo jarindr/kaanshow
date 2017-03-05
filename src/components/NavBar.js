@@ -1,8 +1,9 @@
+import LanguageDropdown from './languageDropdown'
 import { Link } from 'react-router'
 import React from 'react'
+import SearchInput from './SearchInput'
 import cx from 'classnames'
 import styles from './NavBar.styl'
-import LanguageDropdown from './languageDropdown'
 const NavBar = React.createClass({
   getInitialState () {
     return {
@@ -45,6 +46,9 @@ const NavBar = React.createClass({
           </span>
           <span className={styles.navItem}>
             <img src={require('../assets/images/Untitled 2.png')} className={styles.search} />
+          </span>
+          <span className={styles.navItem}>
+            <SearchInput />
           </span>
           <Link to='/ticket/type/' target='_blank'><span className={`${styles.navItem} ${styles.ticket}`}>TICKET</span></Link>
         </div>
