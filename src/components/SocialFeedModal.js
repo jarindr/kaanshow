@@ -13,46 +13,26 @@ const SocialFeedModal = React.createClass({
     onClickNext: React.PropTypes.func
   },
   render () {
-    const customStyles = {
-      overlay: {
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        zIndex: 999
-      },
-      content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-        padding: 0,
-        border: 'none',
-        margin: 0,
-        overflow: 'hidden',
-        width: '900px',
-        backgroundColor: 'transparent'
-      }
-    }
-    const style = {
-      background: `url(${this.props.image}) center`,
-      backgroundSize: 'cover'
-    }
     return (
       <Modal
         isOpen={this.props.isModalOpen}
         onRequestClose={this.props.closeModal}
-        style={customStyles}
+        className={styles.modal}
+        overlayClassName={styles.overlayModal}
         >
         <div className={styles.container}>
+          <div className={styles.imageContainer}>
+            <img src={this.props.image} />
+          </div>
+          <img src={require('../assets/images/next.png')} className={styles.arrowRight}onClick={this.props.onClickPrev} />
           <img src={require('../assets/images/next.png')} className={styles.arrowLeft} onClick={this.props.onClickNext} />
-          <div className={styles.imagePreview} style={style}></div>
+          <img src={require('../assets/images/closeButtonBlack.png')} className={styles.closeButton} onClick={this.props.closeModal} />
           <div className={styles.contentContainer}>
             <img src={require('../assets/images/ig_footer.png')} />
             <h1>{this.props.mention || '@GDH'}</h1>
             <p dangerouslySetInnerHTML={{ __html: this.props.children }}></p>
           </div>
         </div>
-        <img src={require('../assets/images/next.png')} className={styles.arrowRight}onClick={this.props.onClickPrev} />
       </Modal>
     )
   }

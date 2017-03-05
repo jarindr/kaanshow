@@ -164,7 +164,7 @@ const MakingTheShowSection = React.createClass({
       <div className={styles.container}>
         <Title text='MAKING THE SHOW' />
         <p>
-          KAAN Presented by SINGHA CORPORATION คือ ประวัติศาสตร์หน้าใหม่ของการแสดงโชว์ในเมืองไทย
+          KAAN presented by SINGHA CORPORATION คือ ประวัติศาสตร์หน้าใหม่ของการแสดงโชว์ในเมืองไทย
           ที่ได้รวบรวมสุดยอดฝีมือด้านต่างๆ ในเมืองไทย เอาไว้มากมายกว่า 600 ชีวิต
           ซึ่งทุกคนต่างทุ่มเทในการเตรียมงานโดยใช้เวลากว่า 3 ปี
           นักแสดง และทีมงานเบื้องหลังผ่านการฝึกซ้อมอย่างหนักกว่า 10 เดือน
