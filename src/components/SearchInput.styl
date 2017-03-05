@@ -1,10 +1,17 @@
 .container
   vertical-align middle
   position relative
+  display inline-block
+  margin-left 10px
 .searchInput
   background-color transparent
-  border 1px solid white
+  border 1px solid grey
+  border-top none
+  border-left none
+  border-right none
   color white
+  transition 0.3s
+  box-sizing border-box
 .suggestionBox
   position absolute
   right 0
@@ -13,5 +20,6 @@
   .option
     padding 5px
     background-color grey
+    border-bottom 1px solid black
   .option:hover
     background-color rgb(166, 166, 166)

@@ -13,6 +13,9 @@ const NavBar = React.createClass({
   onClickHamberger () {
     this.setState({ mobileMenu: !this.state.mobileMenu })
   },
+  onClickSearch () {
+    this.setState({search: !this.state.search})
+  },
   render () {
     const classNameNav = cx([styles.navigationContainer], { [styles.active]: this.state.mobileMenu })
     return (
@@ -45,10 +48,8 @@ const NavBar = React.createClass({
             />
           </span>
           <span className={styles.navItem}>
-            <img src={require('../assets/images/Untitled 2.png')} className={styles.search} />
-          </span>
-          <span className={styles.navItem}>
-            <SearchInput />
+            <img src={require('../assets/images/Untitled 2.png')} className={styles.search} onClick={this.onClickSearch} />
+            <SearchInput active={this.state.search} />
           </span>
           <Link to='/ticket/type/' target='_blank'><span className={`${styles.navItem} ${styles.ticket}`}>TICKET</span></Link>
         </div>

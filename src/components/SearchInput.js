@@ -2,6 +2,9 @@ import React from 'react'
 import SearchText from './SearchText'
 import styles from './SearchInput.styl'
 const SearchInput = React.createClass({
+  propTypes: {
+    active: React.PropTypes.bool
+  },
   getInitialState () {
     return {
       value: '',
@@ -25,9 +28,9 @@ const SearchInput = React.createClass({
       for (let k in SearchText) {
         if (new RegExp(text).test(k.toLowerCase())) {
           if (typeof SearchText[k] === 'object') {
-            matches.concat(k)
+            matches.concat({text: k, link: SearchText[k]})
           } else {
-            matches.push(k)
+            matches.push({text: k, link: SearchText[k]})
           }
         }
       }
@@ -39,7 +42,7 @@ const SearchInput = React.createClass({
   renderSuggesionBox () {
     return (
       <div className={styles.suggestionBox}>
-        {this.state.matches.map(x => <div className={styles.option}>{x}</div>).slice(0, 5)}
+        {this.state.matches.map(x => <div className={styles.option}><a href={x.link} target='_blank'>{x.text}</a></div>).slice(0, 5)}
       </div>
     )
   },
@@ -51,6 +54,7 @@ const SearchInput = React.createClass({
           className={styles.searchInput}
           onChange={(e) => this.onChange(e)}
           onKeyPress={e => this.onkeyPress(e)}
+          style={{display: !this.props.active ? 'none' : 'block'}}
         />
         {this.renderSuggesionBox()}
       </span>
