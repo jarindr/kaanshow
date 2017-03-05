@@ -26,7 +26,7 @@
   width: 40%
   height: 100%
   padding-right: 20px
-  padding-top: 20px
+  padding-top: 10px
   h1
     color: #be9b42
     margin: 0
@@ -46,11 +46,13 @@
     line-height 1.5
     font-size: 14px
     letter-spacing 1px
+.closeModalContainer
+  text-align right
 .content
   overflow-y: auto;
   height: 350px
-  padding: 0 40px;
-  margin-top: 30px
+  padding: 10px 40px 0 40px;
+  margin-top 10px
   span
     font-size: 10px
     font-family: Montserrat
@@ -87,14 +89,14 @@
 .closeModal
   cursor: pointer;
   width: 25px
-  float: right;
+  vertical-align middle
 .backWorld
   font-family: Montserrat
-  float: right;
   font-size: 9px
   line-height: 25px
   margin-right: 5px
   color: #8a8a8a
+  vertical-align middle
 .arrowLeft
   width: 30px!important
   position: absolute
@@ -111,6 +113,9 @@
   transform: translateY(-50%) scaleX(-1)
 
 @media screen and (max-width 768px)
+  .social
+    margin-left 40px
+    padding-bottom 10px
   .container
     width: 100%
     height: auto

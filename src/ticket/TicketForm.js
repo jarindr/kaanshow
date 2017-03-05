@@ -37,11 +37,11 @@ const TicketForm = React.createClass({
           <h2>รหัสไปรษณีย์</h2>
           <input></input>
         </div>
-        <div className={`${styles.col3} ${styles.colMobile100}`}>
+        <div className={`${styles.col6} ${styles.colMobile100}`}>
           <h2>จำนวนผู้เข้าชม*</h2>
           <input></input>
         </div>
-        <div className={`${styles.col3} ${styles.colMobile100}`}>
+        <div className={`${styles.col6} ${styles.colMobile100}`}>
           <h2>รายละเอียดเพิ่มเติม</h2>
           <input></input>
         </div>

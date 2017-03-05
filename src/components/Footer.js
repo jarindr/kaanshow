@@ -86,7 +86,7 @@ const Footer = React.createClass({
   },
   render () {
     return (
-      <div>
+      <div id='footer-hack'>
         <div className={styles.container}>
           <SocialFeedModal
             title={DATA[this.state.current].mention}
@@ -98,7 +98,7 @@ const Footer = React.createClass({
             >
             {DATA[this.state.current].comment}
           </SocialFeedModal>
-          <div className={styles.containerFooter} id='footer-hack'>
+          <div className={styles.containerFooter}>
             <div className={styles.socialFeed}>
               {DATA.map((x, i) => this.renderSocialBlock(x, i))}
             </div>
@@ -214,7 +214,7 @@ const Footer = React.createClass({
                     <input type='text' placeholder='Enter Your Name' />
                     <input type='text' placeholder='Enter Your Email' />
                     <textarea type='text' placeholder='Your Message'></textarea>
-                    <div className={styles.sendEmail}>SEND MESSAGE</div>
+                    <button className={styles.sendEmail}>SEND MESSAGE</button>
                   </ul>
                 </div>
               </div>

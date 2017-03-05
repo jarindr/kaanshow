@@ -126,10 +126,11 @@
     vertical-align: top
     .sendEmail
       background: white
+      border none
       color: black
       display: table;
       padding: 7px 10px
-      margin-top: 5px
+      margin-top: 10px
       font-family: Montserrat
       cursor: pointer;
       font-size: 8px
@@ -137,9 +138,11 @@
       margin-top: 32px
       input
         display: inline-block;
-        width 200px
+        width calc(50% - 5px)
+        max-width 200px
         padding: 5px
         border: 0
+        box-sizing border-box
         margin 5px 5px 5px 0
         &::placeholder
           font-family: Montserrat
@@ -148,7 +151,9 @@
         display: block
         resize: none
         padding: 5px
-        width: 415px
+        box-sizing border-box
+        width: 100%
+        max-width 405px
         height: 70px
         border: 0
         &::placeholder
@@ -160,8 +165,11 @@
   img
     height: 25px
     margin-right: 22px
-@media screen and (max-width:768px)
+@media screen and (max-width:1000px)
+  .container
+    width 100%
   .siteMapContact
+    padding: 30px 5%
     .siteMap
       width: 100%
     .contact
@@ -170,9 +178,13 @@
         input
           width: 100%
           box-sizing border-box
+          max-width none
         textarea
           width: 100%
+          margin 5px 0
           box-sizing border-box
+        button
+          margin 5px 0
   .socialCaption
     display none
 @media screen and (max-width:450px)
@@ -183,7 +195,6 @@
         flex 1 1 25%
         height 20vw
   .siteMapContact
-    padding: 30px 5%
     .siteMap
       display: none
     .siteMapBlock
