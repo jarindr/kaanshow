@@ -42,7 +42,7 @@ const SearchInput = React.createClass({
   renderSuggesionBox () {
     return (
       <div className={styles.suggestionBox}>
-        {this.state.matches.map(x => <div className={styles.option}><a href={x.link} target='_blank'>{x.text}</a></div>).slice(0, 5)}
+        {this.state.matches.map(x => <a href={x.link} target='_blank'><div className={styles.option}>{x.text}</div></a>).slice(0, 5)}
       </div>
     )
   },
