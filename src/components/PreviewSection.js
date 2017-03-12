@@ -1,5 +1,6 @@
 import FlipMove from 'react-flip-move'
 import React from 'react'
+import ResponsiveSlider from '../components/SingleSliderResponsive'
 import getYouTubeID from 'get-youtube-id'
 import styles from './PreviewSection.styl'
 const PreviewSection = React.createClass({
@@ -92,6 +93,9 @@ const PreviewSection = React.createClass({
     return (
       <div className={styles.container}>
         {this.renderCatagory()}
+        <div className={styles.responsiveSliderContainer}>
+          <ResponsiveSlider data={this.renderPreviewBlocks()} />
+        </div>
         <div
           className={`${styles.previewBlocksContainer} customScrollBar`}
           id='hack-check-height'

@@ -1,3 +1,5 @@
+.responsiveSliderContainer
+  display none
 .block
   width: 280px
   height: 440px
@@ -81,7 +83,7 @@
   max-width: 850px
   text-align: center
   font-size: 0
-.sliderContainer
+.desktopSliderContainer
   position: relative;
   .arrowLeft
     position: absolute;
@@ -98,7 +100,10 @@
     transform: translateY(-50%) rotate(180deg);
     cursor: pointer;
 @media screen and (max-width 450px)
-  .sliderContainer
+  .responsiveSliderContainer
+    display block
+  .desktopSliderContainer
+    display none
     .arrowRight
       right 0
       z-index 10

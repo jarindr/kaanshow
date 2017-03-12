@@ -69,7 +69,7 @@
     "jscrollpane": "^2.0.22",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "normalize.css": "^4.1.1",
-    "react": "^15.1.0",
+    "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",
     "react-click-outside": "^2.2.0",
     "react-dom": "^15.1.0",
@@ -78,8 +78,10 @@
     "react-modal": "^1.5.2",
     "react-router": "^2.4.1",
     "react-router-scroll": "^0.3.2",
+    "react-swipe": "^5.0.6",
     "scroll-to": "0.0.2",
     "scroll-to-element": "^2.0.0",
+    "swipe-js-iso": "^2.0.3",
     "validator": "^6.2.0"
   }
 }

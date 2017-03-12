@@ -45,11 +45,6 @@ const DATA = [
     type: 'character'
   },
   {
-    url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_03-Character_ch.png'),
-    image: require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_03-Character_ch.png'),
-    type: 'character'
-  },
-  {
     url: require('../home/assets/kaanGallery/KAAN-Gallery_Thumbnail-(500x350px)_04-Character_ch.png'),
     image: require('../home/assets/kaanGallery/KAAN-Gallery_Full-Screen-(855x575px)_04-Character_ch.png'),
     type: 'character'

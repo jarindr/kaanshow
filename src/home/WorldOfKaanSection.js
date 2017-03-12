@@ -1,10 +1,10 @@
 import FlipMove from 'react-flip-move'
 import React from 'react'
+import SingleSliderResponsive from '../components/SingleSliderResponsive'
 import Title from '../components/Title'
 import WorldOfKaanModal from '../components/WorldOfKaanModal'
 import styles from './WorldOfKaanSection.styl'
 import worldOfKaanData from './WorldOfKaanData'
-
 const Block = React.createClass({
   propTypes: {
     backgroundImage: React.PropTypes.string,
@@ -50,7 +50,6 @@ const SlideShow = React.createClass({
         key={i}
         />
     ))
-    .slice(this.state.currentSet * 3, 3 + this.state.currentSet * 3)
   },
   onClickArrowLeft () {
     this.setState({ currentSet: 0 })
@@ -61,12 +60,18 @@ const SlideShow = React.createClass({
   render () {
     return (
       <div className={styles.sliderContainer}>
-        <img src={require('../assets/images/arrow.png')} className={styles.arrowLeft} onClick={this.onClickArrowLeft} />
-        <img src={require('../assets/images/arrow.png')} className={styles.arrowRight} onClick={this.onClickArrowRight} />
-        <FlipMove enterAnimation='fade' leaveAnimation='fade'>
-          {this.renderBlocks()}
-        </FlipMove>
+        <div className={styles.responsiveSliderContainer}>
+          <SingleSliderResponsive data={this.renderBlocks()} />
+        </div>
+        <div className={styles.desktopSliderContainer}>
+          <img src={require('../assets/images/arrow.png')} className={styles.arrowLeft} onClick={this.onClickArrowLeft} />
+          <img src={require('../assets/images/arrow.png')} className={styles.arrowRight} onClick={this.onClickArrowRight} />
+          <FlipMove enterAnimation='fade' leaveAnimation='fade'>
+            {this.renderBlocks().slice(this.state.currentSet * 3, 3 + this.state.currentSet * 3)}
+          </FlipMove>
+        </div>
       </div>
+
     )
   }
 })

@@ -49,7 +49,7 @@ const Footer = React.createClass({
   renderSocialBlock (data, i) {
     return (
       <div
-        className={styles.socialBlock}
+        className={`${styles.socialBlock} ${i >= 8 ? styles.hideMobile : null}`}
         style={{background: `url(${data.image}) center no-repeat`, backgroundSize: '102%'}}
         onClick={this.onClickSocialBlock.bind(null, i)}
         >
