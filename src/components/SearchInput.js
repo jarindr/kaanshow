@@ -23,12 +23,12 @@ const SearchInput = React.createClass({
     return true
   },
   findTargetFromSeach (text) {
-    const matches = []
-    if (text.length >= 3) {
+    let matches = []
+    if (text.length) {
       for (let k in SearchText) {
         if (new RegExp(text).test(k.toLowerCase())) {
           if (typeof SearchText[k] === 'object') {
-            matches.concat({text: k, link: SearchText[k]})
+            matches = matches.concat(SearchText[k].map(x => ({ text: `${k} (${x.substring(x.indexOf('#') + 1)})`, link: x })))
           } else {
             matches.push({text: k, link: SearchText[k]})
           }
