@@ -154,7 +154,7 @@ export default {
   'KAAN booking': 'https://kaanshow-ec4c0.firebaseapp.com/ticket/type/',
   'จองตั๋ว KAAN': ['https://kaanshow-ec4c0.firebaseapp.com/ticket/type/', 'https://d-luck.firebaseapp.com/#SEATING-PLAN'],
   'KAAN ตั๋วราคาประหยัด ': 'https://kaanshow-ec4c0.firebaseapp.com/ticket/type/',
-  'KAAN discount https://kaanshow-ec4c0.firebaseapp.com/ticket/type/ ': 'https://kaanshow-ec4c0.firebaseapp.com/ticket/type/',
+  'KAAN discount': 'https://kaanshow-ec4c0.firebaseapp.com/ticket/type/',
   'KAAN Promotion': 'https://kaanshow-ec4c0.firebaseapp.com/ticket/type/',
   'KAAN Sale': 'https://kaanshow-ec4c0.firebaseapp.com/ticket/type/',
   'Best price KAAN': 'https://kaanshow-ec4c0.firebaseapp.com/ticket/type/',
