@@ -69,7 +69,7 @@
     "jscrollpane": "^2.0.22",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "normalize.css": "^4.1.1",
-    "react": "^15.4.2",
+    "react": "15.1.0",
     "react-addons-css-transition-group": "^15.4.2",
     "react-click-outside": "^2.2.0",
     "react-dom": "^15.1.0",

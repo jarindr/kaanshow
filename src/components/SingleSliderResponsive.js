@@ -66,7 +66,7 @@ const SingleSliderResponsive = React.createClass({
       <div>
         <ReactSwipe
           className={styles.container}
-          swipeOptions={{continuous: false, callback: this.onSwipe}}
+          swipeOptions={{continuous: false, callback: this.onSwipe, disableScroll: true}}
           key={this.props.data.length}
           >
           {this.props.data}
