@@ -64,7 +64,9 @@ const Footer = React.createClass({
   },
   onClickSocialBlock (data, e) {
     this.setState({isModalOpen: true, current: data, currentScroll: $(window).scrollTop()}, () => {
-      $('body').css({position: 'fixed'})
+      if ($(window).width() < 500) {
+        $('body').css({position: 'fixed'})
+      }
     })
   },
   onClickNext () {
