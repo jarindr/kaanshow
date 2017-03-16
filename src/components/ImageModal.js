@@ -5,7 +5,7 @@ import styles from './ImageModal.styl'
 const customStyles = {
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
-    zIndex: 999
+    zIndex: 999999
   },
   content: {
     top: '50%',

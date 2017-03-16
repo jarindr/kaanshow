@@ -12,12 +12,12 @@ const PreviewSection = React.createClass({
     category: React.PropTypes.array
   },
   componentDidMount () {
-    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-    let containerHeight = $(this.refs.container)[0].offsetHeight / Math.ceil(this.props.data.length / 3) * 2
-    if (width < 768) {
-      containerHeight = 2 * $(this.refs.container)[0].offsetHeight / Math.ceil(this.props.data.length)
-    }
-    this.setState({containerHeight})
+    const $container = $(this.refs.container)[0]
+    let containerHeight = $container.offsetHeight / Math.ceil(this.props.data.length / 3) * 2
+    this.setState({containerHeight, blockWidth: ($(this.refs.container).outerWidth() - 13) / 3})
+    $(window).on('resize', (e) => {
+      this.setState({containerHeight, blockWidth: ($(this.refs.container).outerWidth() - 13) / 3})
+    })
   },
   getInitialState () {
     return {
@@ -50,6 +50,7 @@ const PreviewSection = React.createClass({
         key={imageUrl}
         className={styles.previewBlock}
         onClick={this.props.onClickPreview.bind(null, i)}
+        style={{maxWidth: this.state.blockWidth ? this.state.blockWidth : '33.33%'}}
       >
         <div className={styles.imageContainer} style={{ background: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <img
@@ -102,7 +103,6 @@ const PreviewSection = React.createClass({
         </div>
         <div
           className={`${styles.previewBlocksContainer} customScrollBar`}
-          id='hack-check-height'
           ref='container'
           style={{ height: this.state.containerHeight }}
         >

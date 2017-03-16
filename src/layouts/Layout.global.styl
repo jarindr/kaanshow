@@ -6,7 +6,10 @@
     opacity: 0;
 }
 .ReactModal__Body--open {
-  overflow hidden
+  // overflow hidden
+}
+.slick-slide {
+  max-width none!important
 }
 *:focus {
   outline:none!important
@@ -14,6 +17,7 @@
 .ReactModal__Overlay {
     transition: opacity 200ms ease-in-out;
     background: rgba(0, 0, 0, 0.15);
+    z-index :999999;
     &--after-open {
         opacity: 1;
     }

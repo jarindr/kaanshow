@@ -1,13 +1,16 @@
 .previewBlock
-  display: inline-block;
+  float left
   width: 100%
-  max-width: 33.33%
+  max-width 33.33%
   cursor: pointer;
+  text-align left
   overflow: hidden;
   .imageContainer
     width: 100%
     position: relative
-    height: 230px
+    max-height: 230px
+    height: 15vw
+    min-height 180px
     overflow: hidden;
   .previewImage
     width: 100%
@@ -36,11 +39,10 @@
   position: absolute;
 .previewBlocksContainer
   font-size: 0
-  max-width: 1050px
+  max-width: 1000px
   overflow: auto;
   margin: 0 auto
-  padding-right: 10px
-  text-align: left
+  display block
 .responsiveSliderContainer
   display none
 .navigation
