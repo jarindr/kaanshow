@@ -1,8 +1,12 @@
 .responsiveSliderContainer
   display none
+  max-width 300px
+  margin 0 auto
 .block
-  width: 280px
-  height: 440px
+  width 32%
+  max-width: 280px
+  max-height: 440px
+  height 50vh
   display: inline-block;
   overflow: hidden;
   position: relative;
@@ -99,7 +103,17 @@
     top: 50%
     transform: translateY(-50%) rotate(180deg);
     cursor: pointer;
+@media screen and (max-width 768px)
+  .block
+    .blockTitle
+      font-size 30px
 @media screen and (max-width 450px)
+  .block
+    max-width none
+    max-height none
+  .blockMobile
+    width 100%
+    height 100vw!important
   .responsiveSliderContainer
     display block
   .desktopSliderContainer

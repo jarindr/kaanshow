@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactSwipe from 'react-swipe'
+import Slider from 'react-slick'
 import cx from 'classnames'
 import styles from './SingleSliderResponsive.styl'
 const SingleSliderResponsive = React.createClass({
@@ -11,6 +11,10 @@ const SingleSliderResponsive = React.createClass({
       current: 0,
       shiftTime: 0
     }
+  },
+  preventScrolling (e) {
+    e.preventDefault()
+    e.stopPropagation()
   },
   getCircleStyle (i) {
     const radius = 10
@@ -62,15 +66,22 @@ const SingleSliderResponsive = React.createClass({
     }
   },
   render () {
+    const settings = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
     return (
       <div>
-        <ReactSwipe
+        <Slider {...settings}
           className={styles.container}
-          swipeOptions={{continuous: false, callback: this.onSwipe, disableScroll: true}}
-          key={this.props.data.length}
+          afterChange={this.onSwipe}
+          arrows={false}
           >
           {this.props.data}
-        </ReactSwipe>
+        </Slider>
         {this.renderPagination()}
       </div>
     )

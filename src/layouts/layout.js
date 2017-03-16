@@ -15,6 +15,11 @@ const Layout = React.createClass({
     }
   },
   componentDidMount () {
+    document.body.addEventListener('touchmove', (e) => {
+      if ($('body').hasClass('ReactModal__Body--open')) {
+        e.preventDefault()
+      }
+    }, {passive: false})
     window.addEventListener('scroll', () => {
       if ($(window).scrollTop() + $(window).innerHeight() >= $('body').height() - 500) {
         this.setState({ showCopyright: true })
@@ -37,7 +42,11 @@ const Layout = React.createClass({
           }]}
           link={[
             {
-              href: '',
+              href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css',
+              rel: 'stylesheet'
+            },
+            {
+              href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css',
               rel: 'stylesheet'
             }
           ]}

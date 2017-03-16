@@ -25,7 +25,7 @@ export default (locals, callback) => {
             <meta charset="UTF-8" />
             ${head.title.toString()}
             ${head.meta.toString()}
-            <meta name="viewport" content="width=device-width">
+            <meta name="viewport" content="width=device-width user-scalable="no">
             ${head.script.toString()}
             ${head.link.toString()}
             ${stylesheets}

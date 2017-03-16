@@ -5,30 +5,6 @@ import Title from '../components/Title'
 import WorldOfKaanModal from '../components/WorldOfKaanModal'
 import styles from './WorldOfKaanSection.styl'
 import worldOfKaanData from './WorldOfKaanData'
-const Block = React.createClass({
-  propTypes: {
-    backgroundImage: React.PropTypes.string,
-    title: React.PropTypes.string.isRequired,
-    subTitle: React.PropTypes.string,
-    onClickBlock: React.PropTypes.func
-  },
-  render () {
-    return (
-      <div className={styles.block} onClick={this.props.onClickBlock}>
-        <div className={styles.emptyOverlay}></div>
-        <div className={styles.blackOverlay}></div>
-        <img src={this.props.backgroundImage} className={styles.imageBlock} />
-        <div className={styles.blockTitle}>
-          {this.props.title}
-          <div className={styles.subTitle}>
-            {this.props.subTitle}
-          </div>
-        </div>
-      </div>
-    )
-  }
-})
-
 const SlideShow = React.createClass({
   propTypes: {
     current: React.PropTypes.number,
@@ -42,13 +18,17 @@ const SlideShow = React.createClass({
   renderBlocks () {
     return worldOfKaanData
     .map((x, i) => (
-      <Block
-        title={x.title}
-        subTitle={x.subTitle}
-        backgroundImage={x.backgroundImage}
-        onClickBlock={this.props.onClickBlock.bind(null, x)}
-        key={i}
-        />
+      <div className={`${styles.block} ${styles.blockMobile}`} onClick={this.props.onClickBlock.bind(null, x)}>
+        <div className={styles.emptyOverlay}></div>
+        <div className={styles.blackOverlay}></div>
+        <img src={x.backgroundImage} className={styles.imageBlock} />
+        <div className={styles.blockTitle}>
+          {x.title}
+          <div className={styles.subTitle}>
+            {x.subTitle}
+          </div>
+        </div>
+      </div>
     ))
   },
   onClickArrowLeft () {
@@ -66,9 +46,7 @@ const SlideShow = React.createClass({
         <div className={styles.desktopSliderContainer}>
           <img src={require('../assets/images/arrow.png')} className={styles.arrowLeft} onClick={this.onClickArrowLeft} />
           <img src={require('../assets/images/arrow.png')} className={styles.arrowRight} onClick={this.onClickArrowRight} />
-          <FlipMove enterAnimation='fade' leaveAnimation='fade'>
             {this.renderBlocks().slice(this.state.currentSet * 3, 3 + this.state.currentSet * 3)}
-          </FlipMove>
         </div>
       </div>
 
