@@ -46,7 +46,9 @@ const SlideShow = React.createClass({
         <div className={styles.desktopSliderContainer}>
           <img src={require('../assets/images/arrow.png')} className={styles.arrowLeft} onClick={this.onClickArrowLeft} />
           <img src={require('../assets/images/arrow.png')} className={styles.arrowRight} onClick={this.onClickArrowRight} />
+          <FlipMove enterAnimation='fade' leaveAnimation='fade'>
             {this.renderBlocks().slice(this.state.currentSet * 3, 3 + this.state.currentSet * 3)}
+          </FlipMove>
         </div>
       </div>
 
