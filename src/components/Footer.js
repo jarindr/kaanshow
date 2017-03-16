@@ -22,7 +22,8 @@ const Footer = React.createClass({
     return {
       isModalOpen: false,
       current: 0,
-      subscribeSuccess: ''
+      subscribeSuccess: '',
+      currentScroll: 0
     }
   },
   onClickSubscribe () {
@@ -62,7 +63,9 @@ const Footer = React.createClass({
     )
   },
   onClickSocialBlock (data, e) {
-    this.setState({isModalOpen: true, current: data})
+    this.setState({isModalOpen: true, current: data, currentScroll: $(window).scrollTop()}, () => {
+      $('body').css({position: 'fixed'})
+    })
   },
   onClickNext () {
     if (this.state.current + 1 > DATA.length - 1) {
@@ -79,12 +82,15 @@ const Footer = React.createClass({
     }
   },
   onCloseModal () {
+    $('body').css({position: 'static'})
+    window.scrollTo(0, this.state.currentScroll)
     this.setState({isModalOpen: false})
   },
   onClickToTop () {
     window.scrollTo(0, 0)
   },
   render () {
+    console.log(this.state.currentScroll)
     return (
       <div id='footer-hack'>
         <div className={styles.container}>

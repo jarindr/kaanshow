@@ -12,10 +12,6 @@ const SingleSliderResponsive = React.createClass({
       shiftTime: 0
     }
   },
-  preventScrolling (e) {
-    e.preventDefault()
-    e.stopPropagation()
-  },
   getCircleStyle (i) {
     const radius = 10
     const styleObject = { width: `${radius}px`, height: `${radius}px` }

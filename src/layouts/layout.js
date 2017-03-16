@@ -15,11 +15,6 @@ const Layout = React.createClass({
     }
   },
   componentDidMount () {
-    document.body.addEventListener('touchmove', (e) => {
-      if ($('body').hasClass('ReactModal__Body--open')) {
-        e.preventDefault()
-      }
-    }, {passive: false})
     window.addEventListener('scroll', () => {
       if ($(window).scrollTop() + $(window).innerHeight() >= $('body').height() - 500) {
         this.setState({ showCopyright: true })
