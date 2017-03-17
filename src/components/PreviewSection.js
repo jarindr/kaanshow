@@ -47,7 +47,7 @@ const PreviewSection = React.createClass({
       : data.url
     return (
       <div
-        key={imageUrl}
+        key={performance.now()}
         className={styles.previewBlock}
         onClick={this.props.onClickPreview.bind(null, i)}
         style={{maxWidth: this.state.blockWidth ? this.state.blockWidth : '33.33%'}}

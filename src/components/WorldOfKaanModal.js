@@ -29,7 +29,7 @@ const WorldOfKaanModal = React.createClass({
     const customStyles = {
       overlay: {
         backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        zIndex: 999
+        zIndex: 99999
       },
       content: {
         top: '50%',
