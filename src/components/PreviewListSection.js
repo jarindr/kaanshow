@@ -39,7 +39,7 @@ const PreviewListSection = React.createClass({
           </div>
           <div className={styles.caption}>
             {x.caption}
-            <div style={{opacity: 0.5}}>{x.subCaption.substr(1, 20) || ''}</div>
+            <div style={{opacity: 0.5}}>{x.subCaption}</div>
           </div>
         </div>
       )

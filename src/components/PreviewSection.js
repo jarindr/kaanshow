@@ -47,10 +47,10 @@ const PreviewSection = React.createClass({
       : data.url
     return (
       <div
-        key={performance.now()}
         className={styles.previewBlock}
         onClick={this.props.onClickPreview.bind(null, i)}
         style={{maxWidth: this.state.blockWidth ? this.state.blockWidth : '33.33%'}}
+        key={Math.random().toString(36).substring(2, 15)}
       >
         <div className={styles.imageContainer} style={{ background: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <img
