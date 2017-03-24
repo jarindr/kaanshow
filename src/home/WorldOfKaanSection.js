@@ -15,6 +15,16 @@ const SlideShow = React.createClass({
       currentSet: 0
     }
   },
+  componentDidMount () {
+    // preload
+    worldOfKaanData.map(x => {
+      return x.images.map(image => {
+        const imageObj = new Image()
+        imageObj.src = image
+        console.log(imageObj)
+      })
+    })
+  },
   renderBlocks () {
     return worldOfKaanData
     .map((x, i) => (

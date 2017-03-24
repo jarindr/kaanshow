@@ -3,7 +3,7 @@ const data = [
     title: 'ผีเสื้อพิโรธ',
     subTitle: 'THE WRATH OF THE SEA GIANTESS',
     backgroundImage: require('./assets/worldOfKaan/01.jpg'),
-    images: [require('./assets/worldOfKaan/bg1.jpg')],
+    images: [require('./assets/worldOfKaan/bg1.jpg'), require('./assets/worldOfKaan/bg2.jpg')],
     content: `ณ เกาะแก้วพิสดาร นางอสูรร้ายแห่งท้องทะเลกำลังตื่นจากนิทราการผจญภัยเหนือจินตนาการได้เริ่มขึ้นแล้ว! <div style='margin-top: 15px;'>เปิดโลกแห่งจินตนาการไปกับการผจญภัยกลางมหาสมุทรอันเวิ้งว้าง
               ของเกาะแก้วพิสดาร ขี่หลังม้านิลมังกรท่องไปในโลกใหม่ตื่นตาตื่นใจกับเรือสำเภาลำยักษ์
               พร้อมสนุกสนานไปกับการผจญภัยของพระอภัยมณี และเหล่าลูกเรือพบกับการร่ายรำอันวิจิตรบนผืนน้ำของฝูงนางเงือก

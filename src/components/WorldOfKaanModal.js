@@ -25,6 +25,20 @@ const WorldOfKaanModal = React.createClass({
     const urlSharer = type === 'facebook' ? `https://www.facebook.com/sharer/sharer.php?u=${url}` : `https://twitter.com/intent/tweet?url=${url}`
     window.open(urlSharer, 'targetWindow', `toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250,top=${top},left=${left}`)
   },
+  onClickNext () {
+    if (this.state.current + 1 < this.props.images.length) {
+      this.setState({current: this.state.current + 1})
+    } else {
+      this.setState({current: 0})
+    }
+  },
+  onClickPrevious () {
+    if (this.state.current - 1 < 0) {
+      this.setState({current: this.props.images.length - 1})
+    } else {
+      this.setState({current: this.state.current - 1})
+    }
+  },
   render () {
     const customStyles = {
       overlay: {
@@ -58,14 +72,26 @@ const WorldOfKaanModal = React.createClass({
       >
         <div className={styles.container}>
           <div className={styles.imagePreview} style={style}>
-            <img src={require('../assets/images/next.png')} className={styles.arrowRight} />
-            <img src={require('../assets/images/next.png')} className={styles.arrowLeft} />
+            <img
+              src={require('../assets/images/next.png')}
+              className={styles.arrowRight}
+              onClick={this.onClickNext}
+            />
+            <img
+              src={require('../assets/images/next.png')}
+              className={styles.arrowLeft}
+              onClick={this.onClickPrevious}
+            />
             <div className={styles.titleImage}>{`${this.props.title} (${this.props.subTitle})`}</div>
           </div>
           <div className={styles.contentContainer}>
             <div className={styles.closeModalContainer}>
               <span className={styles.backWorld}>BACK TO WORLD</span>
-              <img src={require('../assets/images/closeButtonBlack.png')} onClick={this.props.closeModal} className={styles.closeModal} />
+              <img
+                src={require('../assets/images/closeButtonBlack.png')}
+                onClick={this.props.closeModal}
+                className={styles.closeModal}
+                />
             </div>
             <div className={styles.content}>
               <h1>{this.props.title}</h1>
